@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=2 format=3 uid="uid://drndbm4wqiax0"]
+
+[ext_resource type="Texture2D" uid="uid://bh4hr3hhunase" path="res://Sip.png" id="1_uuck6"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -6,6 +8,12 @@
 
 [node name="Node2D2" type="Node2D" parent="."]
 
-[node name="Node2D" type="Node2D" parent="Node2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2"]
+modulate = Color(1, 0.333333, 0.290196, 1)
+top_level = true
+texture = ExtResource("1_uuck6")
 
-[node name="Node2D3" type="Node2D" parent="."]
+[node name="billy bob" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="billy bob"]
+texture = ExtResource("1_uuck6")
