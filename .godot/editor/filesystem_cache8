@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698020332
+::res://::1698022641
+bad_guy_1.tscn::PackedScene::597482472387413054::1698022517::0::1::::<><>::uid://bh4hr3hhunase::::res://Sip.png<>uid://cmyylrtfw6sif::::res://icon.svg
 icon.svg::CompressedTexture2D::5666130331205426709::1695587619::1695587625::1::::<><>::
-node_2d.tscn::PackedScene::8379493916601640807::1698020498::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://bh4hr3hhunase::::res://Sip.png
+protaginast_guy.gd::GDScript::-1::1698022193::0::1::::<>CharacterBody2D<>::
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698022517::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Sip.png
 README.md::TextFile::-1::1695590466::0::1::::<><>::
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698020332::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Sip.png
-protaginast_guy.gd::GDScript::-1::1698020332::0::1::::<>CharacterBody2D<>::
 Sip.png::CompressedTexture2D::2938066403285530928::1695783752::1695783816::1::::<><>::
+World.tscn::PackedScene::8379493916601640807::1698022626::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://bh4hr3hhunase::::res://Sip.png<>uid://iropjcs4mji1::::res://bad_guy_1.tscn

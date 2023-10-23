@@ -1,4 +1,3 @@
-res://node_2d.tscn
-res://protaginast_guy.tscn
-res://protaginast_guy.gd
 res://World.tscn
+res://protaginast_guy.tscn
+res://bad_guy_1.tscn

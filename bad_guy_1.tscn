@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://iropjcs4mji1"]
+
+[ext_resource type="Texture2D" uid="uid://bh4hr3hhunase" path="res://Sip.png" id="1_3x0st"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6bif"]
+radius = 27.0
+height = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avkq4"]
+radius = 76.0592
+
+[node name="Bad_guy_1" type="CharacterBody2D"]
+metadata/_edit_group_ = true
+
+[node name="Ground_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 35)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_y6bif")
+metadata/_edit_group_ = true
+
+[node name="Attack_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_avkq4")
+debug_color = Color(0.843137, 0.380392, 0, 0.419608)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.854902, 0.341176, 0, 1)
+texture = ExtResource("1_3x0st")
