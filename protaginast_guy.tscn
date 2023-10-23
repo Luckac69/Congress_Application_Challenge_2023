@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5kb8m6wcp8br"]
+
+[ext_resource type="Script" path="res://protaginast_guy.gd" id="1_jc4wy"]
+[ext_resource type="Texture2D" uid="uid://bh4hr3hhunase" path="res://Sip.png" id="1_r0vsv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d2cro"]
+radius = 35.0
+height = 116.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f8jt6"]
+radius = 53.9351
+
+[node name="Protaginast_guy" type="CharacterBody2D"]
+script = ExtResource("1_jc4wy")
+
+[node name="TEMP_SPRITE,REPLACEWITH=___ANIMATEDSPRITE" type="Sprite2D" parent="."]
+texture = ExtResource("1_r0vsv")
+
+[node name="Ground_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(4, 12)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_d2cro")
+
+[node name="Attack_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(5, -2)
+shape = SubResource("CircleShape2D_f8jt6")
+debug_color = Color(0.988235, 0.113725, 0, 0.419608)
