@@ -32,7 +32,7 @@ func _physics_process(delta):
 		#position += (target.position - position).normalized() * SPEED
 	# var player = get_parent().get_node(\"Protaginast_guy\")
 	# var target = player
-	
+
 func update_health():
 	var healthbar = $HealthBar
 	
