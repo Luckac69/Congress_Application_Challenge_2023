@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5kb8m6wcp8br"]
 
 [ext_resource type="Script" path="res://Scripts/protaginast_guy.gd" id="1_gpdhi"]
-[ext_resource type="Texture2D" uid="uid://cwxwft34c6fyd" path="res://Artwork/Effects/wizard_idle-Sheet.png" id="2_od8m5"]
+[ext_resource type="Texture2D" uid="uid://bndt5y14kfhh8" path="res://Artwork/Enemies/wizard_sprite-Sheet.png" id="2_aaedg"]
 [ext_resource type="PackedScene" uid="uid://tm3lofwyxbms" path="res://PreFabs/trail_2d.tscn" id="3_m1w6j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f8jt6"]
@@ -26,6 +26,21 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_d3s4r"]
 resource_name = "Walk"
+length = 1.75
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Wizard:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 10, 11]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5ujs"]
 _data = {
@@ -37,8 +52,9 @@ _data = {
 script = ExtResource("1_gpdhi")
 
 [node name="Wizard" type="Sprite2D" parent="."]
-texture = ExtResource("2_od8m5")
-hframes = 4
+texture = ExtResource("2_aaedg")
+hframes = 6
+vframes = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -46,10 +62,10 @@ position_smoothing_speed = 2.0
 
 [node name="Trail2D" parent="." instance=ExtResource("3_m1w6j")]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PlayerHitbox" type="Area2D" parent="."]
 
-[node name="Attack_Collision" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(5, -2)
+[node name="Attack_Collision" type="CollisionShape2D" parent="PlayerHitbox"]
+position = Vector2(4, 32)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_f8jt6")
 debug_color = Color(0.988235, 0.113725, 0, 0.419608)
@@ -62,4 +78,9 @@ libraries = {
 
 [node name="regin_timer" type="Timer" parent="."]
 
+[node name="DamageTakeCooldown" type="Timer" parent="."]
+
+[connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
+[connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
 [connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]
+[connection signal="timeout" from="DamageTakeCooldown" to="." method="_on_damage_take_cooldown_timeout"]
