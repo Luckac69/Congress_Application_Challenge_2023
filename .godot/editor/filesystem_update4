@@ -1,3 +1,5 @@
 res://World.tscn
 res://protaginast_guy.tscn
 res://bad_guy_1.tscn
+res://bad_guy_1.gd
+res://protaginast_guy.gd

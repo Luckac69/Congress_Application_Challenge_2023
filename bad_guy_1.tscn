@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://iropjcs4mji1"]
+[gd_scene load_steps=5 format=3 uid="uid://iropjcs4mji1"]
 
-[ext_resource type="Texture2D" uid="uid://bh4hr3hhunase" path="res://Artwork/Sip.png" id="1_uo4xw"]
+[ext_resource type="Script" path="res://bad_guy_1.gd" id="1_ld1xx"]
+[ext_resource type="Texture2D" uid="uid://dbcnmiqypm1wq" path="res://Artwork/TheBoar.png" id="2_2fa1u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6bif"]
 radius = 27.0
@@ -10,6 +11,7 @@ height = 128.0
 radius = 76.0592
 
 [node name="Bad_guy_1" type="CharacterBody2D"]
+script = ExtResource("1_ld1xx")
 metadata/_edit_group_ = true
 
 [node name="Ground_Collision" type="CollisionShape2D" parent="."]
@@ -25,5 +27,5 @@ debug_color = Color(0.843137, 0.380392, 0, 0.419608)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.854902, 0.341176, 0, 1)
-texture = ExtResource("1_uo4xw")
+position = Vector2(1, 0)
+texture = ExtResource("2_2fa1u")
