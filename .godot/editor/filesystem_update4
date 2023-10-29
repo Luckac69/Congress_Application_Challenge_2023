@@ -1,12 +1,5 @@
 res://World.tscn
-res://EnemySpawner.gd
-res://protaginast_guy.tscn
-res://bad_guy_1.tscn
-res://protaginast_guy.gd
-res://bad_guy_1.gd
 res://PreFabs/protaginast_guy.tscn
 res://PreFabs/bad_guy_1.tscn
-res://PreFabs/trail_2d.tscn
-res://PreFabs/Trail2D.gd
+res://Scripts/protaginast_guy.gd
 res://PreFabs/Area2D.gd
-res://Scripts/EnemySpawner.gd
