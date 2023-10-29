@@ -1,9 +1,9 @@
+CollisionShape2D
 Timer
 TileMap
 ProgressBar
 AnimationPlayer
 Area2D
-CollisionShape2D
 Line2D
 Marker2D
 Camera2D

@@ -1227,7 +1227,7 @@ position = Vector2(0, 243)
 
 [node name="TileMap" type="TileMap" parent="."]
 show_behind_parent = true
-scale = Vector2(4.10146, 3.56959)
+scale = Vector2(8, 8)
 tile_set = SubResource("TileSet_1yr81")
 format = 2
 layer_0/name = "Water"

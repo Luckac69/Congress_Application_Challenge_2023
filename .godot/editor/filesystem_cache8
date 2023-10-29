@@ -1,104 +1,106 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698599313
-README.md::TextFile::-1::1698599111::0::1::::<><>::
-World.tscn::PackedScene::8379493916601640807::1698599111::0::1::::<><>::uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://iropjcs4mji1::::res://PreFabs/bad_guy_1.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn
-::res://Artwork/::1698599111
-::res://Artwork/Effects/::1698599111
-BackButton.png::CompressedTexture2D::8315617522304940773::1698599111::1698599111::1::::<><>::
-Coin-export.png::CompressedTexture2D::65956870932229457::1698599111::1698599111::1::::<><>::
-control button.png::CompressedTexture2D::4121697845468040098::1698599111::1698599111::1::::<><>::
-correct.png::CompressedTexture2D::8403963810528724406::1698599111::1698599111::1::::<><>::
-earth_hitfx-Sheet.png::CompressedTexture2D::4755877752481831374::1698599111::1698599111::1::::<><>::
-explosion-Sheet.png::CompressedTexture2D::5041676420067464807::1698599111::1698599111::1::::<><>::
-exp_circle.png::CompressedTexture2D::254245655672946988::1698599111::1698599111::1::::<><>::
-exp_empty.png::CompressedTexture2D::8536345107713881112::1698599111::1698599111::1::::<><>::
-exp_full.png::CompressedTexture2D::5590875387464976905::1698599111::1698599111::1::::<><>::
-fireball-Sheet.png::CompressedTexture2D::5645751026468939783::1698599111::1698599111::1::::<><>::
-fire_hitfx-Sheet.png::CompressedTexture2D::5283067561595748093::1698599111::1698599111::1::::<><>::
-flashcard.png::CompressedTexture2D::1142660738707230279::1698599111::1698599111::1::::<><>::
-heart.png::CompressedTexture2D::6372095656328576717::1698599111::1698599111::1::::<><>::
-hp_bar.png::CompressedTexture2D::5361685974567232119::1698599111::1698599111::1::::<><>::
-icon.svg::CompressedTexture2D::5666130331205426709::1698599111::1698599111::1::::<><>::
-incorrect.png::CompressedTexture2D::2986170081470384614::1698599111::1698599111::1::::<><>::
-knight_spear_idle-Sheet.png::CompressedTexture2D::1204987223675086832::1698599111::1698599111::1::::<><>::
-knight_spear_walk-Sheet.png::CompressedTexture2D::8158392088859658372::1698599111::1698599111::1::::<><>::
-knight_sword_idle-Sheet.png::CompressedTexture2D::478116988791550489::1698599111::1698599111::1::::<><>::
-knight_sword_sprite-Sheet.png::CompressedTexture2D::7858137853807985494::1698599111::1698599111::1::::<><>::
-lightning-Sheet.png::CompressedTexture2D::1194044402646211012::1698599111::1698599111::1::::<><>::
-play button.png::CompressedTexture2D::8592759481511072825::1698599111::1698599111::1::::<><>::
-Portal-Sheet.png::CompressedTexture2D::472767927854765881::1698599111::1698599111::1::::<><>::
-spikes-Sheet.png::CompressedTexture2D::2386851222282569277::1698599111::1698599111::1::::<><>::
-wizard_idle-Sheet.png::CompressedTexture2D::6365822361096377471::1698599111::1698599111::1::::<><>::
-::res://Artwork/Enemies/::1698599313
-knight_spear_sprite-Sheet.png::CompressedTexture2D::6646999882097610989::1698599111::1698599305::1::::<><>::
-knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698599111::1698599111::1::::<><>::
-knight_sword_sprite-Sheet.png::CompressedTexture2D::2967287097412053354::1698599111::1698599312::1::::<><>::
-Sip.png::CompressedTexture2D::2938066403285530928::1698599111::1698599111::1::::<><>::
-TheBoar.png::CompressedTexture2D::7234390846672947380::1698599111::1698599111::1::::<><>::
-wizard_sprite-Sheet.png::CompressedTexture2D::3306277282985924883::1698599111::1698599313::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/::1698599111
-Asset License.txt::TextFile::-1::1698599111::0::1::::<><>::
-Solaria Palette.png::CompressedTexture2D::2578586704287745856::1698599111::1698599111::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/16x16/::1698599111
-::res://Artwork/Solaria Demo Pack Update 03/16x16/Sprites/::1698599111
-Hero 01.png::CompressedTexture2D::3870639512871166020::1698599111::1698599111::1::::<><>::
-Minecart 01.png::CompressedTexture2D::8984416379389318982::1698599111::1698599111::1::::<><>::
-Slime 01.png::CompressedTexture2D::6779237740842730338::1698599111::1698599111::1::::<><>::
-Sword 01.png::CompressedTexture2D::4914173457999615087::1698599111::1698599111::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/::1698599111
-Solaria Demo Update 01.png::CompressedTexture2D::5249393100562069683::1698599111::1698599111::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/Examples/::1698599111
-Demo Pack Example 01.png::CompressedTexture2D::8389295702717641998::1698599111::1698599111::1::::<><>::
-Demo Pack Example 02.png::CompressedTexture2D::1464570835347275460::1698599111::1698599111::1::::<><>::
-Demo Pack Example 03.png::CompressedTexture2D::1824090573858513260::1698599111::1698599111::1::::<><>::
-Demo Pack Update 01 Preview.png::CompressedTexture2D::5205986713862132311::1698599111::1698599111::1::::<><>::
-Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::658051498286109785::1698599111::1698599111::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/::1698599111
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/characters/::1698599111
-!Chest.png::CompressedTexture2D::1530705066196467162::1698599111::1698599111::1::::<><>::
-!Door1.png::CompressedTexture2D::6595533936449656603::1698599111::1698599111::1::::<><>::
-!Flame.png::CompressedTexture2D::5362898621611530638::1698599111::1698599111::1::::<><>::
-!Other1.png::CompressedTexture2D::4764578339655656905::1698599111::1698599111::1::::<><>::
-!Other2.png::CompressedTexture2D::8465845229347783765::1698599111::1698599111::1::::<><>::
-!Switch1.png::CompressedTexture2D::2239055025629924803::1698599111::1698599111::1::::<><>::
-Actor1.png::CompressedTexture2D::8355689128571753849::1698599111::1698599111::1::::<><>::
-Minecart.png::CompressedTexture2D::5045467312779510694::1698599111::1698599111::1::::<><>::
-Monster.png::CompressedTexture2D::5988549847081745078::1698599111::1698599111::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/faces/::1698599111
-Actor1.png::CompressedTexture2D::9061075525384943771::1698599111::1698599111::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/tilesets/::1698599111
-Dungeon_A1.png::CompressedTexture2D::702205158031962065::1698599111::1698599111::1::::<><>::
-Dungeon_A1.txt::TextFile::-1::1698599111::0::1::::<><>::
-Dungeon_A2.png::CompressedTexture2D::6799935031326260563::1698599111::1698599111::1::::<><>::
-Dungeon_A2.txt::TextFile::-1::1698599111::0::1::::<><>::
-Dungeon_A4.png::CompressedTexture2D::3323522533514470936::1698599111::1698599111::1::::<><>::
-Dungeon_A4.txt::TextFile::-1::1698599111::0::1::::<><>::
-Dungeon_A5.png::CompressedTexture2D::6604484929875814292::1698599111::1698599111::1::::<><>::
-Dungeon_A5.txt::TextFile::-1::1698599111::0::1::::<><>::
-Dungeon_B.png::CompressedTexture2D::3730497200195550686::1698599111::1698599111::1::::<><>::
-Dungeon_B.txt::TextFile::-1::1698599111::0::1::::<><>::
-Dungeon_C.png::CompressedTexture2D::6656592760397037072::1698599111::1698599111::1::::<><>::
-Dungeon_C.txt::TextFile::-1::1698599111::0::1::::<><>::
-Outside_A1.png::CompressedTexture2D::608042096376219201::1698599111::1698599111::1::::<><>::
-Outside_A1.txt::TextFile::-1::1698599111::0::1::::<><>::
-Outside_A2.png::CompressedTexture2D::6439161970580052771::1698599111::1698599111::1::::<><>::
-Outside_A2.txt::TextFile::-1::1698599111::0::1::::<><>::
-Outside_A3.png::CompressedTexture2D::3641386570154739647::1698599111::1698599111::1::::<><>::
-Outside_A3.txt::TextFile::-1::1698599111::0::1::::<><>::
-Outside_A5.png::CompressedTexture2D::406739641970117726::1698599111::1698599111::1::::<><>::
-Outside_A5.txt::TextFile::-1::1698599111::0::1::::<><>::
-Outside_B.png::CompressedTexture2D::6605706845246298765::1698599111::1698599111::1::::<><>::
-Outside_B.txt::TextFile::-1::1698599111::0::1::::<><>::
-Outside_C.png::CompressedTexture2D::4887182703584826249::1698599111::1698599111::1::::<><>::
-Outside_C.txt::TextFile::-1::1698599111::0::1::::<><>::
-::res://PreFabs/::1698599111
-Area2D.gd::GDScript::-1::1698599111::0::1::::<>Area2D<>::
-bad_guy_1.tscn::PackedScene::597482472387413054::1698599111::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png<>res://PreFabs/Area2D.gd
-enemy_spawner.tscn::PackedScene::3966547869076799890::1698599111::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://iropjcs4mji1
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698599111::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://cwxwft34c6fyd::::res://Artwork/Effects/wizard_idle-Sheet.png<>uid://tm3lofwyxbms::::res://PreFabs/trail_2d.tscn
-Trail2D.gd::GDScript::-1::1698599111::0::1::::<>Line2D<>::
-trail_2d.tscn::PackedScene::1360081025785228518::1698599111::0::1::::<><>::res://PreFabs/Trail2D.gd
-::res://Scripts/::1698599111
-bad_guy_1.gd::GDScript::-1::1698599111::0::1::::Enemy<>CharacterBody2D<>::
-EnemySpawner.gd::GDScript::-1::1698599111::0::1::::<>Marker2D<>::
-protaginast_guy.gd::GDScript::-1::1698599111::0::1::::<>CharacterBody2D<>::
+::res://::1698604214
+bad_guy_1.tscn::PackedScene::7536049966905988330::1698602284::0::1::::<><>::res://bad_guy_1.gd<>res://Artwork/TheBoar.png<>res://Artwork/knight_sprite-Sheet.png
+protaginast_guy.tscn::PackedScene::1241159874006497388::1698602284::0::1::::<><>::res://protaginast_guy.gd
+README.md::TextFile::-1::1695590466::0::1::::<><>::
+World.tscn::PackedScene::8379493916601640807::1698603900::0::1::::<><>::uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://iropjcs4mji1::::res://PreFabs/bad_guy_1.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn
+::res://Artwork/::1698602115
+::res://Artwork/Effects/::1698602121
+BackButton.png::CompressedTexture2D::8315617522304940773::1698602115::1698602115::1::::<><>::
+Coin-export.png::CompressedTexture2D::65956870932229457::1698602115::1698602115::1::::<><>::
+control button.png::CompressedTexture2D::4121697845468040098::1698602115::1698602115::1::::<><>::
+correct.png::CompressedTexture2D::8403963810528724406::1698602115::1698602115::1::::<><>::
+earth_hitfx-Sheet.png::CompressedTexture2D::4755877752481831374::1698602115::1698602115::1::::<><>::
+explosion-Sheet.png::CompressedTexture2D::5041676420067464807::1698602115::1698602115::1::::<><>::
+exp_circle.png::CompressedTexture2D::254245655672946988::1698602115::1698602115::1::::<><>::
+exp_empty.png::CompressedTexture2D::8536345107713881112::1698602115::1698602115::1::::<><>::
+exp_full.png::CompressedTexture2D::5590875387464976905::1698602115::1698602115::1::::<><>::
+fireball-Sheet.png::CompressedTexture2D::5645751026468939783::1698602115::1698602115::1::::<><>::
+fire_hitfx-Sheet.png::CompressedTexture2D::5283067561595748093::1698602115::1698602115::1::::<><>::
+flashcard.png::CompressedTexture2D::1142660738707230279::1698602115::1698602115::1::::<><>::
+heart.png::CompressedTexture2D::6372095656328576717::1698602115::1698602115::1::::<><>::
+hp_bar.png::CompressedTexture2D::5361685974567232119::1698602115::1698602115::1::::<><>::
+icon.svg::CompressedTexture2D::5666130331205426709::1698602115::1698602121::1::::<><>::
+incorrect.png::CompressedTexture2D::2986170081470384614::1698602115::1698602115::1::::<><>::
+knight_spear_idle-Sheet.png::CompressedTexture2D::1204987223675086832::1698602115::1698602115::1::::<><>::
+knight_spear_walk-Sheet.png::CompressedTexture2D::8158392088859658372::1698602115::1698602115::1::::<><>::
+knight_sword_idle-Sheet.png::CompressedTexture2D::478116988791550489::1698602115::1698602115::1::::<><>::
+knight_sword_sprite-Sheet.png::CompressedTexture2D::7858137853807985494::1698602115::1698602115::1::::<><>::
+lightning-Sheet.png::CompressedTexture2D::1194044402646211012::1698602115::1698602115::1::::<><>::
+play button.png::CompressedTexture2D::8592759481511072825::1698602115::1698602115::1::::<><>::
+Portal-Sheet.png::CompressedTexture2D::472767927854765881::1698602115::1698602115::1::::<><>::
+spikes-Sheet.png::CompressedTexture2D::2386851222282569277::1698602115::1698602115::1::::<><>::
+wizard_idle-Sheet.png::CompressedTexture2D::6365822361096377471::1698602115::1698602115::1::::<><>::
+::res://Artwork/Enemies/::1698602115
+knight_spear_sprite-Sheet.png::CompressedTexture2D::6646999882097610989::1698602115::1698602115::1::::<><>::
+knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698602115::1698602115::1::::<><>::
+knight_sword_sprite-Sheet.png::CompressedTexture2D::2967287097412053354::1698602115::1698602115::1::::<><>::
+Sip.png::CompressedTexture2D::2938066403285530928::1698602115::1698602115::1::::<><>::
+TheBoar.png::CompressedTexture2D::7234390846672947380::1698602115::1698602115::1::::<><>::
+wizard_sprite-Sheet.png::CompressedTexture2D::3306277282985924883::1698602115::1698602115::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/::1698544818
+Asset License.txt::TextFile::-1::1698544818::0::1::::<><>::
+Solaria Palette.png::CompressedTexture2D::2578586704287745856::1698544818::1698544818::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/16x16/::1698544818
+::res://Artwork/Solaria Demo Pack Update 03/16x16/Sprites/::1698544818
+Hero 01.png::CompressedTexture2D::3870639512871166020::1698544818::1698544818::1::::<><>::
+Minecart 01.png::CompressedTexture2D::8984416379389318982::1698544818::1698544818::1::::<><>::
+Slime 01.png::CompressedTexture2D::6779237740842730338::1698544818::1698544818::1::::<><>::
+Sword 01.png::CompressedTexture2D::4914173457999615087::1698544818::1698544818::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/::1698544818
+Solaria Demo Update 01.png::CompressedTexture2D::5249393100562069683::1698544818::1698544818::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/Examples/::1698544818
+Demo Pack Example 01.png::CompressedTexture2D::8389295702717641998::1698544818::1698544818::1::::<><>::
+Demo Pack Example 02.png::CompressedTexture2D::1464570835347275460::1698544818::1698544818::1::::<><>::
+Demo Pack Example 03.png::CompressedTexture2D::1824090573858513260::1698544818::1698544818::1::::<><>::
+Demo Pack Update 01 Preview.png::CompressedTexture2D::5205986713862132311::1698544818::1698544818::1::::<><>::
+Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::658051498286109785::1698544818::1698544818::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/::1698544818
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/characters/::1698544818
+!Chest.png::CompressedTexture2D::1530705066196467162::1698544818::1698544818::1::::<><>::
+!Door1.png::CompressedTexture2D::6595533936449656603::1698544818::1698544818::1::::<><>::
+!Flame.png::CompressedTexture2D::5362898621611530638::1698544818::1698544818::1::::<><>::
+!Other1.png::CompressedTexture2D::4764578339655656905::1698544818::1698544818::1::::<><>::
+!Other2.png::CompressedTexture2D::8465845229347783765::1698544818::1698544818::1::::<><>::
+!Switch1.png::CompressedTexture2D::2239055025629924803::1698544818::1698544818::1::::<><>::
+Actor1.png::CompressedTexture2D::8355689128571753849::1698544818::1698544818::1::::<><>::
+Minecart.png::CompressedTexture2D::5045467312779510694::1698544818::1698544818::1::::<><>::
+Monster.png::CompressedTexture2D::5988549847081745078::1698544818::1698544818::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/faces/::1698544818
+Actor1.png::CompressedTexture2D::9061075525384943771::1698544818::1698544818::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/tilesets/::1698544818
+Dungeon_A1.png::CompressedTexture2D::702205158031962065::1698544818::1698544818::1::::<><>::
+Dungeon_A1.txt::TextFile::-1::1698544818::0::1::::<><>::
+Dungeon_A2.png::CompressedTexture2D::6799935031326260563::1698544818::1698544818::1::::<><>::
+Dungeon_A2.txt::TextFile::-1::1698544818::0::1::::<><>::
+Dungeon_A4.png::CompressedTexture2D::3323522533514470936::1698544818::1698544818::1::::<><>::
+Dungeon_A4.txt::TextFile::-1::1698544818::0::1::::<><>::
+Dungeon_A5.png::CompressedTexture2D::6604484929875814292::1698544818::1698544818::1::::<><>::
+Dungeon_A5.txt::TextFile::-1::1698544818::0::1::::<><>::
+Dungeon_B.png::CompressedTexture2D::3730497200195550686::1698544818::1698544818::1::::<><>::
+Dungeon_B.txt::TextFile::-1::1698544818::0::1::::<><>::
+Dungeon_C.png::CompressedTexture2D::6656592760397037072::1698544818::1698544818::1::::<><>::
+Dungeon_C.txt::TextFile::-1::1698544818::0::1::::<><>::
+Outside_A1.png::CompressedTexture2D::608042096376219201::1698544818::1698544818::1::::<><>::
+Outside_A1.txt::TextFile::-1::1698544818::0::1::::<><>::
+Outside_A2.png::CompressedTexture2D::6439161970580052771::1698544818::1698544818::1::::<><>::
+Outside_A2.txt::TextFile::-1::1698544818::0::1::::<><>::
+Outside_A3.png::CompressedTexture2D::3641386570154739647::1698544818::1698544818::1::::<><>::
+Outside_A3.txt::TextFile::-1::1698544818::0::1::::<><>::
+Outside_A5.png::CompressedTexture2D::406739641970117726::1698544818::1698544818::1::::<><>::
+Outside_A5.txt::TextFile::-1::1698544818::0::1::::<><>::
+Outside_B.png::CompressedTexture2D::6605706845246298765::1698544818::1698544818::1::::<><>::
+Outside_B.txt::TextFile::-1::1698544818::0::1::::<><>::
+Outside_C.png::CompressedTexture2D::4887182703584826249::1698544818::1698544818::1::::<><>::
+Outside_C.txt::TextFile::-1::1698544818::0::1::::<><>::
+::res://PreFabs/::1698603900
+Area2D.gd::GDScript::-1::1698602115::0::1::::<>Area2D<>::
+bad_guy_1.tscn::PackedScene::597482472387413054::1698603900::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png<>res://PreFabs/Area2D.gd
+enemy_spawner.tscn::PackedScene::3966547869076799890::1698602115::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://iropjcs4mji1
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698603900::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://bndt5y14kfhh8::::res://Artwork/Enemies/wizard_sprite-Sheet.png<>uid://tm3lofwyxbms::::res://PreFabs/trail_2d.tscn
+Trail2D.gd::GDScript::-1::1698602115::0::1::::<>Line2D<>::
+trail_2d.tscn::PackedScene::1360081025785228518::1698602115::0::1::::<><>::res://PreFabs/Trail2D.gd
+::res://Scripts/::1698603665
+bad_guy_1.gd::GDScript::-1::1698602115::0::1::::Enemy<>CharacterBody2D<>::
+EnemySpawner.gd::GDScript::-1::1698602115::0::1::::<>Marker2D<>::
+protaginast_guy.gd::GDScript::-1::1698603665::0::1::::<>CharacterBody2D<>::

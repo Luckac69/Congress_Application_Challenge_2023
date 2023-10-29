@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://tm3lofwyxbms" path="res://PreFabs/trail_2d.tscn" id="3_m1w6j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f8jt6"]
-radius = 53.9351
+radius = 175.328
 
 [sub_resource type="Animation" id="Animation_83qwf"]
 resource_name = "Idle"
@@ -55,6 +55,7 @@ script = ExtResource("1_gpdhi")
 texture = ExtResource("2_aaedg")
 hframes = 6
 vframes = 2
+frame = 6
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -65,7 +66,7 @@ position_smoothing_speed = 2.0
 [node name="PlayerHitbox" type="Area2D" parent="."]
 
 [node name="Attack_Collision" type="CollisionShape2D" parent="PlayerHitbox"]
-position = Vector2(4, 32)
+position = Vector2(0, 16)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_f8jt6")
 debug_color = Color(0.988235, 0.113725, 0, 0.419608)

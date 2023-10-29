@@ -110,15 +110,15 @@ height = 32.6667
 
 [node name="Bad_guy_1" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
 script = SubResource("GDScript_vmnvc")
-EnemySprite = NodePath("RealDeal")
+EnemySprite = NodePath("SwordsMan")
 metadata/_edit_group_ = true
 
-[node name="RealDeal" type="Sprite2D" parent="."]
+[node name="SwordsMan" type="Sprite2D" parent="."]
 texture = ExtResource("1_c2wui")
 hframes = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../RealDeal")
+root_node = NodePath("../SwordsMan")
 speed_scale = 2.5
 libraries = {
 "": SubResource("AnimationLibrary_wpwl6")
