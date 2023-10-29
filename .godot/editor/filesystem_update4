@@ -2,3 +2,7 @@ res://Scripts/protaginast_guy.gd
 res://World.tscn
 res://PreFabs/bad_guy_1.tscn
 res://PreFabs/protaginast_guy.tscn
+res://PreFabs/Camera2D.gd
+res://global.gd
+res://PreFabs/WhiteFlash.gdshader
+res://PreFabs/protaginast_guy.gdshader
