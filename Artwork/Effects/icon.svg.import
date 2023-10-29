@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh4hr3hhunase"
-path="res://.godot/imported/Sip.png-330e38227d133095d29b6fec6f3582ff.ctex"
+uid="uid://cmyylrtfw6sif"
+path="res://.godot/imported/icon.svg-034532e63776e07e9975d2553c2215ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/Sip.png"
-dest_files=["res://.godot/imported/Sip.png-330e38227d133095d29b6fec6f3582ff.ctex"]
+source_file="res://Artwork/Effects/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-034532e63776e07e9975d2553c2215ab.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

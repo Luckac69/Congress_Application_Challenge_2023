@@ -13,7 +13,7 @@ config_version=5
 config/name="2023 Congress App Prodject"
 run/main_scene="res://World.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://Artwork/icon.svg"
+config/icon="res://Artwork/Effects/icon.svg"
 
 [input]
 

@@ -1,5 +1,8 @@
 res://World.tscn
+res://EnemySpawner.gd
 res://protaginast_guy.tscn
 res://bad_guy_1.tscn
-res://bad_guy_1.gd
 res://protaginast_guy.gd
+res://bad_guy_1.gd
+res://PreFabs/protaginast_guy.tscn
+res://PreFabs/bad_guy_1.tscn

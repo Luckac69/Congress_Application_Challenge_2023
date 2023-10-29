@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbcnmiqypm1wq"
-path="res://.godot/imported/TheBoar.png-0413d826bc19b164638b862c69482c58.ctex"
+uid="uid://ccv0kh37c6kw"
+path="res://.godot/imported/knight_sprite-Sheet.png-1643ab1a421716d61b7d91dd3e27125d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Artwork/TheBoar.png"
-dest_files=["res://.godot/imported/TheBoar.png-0413d826bc19b164638b862c69482c58.ctex"]
+source_file="res://Artwork/Enemies/knight_sprite-Sheet.png"
+dest_files=["res://.godot/imported/knight_sprite-Sheet.png-1643ab1a421716d61b7d91dd3e27125d.ctex"]
 
 [params]
 

@@ -1,18 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698546605
-bad_guy_1.gd::GDScript::-1::1698546580::0::1::::<>CharacterBody2D<>::
-bad_guy_1.tscn::PackedScene::597482472387413054::1698546580::0::1::::<><>::res://bad_guy_1.gd<>uid://dbcnmiqypm1wq::::res://Artwork/TheBoar.png<>uid://ccv0kh37c6kw::::res://Artwork/knight_sprite-Sheet.png
-protaginast_guy.gd::GDScript::-1::1698546580::0::1::::<>CharacterBody2D<>::
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698546580::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Artwork/Sip.png
+::res://::1698559103
 README.md::TextFile::-1::1698546580::0::1::::<><>::
-World.tscn::PackedScene::8379493916601640807::1698546580::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://iropjcs4mji1::::res://bad_guy_1.tscn
-::res://Artwork/::1698546580
-Coin-export.png::CompressedTexture2D::65956870932229457::1698546580::1698546580::1::::<><>::
-GRASS+.png::CompressedTexture2D::4301373317901240243::1698546580::1698546580::1::::<><>::
-icon.svg::CompressedTexture2D::5666130331205426709::1698546580::1698546606::1::::<><>::
-knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698546580::1698546580::1::::<><>::
-Sip.png::CompressedTexture2D::2938066403285530928::1698546580::1698546580::1::::<><>::
-TheBoar.png::CompressedTexture2D::7234390846672947380::1698546580::1698546580::1::::<><>::
+World.tscn::PackedScene::8379493916601640807::1698559048::0::1::::<><>::uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://iropjcs4mji1::::res://PreFabs/bad_guy_1.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn
+::res://Artwork/::1698559103
+::res://Artwork/Effects/::1698559101
+Coin-export.png::CompressedTexture2D::65956870932229457::1698546580::1698559099::1::::<><>::
+icon.svg::CompressedTexture2D::5666130331205426709::1698546580::1698559101::1::::<><>::
+::res://Artwork/Enemies/::1698559103
+knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698546580::1698559104::1::::<><>::
+Sip.png::CompressedTexture2D::2938066403285530928::1698546580::1698559092::1::::<><>::
+TheBoar.png::CompressedTexture2D::7234390846672947380::1698546580::1698559088::1::::<><>::
 ::res://Artwork/Solaria Demo Pack Update 03/::1698546580
 Asset License.txt::TextFile::-1::1698546580::0::1::::<><>::
 Solaria Palette.png::CompressedTexture2D::2578586704287745856::1698546580::1698546580::1::::<><>::
@@ -68,3 +65,11 @@ Outside_B.png::CompressedTexture2D::6605706845246298765::1698546580::1698546580:
 Outside_B.txt::TextFile::-1::1698546580::0::1::::<><>::
 Outside_C.png::CompressedTexture2D::4887182703584826249::1698546580::1698546580::1::::<><>::
 Outside_C.txt::TextFile::-1::1698546580::0::1::::<><>::
+::res://PreFabs/::1698559103
+bad_guy_1.tscn::PackedScene::597482472387413054::1698559103::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png
+enemy_spawner.tscn::PackedScene::3966547869076799890::1698559046::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://iropjcs4mji1
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698559092::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Artwork/Enemies/Sip.png
+::res://Scripts/::1698559025
+bad_guy_1.gd::GDScript::-1::1698558543::0::1::::Enemy<>CharacterBody2D<>::
+EnemySpawner.gd::GDScript::-1::1698556903::0::1::::<>Marker2D<>::
+protaginast_guy.gd::GDScript::-1::1698556358::0::1::::<>CharacterBody2D<>::
