@@ -15,6 +15,7 @@ func spawn():
 	randomize()
 	var randomspawn = spawnlings[randi_range(0,spawnlings.size()-1)]
 	var spawnling = randomspawn.instantiate()
+	print("Spaning: "); print(spawnling)
 	
 	spawnling.global_position = position
 	add_child(spawnling)

@@ -1,3 +1,10 @@
 res://PreFabs/bad_guy_1.tscn
 res://PreFabs/protaginast_guy.tscn
 res://World.tscn
+<<<<<<< Updated upstream
+=======
+res://PreFabs/bad_guy_Knight.tscn
+res://Scripts/protaginast_guy.gd
+res://Scripts/EnemySpawner.gd
+res://PreFabs/enemy_spawner.tscn
+>>>>>>> Stashed changes

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwrop1iqvcqhe"]
 
 [ext_resource type="Script" path="res://Scripts/EnemySpawner.gd" id="1_84upa"]
-[ext_resource type="PackedScene" uid="uid://iropjcs4mji1" path="res://PreFabs/bad_guy_1.tscn" id="2_3k5uq"]
+[ext_resource type="PackedScene" uid="uid://b5qghu0iyqr3v" path="res://PreFabs/bad_guy_Knight.tscn" id="2_3k5uq"]
 
 [node name="EnemySpawner" type="Marker2D"]
 script = ExtResource("1_84upa")

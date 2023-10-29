@@ -1,0 +1,155 @@
+[gd_scene load_steps=8 format=3 uid="uid://b5qghu0iyqr3v"]
+
+[ext_resource type="Texture2D" uid="uid://ccv0kh37c6kw" path="res://Artwork/Enemies/knight_sprite-Sheet.png" id="1_c2wui"]
+[ext_resource type="Script" path="res://PreFabs/Area2D.gd" id="2_1ml0n"]
+
+[sub_resource type="GDScript" id="GDScript_vmnvc"]
+script/source = "extends CharacterBody2D
+
+# var target = player
+@onready var animation = $AnimationPlayer
+@onready var target = $\"../Protaginast_guy\"
+@export var speed : float = 250
+@export var health : float = 100
+@export var damage : float = 15
+@export var EnemySprite : Sprite2D
+
+var player_inattack_zone = false
+var can_take_damage = true
+
+
+func _physics_process(delta):
+	deal_damage()
+	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
+	if target != null:
+		animation.play(\"Walk\")
+		velocity = position.direction_to(target.position) * speed
+		if velocity.x > 1:
+			EnemySprite.flip_h = true
+		else:
+			EnemySprite.flip_h = false
+		move_and_slide()
+		#position += (target.position - position).normalized() * SPEED
+	# var player = get_parent().get_node(\"Protaginast_guy\")
+	# var target = player
+
+func update_health():
+	var healthbar = $HealthBar
+	
+	healthbar.value = health
+	
+	
+
+func _on_enemy_hitbox_area_entered(body):
+	if body.get_parent().has_method(\"Player\"):
+		player_inattack_zone = true
+		
+func _on_enemy_hitbox_area_exited(body):
+	if body.get_parent().has_method(\"Player\"):
+		player_inattack_zone = false
+		
+func deal_damage():
+	if player_inattack_zone == true:
+		if can_take_damage == true:
+			health -=  20
+			update_health()
+			$DamageTakeCooldown.start()
+			can_take_damage = false
+			print(\"Enemy Health is \", health)
+			if health <= 0: self.queue_free()
+
+func _on_damage_take_cooldown_timeout():
+	can_take_damage = true
+"
+
+[sub_resource type="Animation" id="Animation_22p5w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3tjkg"]
+resource_name = "Walk"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpwl6"]
+_data = {
+"RESET": SubResource("Animation_22p5w"),
+"Walk": SubResource("Animation_3tjkg")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jmwcj"]
+radius = 17.0
+height = 64.0
+
+[node name="Bad_guy_Knight" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
+script = SubResource("GDScript_vmnvc")
+EnemySprite = NodePath("RealDeal")
+metadata/_edit_group_ = true
+
+[node name="RealDeal" type="Sprite2D" parent="."]
+texture = ExtResource("1_c2wui")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../RealDeal")
+speed_scale = 2.5
+libraries = {
+"": SubResource("AnimationLibrary_wpwl6")
+}
+
+[node name="EnemyHitbox" type="Area2D" parent="."]
+script = ExtResource("2_1ml0n")
+
+[node name="Hitbox" type="CollisionShape2D" parent="EnemyHitbox"]
+position = Vector2(0, 6)
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_jmwcj")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 25)
+shape = SubResource("CapsuleShape2D_jmwcj")
+debug_color = Color(0.796078, 0.392157, 0, 0.419608)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.34902, 0.941176, 0.454902, 0.941176)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = 70.0
+offset_right = 37.5
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+show_percentage = false
+
+[node name="DamageTakeCooldown" type="Timer" parent="."]
+
+[connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]
+[connection signal="timeout" from="DamageTakeCooldown" to="." method="_on_damage_take_cooldown_timeout"]
