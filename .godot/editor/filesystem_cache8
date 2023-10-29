@@ -1,12 +1,68 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698536540
-bad_guy_1.tscn::PackedScene::597482472387413054::1698023017::0::1::::<><>::uid://bh4hr3hhunase::::res://Sip.png
-Coin-export.png::CompressedTexture2D::65956870932229457::1698536528::1698536540::1::::<><>::
-GRASS+.png::CompressedTexture2D::4301373317901240243::1698536528::1698536540::1::::<><>::
-icon.svg::CompressedTexture2D::5666130331205426709::1695587619::1695587625::1::::<><>::
+::res://::1698538780
+bad_guy_1.tscn::PackedScene::597482472387413054::1698538780::0::1::::<><>::uid://bh4hr3hhunase::::res://Artwork/Sip.png
 protaginast_guy.gd::GDScript::-1::1698022193::0::1::::<>CharacterBody2D<>::
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698023017::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Sip.png
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698538780::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Artwork/Sip.png
 README.md::TextFile::-1::1695590466::0::1::::<><>::
-Sip.png::CompressedTexture2D::2938066403285530928::1695783752::1695783816::1::::<><>::
-TheBoar.png::CompressedTexture2D::7234390846672947380::1698536528::1698536540::1::::<><>::
-World.tscn::PackedScene::8379493916601640807::1698023017::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://iropjcs4mji1::::res://bad_guy_1.tscn
+World.tscn::PackedScene::8379493916601640807::1698536556::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://iropjcs4mji1::::res://bad_guy_1.tscn
+::res://Artwork/::1698538780
+Coin-export.png::CompressedTexture2D::65956870932229457::1698536528::1698538780::1::::<><>::
+GRASS+.png::CompressedTexture2D::4301373317901240243::1698536528::1698538780::1::::<><>::
+icon.svg::CompressedTexture2D::5666130331205426709::1695587619::1698538780::1::::<><>::
+Sip.png::CompressedTexture2D::2938066403285530928::1695783752::1698538780::1::::<><>::
+TheBoar.png::CompressedTexture2D::7234390846672947380::1698536528::1698538780::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/::1698538773
+Asset License.txt::TextFile::-1::1651777320::0::1::::<><>::
+Solaria Palette.png::CompressedTexture2D::2578586704287745856::1626890908::1698538773::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/16x16/::18000
+::res://Artwork/Solaria Demo Pack Update 03/16x16/Sprites/::1698538773
+Hero 01.png::CompressedTexture2D::3870639512871166020::1638223678::1698538773::1::::<><>::
+Minecart 01.png::CompressedTexture2D::8984416379389318982::1638342250::1698538773::1::::<><>::
+Slime 01.png::CompressedTexture2D::6779237740842730338::1638251492::1698538773::1::::<><>::
+Sword 01.png::CompressedTexture2D::4914173457999615087::1641674080::1698538773::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/::1698538773
+Solaria Demo Update 01.png::CompressedTexture2D::5249393100562069683::1665674608::1698538773::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/Examples/::1698538773
+Demo Pack Example 01.png::CompressedTexture2D::8389295702717641998::1665674616::1698538773::1::::<><>::
+Demo Pack Example 02.png::CompressedTexture2D::1464570835347275460::1643415142::1698538773::1::::<><>::
+Demo Pack Example 03.png::CompressedTexture2D::1824090573858513260::1665674468::1698538773::1::::<><>::
+Demo Pack Update 01 Preview.png::CompressedTexture2D::5205986713862132311::1665674778::1698538773::1::::<><>::
+Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::658051498286109785::1643413818::1698538773::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/::1665672450
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/characters/::1698538773
+!Chest.png::CompressedTexture2D::1530705066196467162::1651629036::1698538773::1::::<><>::
+!Door1.png::CompressedTexture2D::6595533936449656603::1651629796::1698538773::1::::<><>::
+!Flame.png::CompressedTexture2D::5362898621611530638::1651625228::1698538773::1::::<><>::
+!Other1.png::CompressedTexture2D::4764578339655656905::1651627038::1698538773::1::::<><>::
+!Other2.png::CompressedTexture2D::8465845229347783765::1651630196::1698538773::1::::<><>::
+!Switch1.png::CompressedTexture2D::2239055025629924803::1651630292::1698538773::1::::<><>::
+Actor1.png::CompressedTexture2D::8355689128571753849::1651698660::1698538773::1::::<><>::
+Minecart.png::CompressedTexture2D::5045467312779510694::1651715456::1698538773::1::::<><>::
+Monster.png::CompressedTexture2D::5988549847081745078::1651698656::1698538773::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/faces/::1698538773
+Actor1.png::CompressedTexture2D::9061075525384943771::1651522792::1698538773::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/tilesets/::1698538773
+Dungeon_A1.png::CompressedTexture2D::702205158031962065::1651623282::1698538773::1::::<><>::
+Dungeon_A1.txt::TextFile::-1::1651680168::0::1::::<><>::
+Dungeon_A2.png::CompressedTexture2D::6799935031326260563::1651623148::1698538773::1::::<><>::
+Dungeon_A2.txt::TextFile::-1::1651680258::0::1::::<><>::
+Dungeon_A4.png::CompressedTexture2D::3323522533514470936::1651678862::1698538773::1::::<><>::
+Dungeon_A4.txt::TextFile::-1::1651682302::0::1::::<><>::
+Dungeon_A5.png::CompressedTexture2D::6604484929875814292::1651615178::1698538773::1::::<><>::
+Dungeon_A5.txt::TextFile::-1::1651681208::0::1::::<><>::
+Dungeon_B.png::CompressedTexture2D::3730497200195550686::1651614786::1698538773::1::::<><>::
+Dungeon_B.txt::TextFile::-1::1651683658::0::1::::<><>::
+Dungeon_C.png::CompressedTexture2D::6656592760397037072::1651614788::1698538773::1::::<><>::
+Dungeon_C.txt::TextFile::-1::1651692648::0::1::::<><>::
+Outside_A1.png::CompressedTexture2D::608042096376219201::1651772430::1698538773::1::::<><>::
+Outside_A1.txt::TextFile::-1::1651693214::0::1::::<><>::
+Outside_A2.png::CompressedTexture2D::6439161970580052771::1652988110::1698538773::1::::<><>::
+Outside_A2.txt::TextFile::-1::1651769520::0::1::::<><>::
+Outside_A3.png::CompressedTexture2D::3641386570154739647::1651348072::1698538773::1::::<><>::
+Outside_A3.txt::TextFile::-1::1651693994::0::1::::<><>::
+Outside_A5.png::CompressedTexture2D::406739641970117726::1651771856::1698538773::1::::<><>::
+Outside_A5.txt::TextFile::-1::1651695398::0::1::::<><>::
+Outside_B.png::CompressedTexture2D::6605706845246298765::1651772132::1698538773::1::::<><>::
+Outside_B.txt::TextFile::-1::1651697170::0::1::::<><>::
+Outside_C.png::CompressedTexture2D::4887182703584826249::1651772824::1698538773::1::::<><>::
+Outside_C.txt::TextFile::-1::1651772908::0::1::::<><>::

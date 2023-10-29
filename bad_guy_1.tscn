@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://iropjcs4mji1"]
 
-[ext_resource type="Texture2D" uid="uid://bh4hr3hhunase" path="res://Sip.png" id="1_3x0st"]
+[ext_resource type="Texture2D" uid="uid://bh4hr3hhunase" path="res://Artwork/Sip.png" id="1_uo4xw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6bif"]
 radius = 27.0
@@ -26,4 +26,4 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.854902, 0.341176, 0, 1)
-texture = ExtResource("1_3x0st")
+texture = ExtResource("1_uo4xw")
