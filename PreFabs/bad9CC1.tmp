@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://iropjcs4mji1"]
+
+[ext_resource type="Texture2D" uid="uid://ccv0kh37c6kw" path="res://Artwork/Enemies/knight_sprite-Sheet.png" id="1_c2wui"]
+
+[sub_resource type="GDScript" id="GDScript_vmnvc"]
+script/source = "extends CharacterBody2D
+
+# var target = player
+@onready var animation = $AnimationPlayer
+@onready var target = $\"../Protaginast_guy\"
+var SPEED : float = 250
+
+func _physics_process(delta):
+	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
+	if target != null:
+		animation.play(\"Walk\")
+		velocity = position.direction_to(target.position) * SPEED
+		move_and_slide()
+		#position += (target.position - position).normalized() * SPEED
+	# var player = get_parent().get_node(\"Protaginast_guy\")
+	# var target = player
+	
+	
+
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6bif"]
+radius = 27.0
+height = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avkq4"]
+radius = 76.0592
+
+[sub_resource type="Animation" id="Animation_22p5w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3tjkg"]
+resource_name = "Walk"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpwl6"]
+_data = {
+"RESET": SubResource("Animation_22p5w"),
+"Walk": SubResource("Animation_3tjkg")
+}
+
+[node name="Bad_guy_1" type="CharacterBody2D"]
+script = SubResource("GDScript_vmnvc")
+metadata/_edit_group_ = true
+
+[node name="Ground_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 35)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_y6bif")
+metadata/_edit_group_ = true
+
+[node name="Attack_Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_avkq4")
+debug_color = Color(0.917647, 0.286275, 0, 0.419608)
+metadata/_edit_group_ = true
+
+[node name="RealDeal" type="Sprite2D" parent="."]
+texture = ExtResource("1_c2wui")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../RealDeal")
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_wpwl6")
+}
