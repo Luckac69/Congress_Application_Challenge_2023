@@ -1,14 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698538780
-bad_guy_1.tscn::PackedScene::597482472387413054::1698538780::0::1::::<><>::uid://bh4hr3hhunase::::res://Artwork/Sip.png
-protaginast_guy.gd::GDScript::-1::1698022193::0::1::::<>CharacterBody2D<>::
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698538780::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Artwork/Sip.png
+::res://::1698542795
+bad_guy_1.tscn::PackedScene::597482472387413054::1698542795::0::1::::<><>::res://bad_guy_1.gd<>uid://dbcnmiqypm1wq::::res://Artwork/TheBoar.png
+protaginast_guy.gd::GDScript::-1::1698541379::0::1::::<>CharacterBody2D<>::
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698542795::0::1::::<><>::res://protaginast_guy.gd<>uid://bh4hr3hhunase::::res://Artwork/Sip.png
 README.md::TextFile::-1::1695590466::0::1::::<><>::
-World.tscn::PackedScene::8379493916601640807::1698536556::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://iropjcs4mji1::::res://bad_guy_1.tscn
-::res://Artwork/::1698538780
+bad_guy_1.gd::GDScript::-1::1698541841::0::1::::<>CharacterBody2D<>::
+World.tscn::PackedScene::8379493916601640807::1698542795::0::1::::<><>::uid://b5kb8m6wcp8br::::res://protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://iropjcs4mji1::::res://bad_guy_1.tscn
+::res://Artwork/::1698542966
 Coin-export.png::CompressedTexture2D::65956870932229457::1698536528::1698538780::1::::<><>::
 GRASS+.png::CompressedTexture2D::4301373317901240243::1698536528::1698538780::1::::<><>::
 icon.svg::CompressedTexture2D::5666130331205426709::1695587619::1698538780::1::::<><>::
+knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698542966::1698542969::1::::<><>::
 Sip.png::CompressedTexture2D::2938066403285530928::1695783752::1698538780::1::::<><>::
 TheBoar.png::CompressedTexture2D::7234390846672947380::1698536528::1698538780::1::::<><>::
 ::res://Artwork/Solaria Demo Pack Update 03/::1698538773

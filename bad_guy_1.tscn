@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://iropjcs4mji1"]
+[gd_scene load_steps=9 format=3 uid="uid://iropjcs4mji1"]
 
 [ext_resource type="Script" path="res://bad_guy_1.gd" id="1_ld1xx"]
 [ext_resource type="Texture2D" uid="uid://dbcnmiqypm1wq" path="res://Artwork/TheBoar.png" id="2_2fa1u"]
+[ext_resource type="Texture2D" uid="uid://ccv0kh37c6kw" path="res://Artwork/knight_sprite-Sheet.png" id="3_8rm6j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6bif"]
 radius = 27.0
@@ -10,22 +11,74 @@ height = 128.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_avkq4"]
 radius = 76.0592
 
+[sub_resource type="Animation" id="Animation_3tjkg"]
+resource_name = "Walk"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_22p5w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpwl6"]
+_data = {
+"RESET": SubResource("Animation_22p5w"),
+"Walk": SubResource("Animation_3tjkg")
+}
+
 [node name="Bad_guy_1" type="CharacterBody2D"]
 script = ExtResource("1_ld1xx")
 metadata/_edit_group_ = true
 
 [node name="Ground_Collision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 35)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_y6bif")
 metadata/_edit_group_ = true
 
 [node name="Attack_Collision" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_avkq4")
 debug_color = Color(0.843137, 0.380392, 0, 0.419608)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, 0)
 texture = ExtResource("2_2fa1u")
+
+[node name="RealDeal" type="Sprite2D" parent="."]
+texture = ExtResource("3_8rm6j")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../RealDeal")
+speed_scale = 4.0
+libraries = {
+"": SubResource("AnimationLibrary_wpwl6")
+}

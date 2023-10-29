@@ -1,7 +1,8 @@
+Sprite2D
+AnimationPlayer
+AnimatedSprite2D
 Node
 TileMap
-Sprite2D
 CollisionShape2D
 CharacterBody2D
-AnimatedSprite2D
 Node2D
