@@ -1,3 +1,4 @@
+TileMap
 Timer
 ProgressBar
 AnimationPlayer
@@ -9,6 +10,5 @@ Camera2D
 Sprite2D
 AnimatedSprite2D
 Node
-TileMap
 CharacterBody2D
 Node2D
