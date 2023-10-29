@@ -1,3 +1,6 @@
+Area2D
+CollisionShape2D
+Line2D
 Timer
 Marker2D
 Camera2D
@@ -6,6 +9,5 @@ AnimationPlayer
 AnimatedSprite2D
 Node
 TileMap
-CollisionShape2D
 CharacterBody2D
 Node2D

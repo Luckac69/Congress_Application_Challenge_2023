@@ -381,12 +381,11 @@ sources/0 = SubResource("TileSetAtlasSource_pt4r5")
 position = Vector2(0, 243)
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-178, -363)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_1yr81")
 format = 2
 layer_0/tile_data = PackedInt32Array(458758, 458752, 0)
 
-[node name="Node" type="Node" parent="."]
-
 [node name="EnemySpawner" parent="." instance=ExtResource("4_1actk")]
+mintime = null
+maxtime = null

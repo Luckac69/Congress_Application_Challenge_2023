@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://iropjcs4mji1"]
 
 [ext_resource type="Texture2D" uid="uid://ccv0kh37c6kw" path="res://Artwork/Enemies/knight_sprite-Sheet.png" id="1_c2wui"]
+[ext_resource type="Script" path="res://PreFabs/Area2D.gd" id="2_1ml0n"]
 
 [sub_resource type="GDScript" id="GDScript_vmnvc"]
 script/source = "extends CharacterBody2D
 
-class_name Enemy
 # var target = player
 @onready var animation = $AnimationPlayer
 @onready var target = $\"../Protaginast_guy\"
@@ -24,13 +24,6 @@ func _physics_process(delta):
 	
 
 "
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6bif"]
-radius = 27.0
-height = 128.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_avkq4"]
-radius = 76.0592
 
 [sub_resource type="Animation" id="Animation_22p5w"]
 length = 0.001
@@ -70,20 +63,11 @@ _data = {
 "Walk": SubResource("Animation_3tjkg")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jmwcj"]
+height = 32.6667
+
 [node name="Bad_guy_1" type="CharacterBody2D"]
 script = SubResource("GDScript_vmnvc")
-metadata/_edit_group_ = true
-
-[node name="Ground_Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 35)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_y6bif")
-metadata/_edit_group_ = true
-
-[node name="Attack_Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
-shape = SubResource("CircleShape2D_avkq4")
-debug_color = Color(0.917647, 0.286275, 0, 0.419608)
 metadata/_edit_group_ = true
 
 [node name="RealDeal" type="Sprite2D" parent="."]
@@ -96,3 +80,18 @@ speed_scale = 4.0
 libraries = {
 "": SubResource("AnimationLibrary_wpwl6")
 }
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_1ml0n")
+
+[node name="Hitbox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6)
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_jmwcj")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(0, 25)
+shape = SubResource("CapsuleShape2D_jmwcj")
+debug_color = Color(0.796078, 0.392157, 0, 0.419608)
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

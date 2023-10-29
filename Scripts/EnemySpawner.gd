@@ -27,4 +27,4 @@ func spawn():
 	
 	
 func _on_timer_timeout():
-	spawn()
+
