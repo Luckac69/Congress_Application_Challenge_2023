@@ -377,6 +377,10 @@ sources/0 = SubResource("TileSetAtlasSource_pt4r5")
 [node name="Protaginast_guy" parent="." instance=ExtResource("1_e8ioa")]
 position = Vector2(580, 315)
 
+[node name="Camera2D" type="Camera2D" parent="Protaginast_guy"]
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+
 [node name="Bad_guy_1" parent="." instance=ExtResource("3_ndub3")]
 position = Vector2(339, 243)
 
