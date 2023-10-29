@@ -3,3 +3,4 @@ res://PreFabs/protaginast_guy.tscn
 res://PreFabs/bad_guy_1.tscn
 res://Scripts/protaginast_guy.gd
 res://PreFabs/Area2D.gd
+res://PreFabs/Camera2D.gd

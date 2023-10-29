@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1x4d8fnqqcaf"
-path="res://.godot/imported/knight_spear_sprite-Sheet.png-816bea16192c336347f11a4ff5103f69.ctex"
+uid="uid://bndt5y14kfhh8"
+path="res://.godot/imported/wizard_sprite-Sheet.png-a20ce2cee5044392c3d7b03fab849df9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://knight_spear_sprite-Sheet.png"
-dest_files=["res://.godot/imported/knight_spear_sprite-Sheet.png-816bea16192c336347f11a4ff5103f69.ctex"]
+source_file="res://Artwork/Enemies/wizard_sprite-Sheet.png"
+dest_files=["res://.godot/imported/wizard_sprite-Sheet.png-a20ce2cee5044392c3d7b03fab849df9.ctex"]
 
 [params]
 

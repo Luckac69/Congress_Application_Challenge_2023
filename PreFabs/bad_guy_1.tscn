@@ -9,24 +9,62 @@ script/source = "extends CharacterBody2D
 # var target = player
 @onready var animation = $AnimationPlayer
 @onready var target = $\"../Protaginast_guy\"
-var SPEED : float = 250
+@export var SPEED : float = 250
+@export var HEALTH : float = 100
+@export var DAMAGE : float = 15
+@export var EnemySprite : Sprite2D
+
+var player_inattack_zone = false
+var can_take_damage = true
+
 
 func _physics_process(delta):
+	deal_damage()
 	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
 	if target != null:
 		animation.play(\"Walk\")
 		velocity = position.direction_to(target.position) * SPEED
+		if velocity.x > 1:
+			EnemySprite.flip_h = true
+		else:
+			EnemySprite.flip_h = false
 		move_and_slide()
 		#position += (target.position - position).normalized() * SPEED
 	# var player = get_parent().get_node(\"Protaginast_guy\")
 	# var target = player
 	
+func update_health():
+	var healthbar = $HealthBar
+	
+	healthbar.value = HEALTH
+	
+	if HEALTH >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true
+		
+		
+func _on_enemy_hitbox_area_entered(body):
+	if body.get_parent().has_method(\"Player\"):
+		player_inattack_zone = true
+		
+func _on_enemy_hitbox_area_exited(body):
+	if body.get_parent().has_method(\"Player\"):
+		player_inattack_zone = false
+		
+func deal_damage():
+	if player_inattack_zone == true:
+		if can_take_damage == true:
+			HEALTH = HEALTH - 20
+			update_health()
+			$DamageTakeCooldown.start()
+			can_take_damage = false
+			print(\"Enemy Health is \", HEALTH)
+			if HEALTH <= 0:
+				self.queue_free()
 
-func _on_area_entered(area):
-	print(area.name)
-
-
-
+func _on_damage_take_cooldown_timeout():
+	can_take_damage = true
 "
 
 [sub_resource type="Animation" id="Animation_22p5w"]
@@ -70,8 +108,9 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jmwcj"]
 height = 32.6667
 
-[node name="Bad_guy_1" type="CharacterBody2D"]
+[node name="Bad_guy_1" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
 script = SubResource("GDScript_vmnvc")
+EnemySprite = NodePath("RealDeal")
 metadata/_edit_group_ = true
 
 [node name="RealDeal" type="Sprite2D" parent="."]
@@ -85,10 +124,10 @@ libraries = {
 "": SubResource("AnimationLibrary_wpwl6")
 }
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="EnemyHitbox" type="Area2D" parent="."]
 script = ExtResource("2_1ml0n")
 
-[node name="Hitbox" type="CollisionShape2D" parent="Area2D"]
+[node name="Hitbox" type="CollisionShape2D" parent="EnemyHitbox"]
 position = Vector2(0, 6)
 scale = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_jmwcj")
@@ -99,7 +138,8 @@ shape = SubResource("CapsuleShape2D_jmwcj")
 debug_color = Color(0.796078, 0.392157, 0, 0.419608)
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-modulate = Color(0.34902, 0.941176, 0.454902, 0.941176)
+visible = false
+modulate = Color(0.34902, 0.941176, 0.454902, 0.980392)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -113,4 +153,8 @@ grow_horizontal = 2
 grow_vertical = 2
 show_percentage = false
 
-[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[node name="DamageTakeCooldown" type="Timer" parent="."]
+
+[connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]
+[connection signal="timeout" from="DamageTakeCooldown" to="." method="_on_damage_take_cooldown_timeout"]
