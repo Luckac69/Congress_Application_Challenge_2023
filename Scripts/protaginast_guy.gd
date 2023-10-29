@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animation = $AnimationPlayer
 
+
 var HEALTH = 100
 var can_take_damage = true
 var player_alive = true
@@ -78,6 +79,8 @@ func deal_damage():
 	if enemy_in_attack_zone == true:
 		if can_take_damage == true:
 			HEALTH = HEALTH - 20
+			$"/root/GlobalScript".camera.shake(0.2, 3)
+			animation.play("Damage")
 			$DamageTakeCooldown.start()
 			can_take_damage = false
 			print("Player Health is ", HEALTH)
