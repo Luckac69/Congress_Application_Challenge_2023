@@ -129,8 +129,12 @@ libraries = {
 
 [node name="DamageTakeCooldown" type="Timer" parent="."]
 
+[node name="FireballShootCooldown" type="Timer" parent="."]
+wait_time = 0.25
+
 [connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
 [connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]
 [connection signal="timeout" from="DamageTakeCooldown" to="." method="_on_damage_take_cooldown_timeout"]
+[connection signal="timeout" from="FireballShootCooldown" to="." method="_on_fireball_shoot_cooldown_timeout"]

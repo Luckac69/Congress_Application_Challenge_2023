@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhch4qwpg1fd8"]
+
+[ext_resource type="Script" path="res://fireball.gd" id="1_wathu"]
+[ext_resource type="Texture2D" uid="uid://cmo3xu5wbe1i6" path="res://Artwork/Effects/fireball-Sheet.png" id="2_tvlo0"]
+
+[sub_resource type="Animation" id="Animation_gky5h"]
+resource_name = "idle"
+length = 1.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 4]
+}
+
+[sub_resource type="Animation" id="Animation_o8pa0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FireSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7xy4i"]
+_data = {
+"RESET": SubResource("Animation_o8pa0"),
+"idle": SubResource("Animation_gky5h")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lrqlj"]
+height = 59.6364
+
+[node name="Fireball" type="CharacterBody2D"]
+scale = Vector2(0.45, 0.45)
+script = ExtResource("1_wathu")
+
+[node name="FireSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_tvlo0")
+hframes = 5
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 2.5
+libraries = {
+"": SubResource("AnimationLibrary_7xy4i")
+}
+
+[node name="FireballHitbox" type="Area2D" parent="."]
+
+[node name="Fireball_Collision" type="CollisionShape2D" parent="FireballHitbox"]
+position = Vector2(0, 10)
+rotation = 1.5708
+scale = Vector2(5.5, 5.5)
+shape = SubResource("CapsuleShape2D_lrqlj")
+debug_color = Color(0.988235, 0.113725, 0, 0.419608)
+
+[connection signal="area_entered" from="FireballHitbox" to="." method="_on_fireball_hitbox_area_entered"]

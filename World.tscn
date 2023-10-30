@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=9 format=3 uid="uid://drndbm4wqiax0"]
 
 [ext_resource type="PackedScene" uid="uid://b5kb8m6wcp8br" path="res://PreFabs/protaginast_guy.tscn" id="1_e8ioa"]
 [ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="3_4ejky"]
 [ext_resource type="PackedScene" uid="uid://clfhdemr0mfhd" path="res://PreFabs/bad_guy_1.tscn" id="3_ndub3"]
 [ext_resource type="PackedScene" uid="uid://bwrop1iqvcqhe" path="res://PreFabs/enemy_spawner.tscn" id="4_1actk"]
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_g5ugi"]
+[ext_resource type="PackedScene" uid="uid://bhch4qwpg1fd8" path="res://fireball.tscn" id="6_s1oad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt4r5"]
 texture = ExtResource("3_4ejky")
@@ -1351,3 +1352,5 @@ layer_2/tile_data = PackedInt32Array(-327673, 458752, 0, -327667, 458752, 0, -45
 
 [node name="EnemySpawner" parent="." instance=ExtResource("4_1actk")]
 spawnlings = [ExtResource("3_ndub3"), ExtResource("5_g5ugi")]
+
+[node name="Fireball" parent="." instance=ExtResource("6_s1oad")]

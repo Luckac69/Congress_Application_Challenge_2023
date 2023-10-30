@@ -3,16 +3,37 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 
 
-var HEALTH = 100
+@export var HEALTH = 100
 var can_take_damage = true
 var player_alive = true
 var enemy_in_attack_zone = false
-const SPEED = 300.0
+var can_shoot_fireball = true
+@export var SPEED = 300.0
+
+var bullet_prefab = preload("res://fireball.tscn")
+
+func _input(event):
+	if event.is_action_pressed("Shoot"):
+		if can_shoot_fireball == true:
+			if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+				can_shoot_fireball = false
+				$FireballShootCooldown.start()
+				create_bullet()
+
+func create_bullet():
+	var bullet = bullet_prefab.instantiate()
+	# Set the bullet's position to the player's position or the gun's position.
+	# Add the bullet as a child of the current scene.
+	get_parent().add_child(bullet)
+	bullet.position = position
+	bullet.velocity = get_global_mouse_position() - bullet.position
+	bullet.look_at(get_global_mouse_position())
 
 func _physics_process(delta):
 	#every frame these things run
 	deal_damage()
 	player_move()
+	
 
 	#if player health is 0 then kill player
 	if HEALTH <= 0:
@@ -90,3 +111,7 @@ func deal_damage():
 func _on_damage_take_cooldown_timeout():
 	can_take_damage = true
 
+
+
+func _on_fireball_shoot_cooldown_timeout():
+	can_shoot_fireball = true
