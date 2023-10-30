@@ -92,6 +92,7 @@ _data = {
 }
 
 [node name="Protaginast_guy" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_gpdhi")
 
 [node name="Wizard" type="Sprite2D" parent="."]
@@ -118,6 +119,14 @@ position = Vector2(0, 16)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_f8jt6")
 debug_color = Color(0.988235, 0.113725, 0, 0.419608)
+
+[node name="Collision_Box" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_f8jt6")
+one_way_collision = true
+one_way_collision_margin = 0.0
+debug_color = Color(0.180392, 0.345098, 0.94902, 0.419608)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 speed_scale = 2.5

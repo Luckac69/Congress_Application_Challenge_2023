@@ -121,6 +121,7 @@ func _on_area_entered(area):
 height = 32.6667
 
 [node name="bad_guy_spear" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
+collision_layer = 4
 script = SubResource("GDScript_vmnvc")
 EnemySprite = NodePath("SpearsMan")
 metadata/_edit_group_ = true

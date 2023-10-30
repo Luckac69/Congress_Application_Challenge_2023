@@ -1,9 +1,6 @@
-res://fireball.gd
 res://World.tscn
 res://PreFabs/protaginast_guy.tscn
-res://PreFabs/bad_guy_Knight.tscn
 res://fireball.tscn
-res://Scripts/protaginast_guy.gd
 res://hit_effect.tscn
-res://hit_effect.gd
+res://PreFabs/bad_guy_Knight.tscn
 res://PreFabs/bad_guy_1.tscn
