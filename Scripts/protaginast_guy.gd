@@ -88,7 +88,6 @@ func _on_regin_timer_timeout():
 			HEALTH = 100
 
 func _on_player_hitbox_area_entered(body):
-	print(body)
 	if body.get_parent().is_in_group("Enemy"):
 		enemy_in_attack_zone = true
 

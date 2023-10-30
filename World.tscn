@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clfhdemr0mfhd" path="res://PreFabs/bad_guy_1.tscn" id="3_ndub3"]
 [ext_resource type="PackedScene" uid="uid://bwrop1iqvcqhe" path="res://PreFabs/enemy_spawner.tscn" id="4_1actk"]
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_g5ugi"]
-[ext_resource type="PackedScene" uid="uid://bhch4qwpg1fd8" path="res://fireball.tscn" id="6_s1oad"]
+[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="7_h5mf3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt4r5"]
 texture = ExtResource("3_4ejky")
@@ -1353,4 +1353,4 @@ layer_2/tile_data = PackedInt32Array(-327673, 458752, 0, -327667, 458752, 0, -45
 [node name="EnemySpawner" parent="." instance=ExtResource("4_1actk")]
 spawnlings = [ExtResource("3_ndub3"), ExtResource("5_g5ugi")]
 
-[node name="Fireball" parent="." instance=ExtResource("6_s1oad")]
+[node name="HitEffect" parent="." instance=ExtResource("7_h5mf3")]

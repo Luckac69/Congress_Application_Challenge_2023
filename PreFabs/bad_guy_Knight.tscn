@@ -8,7 +8,7 @@ script/source = "extends CharacterBody2D
 # var target = player
 @onready var animation = $AnimationPlayer
 @onready var target = get_parent().get_node(\"Protaginast_guy\")
-@export var speed : float = 250
+@export var speed : float = 450
 @export var health : float = 100
 @export var damage : float = 15
 @export var EnemySprite : Sprite2D
@@ -21,7 +21,7 @@ func _ready():
 	add_to_group(\"Enemy\")
 
 func _physics_process(delta):
-	deal_damage()
+
 	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
 	if target != null:
 		animation.play(\"Walk\")
@@ -40,20 +40,26 @@ func update_health():
 	
 	healthbar.value = health
 	
+	if health < 100:
+		healthbar.visible = true
+	else:
+		healthbar.visible = false
+	
 	
 
 func _on_enemy_hitbox_area_entered(body):
-	if body.get_parent().has_method(\"Player\"):
+	if body.get_parent().is_in_group(\"Player\"):
 		player_inattack_zone = true
-		
+	if body.get_parent().is_in_group(\"Bullet\"):
+		deal_damage(20)
+	
 func _on_enemy_hitbox_area_exited(body):
-	if body.get_parent().has_method(\"Player\"):
+	if body.get_parent().is_in_group(\"Playeraa\"):
 		player_inattack_zone = false
 		
-func deal_damage():
-	if player_inattack_zone == true:
+func deal_damage(damage: float):
 		if can_take_damage == true:
-			health = health - 20
+			health = health - damage
 			update_health()
 			$DamageTakeCooldown.start()
 			can_take_damage = false
@@ -144,7 +150,8 @@ shape = SubResource("CapsuleShape2D_jmwcj")
 debug_color = Color(0.796078, 0.392157, 0, 0.419608)
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-modulate = Color(0.34902, 0.941176, 0.454902, 0.941176)
+visible = false
+modulate = Color(0.34902, 0.941176, 0.454902, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -159,6 +166,7 @@ grow_vertical = 2
 show_percentage = false
 
 [node name="DamageTakeCooldown" type="Timer" parent="."]
+wait_time = 0.05
 
 [connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]

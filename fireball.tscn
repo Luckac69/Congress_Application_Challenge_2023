@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhch4qwpg1fd8"]
+[gd_scene load_steps=8 format=3 uid="uid://bhch4qwpg1fd8"]
 
 [ext_resource type="Script" path="res://fireball.gd" id="1_wathu"]
+[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="2_sut7i"]
 [ext_resource type="Texture2D" uid="uid://cmo3xu5wbe1i6" path="res://Artwork/Effects/fireball-Sheet.png" id="2_tvlo0"]
 
 [sub_resource type="Animation" id="Animation_gky5h"]
@@ -48,6 +49,7 @@ height = 59.6364
 [node name="Fireball" type="CharacterBody2D"]
 scale = Vector2(0.45, 0.45)
 script = ExtResource("1_wathu")
+hit_effect = ExtResource("2_sut7i")
 
 [node name="FireSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_tvlo0")

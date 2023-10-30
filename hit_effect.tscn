@@ -1,3 +1,43 @@
-[gd_scene format=3 uid="uid://c53bmsws2shc"]
+[gd_scene load_steps=6 format=3 uid="uid://c53bmsws2shc"]
+
+[ext_resource type="Script" path="res://hit_effect.gd" id="1_it5d3"]
+
+[sub_resource type="Gradient" id="Gradient_y7ij0"]
+offsets = PackedFloat32Array(0, 0.711957, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gq18h"]
+gradient = SubResource("Gradient_y7ij0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lsnou"]
+lifetime_randomness = 0.25
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 250.0
+initial_velocity_max = 450.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 50.0
+damping_max = 75.0
+scale_min = 10.0
+scale_max = 12.0
+color_ramp = SubResource("GradientTexture1D_gq18h")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_xr6dc"]
 
 [node name="HitEffect" type="GPUParticles2D"]
+emitting = false
+amount = 25
+process_material = SubResource("ParticleProcessMaterial_lsnou")
+texture = SubResource("CanvasTexture_xr6dc")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+script = ExtResource("1_it5d3")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
