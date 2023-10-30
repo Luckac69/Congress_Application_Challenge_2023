@@ -1,13 +1,13 @@
+AnimationPlayer
+Sprite2D
 CollisionShape2D
 Timer
 TileMap
 ProgressBar
-AnimationPlayer
 Area2D
 Line2D
 Marker2D
 Camera2D
-Sprite2D
 AnimatedSprite2D
 Node
 CharacterBody2D

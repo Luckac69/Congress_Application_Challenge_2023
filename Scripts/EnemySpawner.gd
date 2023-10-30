@@ -5,10 +5,12 @@ signal spawned(spawn)
 @export var mintime : float = 1
 @export var maxtime : float = 3
 @export var spawnlings: Array 
+@onready var animation = $AnimationPlayer
 
 
 func _ready():
 	$Timer.start()
+	animation.play("Idle")
 	print("TimerMoment")
 
 func spawn():

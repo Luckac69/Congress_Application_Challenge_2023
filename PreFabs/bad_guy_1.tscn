@@ -1,14 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://clfhdemr0mfhd"]
 
-[ext_resource type="Texture2D" uid="uid://ccv0kh37c6kw" path="res://Artwork/Enemies/knight_sprite-Sheet.png" id="1_c2wui"]
-[ext_resource type="Script" path="res://PreFabs/Area2D.gd" id="2_1ml0n"]
+[ext_resource type="Texture2D" uid="uid://c1x4d8fnqqcaf" path="res://Artwork/Enemies/knight_spear_sprite-Sheet.png" id="1_q2xob"]
 
 [sub_resource type="GDScript" id="GDScript_vmnvc"]
 script/source = "extends CharacterBody2D
 
 # var target = player
 @onready var animation = $AnimationPlayer
-@onready var target = $\"../Protaginast_guy\"
+@onready var target = get_parent().get_node(\"Protaginast_guy\")
 @export var SPEED : float = 250
 @export var HEALTH : float = 100
 @export var DAMAGE : float = 15
@@ -17,6 +16,8 @@ script/source = "extends CharacterBody2D
 var player_inattack_zone = false
 var can_take_damage = true
 
+func _ready():
+	add_to_group(\"Enemy\")
 
 func _physics_process(delta):
 	deal_damage()
@@ -84,8 +85,9 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_3tjkg"]
 resource_name = "Walk"
-length = 3.0
+length = 1.25
 loop_mode = 1
+step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -93,10 +95,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [2, 3, 4, 5, 6, 7]
+"values": [4, 5, 6, 7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wpwl6"]
@@ -105,27 +107,36 @@ _data = {
 "Walk": SubResource("Animation_3tjkg")
 }
 
+[sub_resource type="GDScript" id="GDScript_raej7"]
+script/source = "extends Area2D
+
+func _on_area_entered(area):
+	print(area.name)
+
+"
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jmwcj"]
 height = 32.6667
 
-[node name="Bad_guy_1" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
+[node name="bad_guy_spear" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
 script = SubResource("GDScript_vmnvc")
-EnemySprite = NodePath("SwordsMan")
+EnemySprite = NodePath("SpearsMan")
 metadata/_edit_group_ = true
 
-[node name="SwordsMan" type="Sprite2D" parent="."]
-texture = ExtResource("1_c2wui")
-hframes = 8
+[node name="SpearsMan" type="Sprite2D" parent="."]
+texture = ExtResource("1_q2xob")
+hframes = 4
+vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../SwordsMan")
+root_node = NodePath("../SpearsMan")
 speed_scale = 2.5
 libraries = {
 "": SubResource("AnimationLibrary_wpwl6")
 }
 
 [node name="EnemyHitbox" type="Area2D" parent="."]
-script = ExtResource("2_1ml0n")
+script = SubResource("GDScript_raej7")
 
 [node name="Hitbox" type="CollisionShape2D" parent="EnemyHitbox"]
 position = Vector2(0, 6)

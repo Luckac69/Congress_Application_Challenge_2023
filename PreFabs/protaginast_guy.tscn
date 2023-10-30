@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/protaginast_guy.gd" id="1_gpdhi"]
 [ext_resource type="Texture2D" uid="uid://bndt5y14kfhh8" path="res://Artwork/Enemies/wizard_sprite-Sheet.png" id="2_aaedg"]
 [ext_resource type="Shader" path="res://PreFabs/WhiteFlash.gdshader" id="2_k8yg5"]
-[ext_resource type="Script" path="res://PreFabs/Camera2D.gd" id="3_6oxrj"]
 [ext_resource type="PackedScene" uid="uid://tm3lofwyxbms" path="res://PreFabs/trail_2d.tscn" id="3_m1w6j"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="4_202qr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y0ewj"]
 shader = ExtResource("2_k8yg5")
@@ -102,9 +102,10 @@ vframes = 2
 frame = 6
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
-script = ExtResource("3_6oxrj")
+script = ExtResource("4_202qr")
 
 [node name="Timer" type="Timer" parent="Camera2D"]
 
