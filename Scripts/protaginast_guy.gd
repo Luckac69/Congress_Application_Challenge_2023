@@ -3,12 +3,12 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 
 
-@export var HEALTH = 100
+@export var health = 100
 var can_take_damage = true
 var player_alive = true
 var enemy_in_attack_zone = false
 var can_shoot_fireball = true
-@export var SPEED = 300.0
+@export var speed = 300.0
 
 var bullet_prefab = preload("res://fireball.tscn")
 
@@ -36,9 +36,9 @@ func _physics_process(delta):
 	
 
 	#if player health is 0 then kill player
-	if HEALTH <= 0:
+	if health <= 0:
 		player_alive = false 
-		HEALTH = 0
+		health = 0
 		print("player killed")
 		self.queue_free()
 
@@ -47,20 +47,20 @@ func player_move():
 	var yDirection = Input.get_axis("up","down")
 	var WizardSprite = $Wizard
 	if yDirection:
-		velocity.y = yDirection * SPEED
+		velocity.y = yDirection * speed
 	else:
-		velocity.y = move_toward(velocity.y,0,SPEED)
+		velocity.y = move_toward(velocity.y,0,speed)
 
 	var xDirection = Input.get_axis("left", "right")
 
 	if xDirection:
-		velocity.x = xDirection * SPEED
+		velocity.x = xDirection * speed
 		if xDirection > 0:
 			WizardSprite.flip_h = false
 		else:
 			WizardSprite.flip_h = true
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	if yDirection or xDirection:
 		animation.play("Walk")
@@ -73,19 +73,19 @@ func player_move():
 func update_health():
 	var healthbar = $healthbar
 
-	healthbar.value = HEALTH
+	healthbar.value = health
 
-	if HEALTH >= 100:
+	if health >= 100:
 		healthbar.visible = false
 	else:
 		healthbar.visible = true
 
 
 func _on_regin_timer_timeout():
-	if HEALTH < 100:
-		HEALTH = HEALTH + 5
-		if HEALTH > 100:
-			HEALTH = 100
+	if health < 100:
+		health += 5
+		if health > 100:
+			health = 100
 
 func _on_player_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Enemy"):
@@ -98,13 +98,13 @@ func _on_player_hitbox_area_exited(body):
 func deal_damage():
 	if enemy_in_attack_zone == true:
 		if can_take_damage == true:
-			HEALTH = HEALTH - 20
+			health -= 20
 			$"/root/GlobalScript".camera.shake(0.2, 3)
 			animation.play("Damage")
 			$DamageTakeCooldown.start()
 			can_take_damage = false
-			print("Player Health is ", HEALTH)
-			if HEALTH <= 0:
+			print("Player Health is ", health)
+			if health <= 0:
 				self.queue_free()
 
 func _on_damage_take_cooldown_timeout():
