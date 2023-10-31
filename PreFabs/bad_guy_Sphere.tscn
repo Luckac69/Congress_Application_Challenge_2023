@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c52r05na5tnor"]
+[gd_scene load_steps=8 format=3 uid="uid://clfhdemr0mfhd"]
 
 [ext_resource type="Texture2D" uid="uid://c1x4d8fnqqcaf" path="res://Artwork/Enemies/knight_spear_sprite-Sheet.png" id="1_q2xob"]
 
@@ -7,22 +7,25 @@ script/source = "extends CharacterBody2D
 
 # var target = player
 @onready var animation = $AnimationPlayer
-@onready var target = $\"../Protaginast_guy\"
-@export var SPEED : float = 250
-@export var HEALTH : float = 100
-@export var DAMAGE : float = 15
+@onready var target = get_parent().get_node(\"Protaginast_guy\")
+@export var speed : float = 450
+@export var health : float = 100
+@export var damage : float = 15
 @export var EnemySprite : Sprite2D
 
 var player_inattack_zone = false
 var can_take_damage = true
 
 
+func _ready():
+	add_to_group(\"Enemy\")
+
 func _physics_process(delta):
-	deal_damage()
+
 	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
 	if target != null:
 		animation.play(\"Walk\")
-		velocity = position.direction_to(target.position) * SPEED
+		velocity = position.direction_to(target.position) * speed
 		if velocity.x > 1:
 			EnemySprite.flip_h = true
 		else:
@@ -31,36 +34,37 @@ func _physics_process(delta):
 		#position += (target.position - position).normalized() * SPEED
 	# var player = get_parent().get_node(\"Protaginast_guy\")
 	# var target = player
-	
+
 func update_health():
 	var healthbar = $HealthBar
 	
-	healthbar.value = HEALTH
+	healthbar.value = health
 	
-	if HEALTH >= 100:
-		healthbar.visible = false
-	else:
+	if health < 100:
 		healthbar.visible = true
-		
-		
+	else:
+		healthbar.visible = false
+	
+	
+
 func _on_enemy_hitbox_area_entered(body):
-	if body.get_parent().has_method(\"Player\"):
+	if body.get_parent().is_in_group(\"Player\"):
 		player_inattack_zone = true
-		
+	if body.get_parent().is_in_group(\"Bullet\"):
+		deal_damage(20)
+	
 func _on_enemy_hitbox_area_exited(body):
-	if body.get_parent().has_method(\"Player\"):
+	if body.get_parent().is_in_group(\"Playeraa\"):
 		player_inattack_zone = false
 		
-func deal_damage():
-	if player_inattack_zone == true:
+func deal_damage(damage: float):
 		if can_take_damage == true:
-			HEALTH = HEALTH - 20
+			health = health - damage
 			update_health()
 			$DamageTakeCooldown.start()
 			can_take_damage = false
-			print(\"Enemy Health is \", HEALTH)
-			if HEALTH <= 0:
-				self.queue_free()
+			print(\"Enemy Health is \", health)
+			if health <= 0: self.queue_free()
 
 func _on_damage_take_cooldown_timeout():
 	can_take_damage = true
