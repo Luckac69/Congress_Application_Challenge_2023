@@ -10,7 +10,7 @@ script/source = "extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 @onready var target = get_parent().get_node(\"Protaginast_guy\")
 @export var speed : float = 450
-@export var health : float = 200
+@export var health : float = 100
 @export var damage : float = 20
 @export var EnemySprite : Sprite2D
 
@@ -52,7 +52,7 @@ func _on_enemy_hitbox_area_entered(body):
 	if body.get_parent().is_in_group(\"Player\"):
 		player_inattack_zone = true
 	if body.get_parent().is_in_group(\"Bullet\"):
-		take_damage(20)
+		take_damage(10)
 	if body.get_parent().is_in_group(\"Explosion\"):
 		take_damage(80)
 		

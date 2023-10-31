@@ -52,9 +52,9 @@ func _on_enemy_hitbox_area_entered(body):
 	if body.get_parent().is_in_group(\"Player\"):
 		player_inattack_zone = true
 	if body.get_parent().is_in_group(\"Bullet\"):
-		deal_damage(20)
+		deal_damage(40)
 	if body.get_parent().is_in_group(\"Explosion\"):
-		deal_damage(50)
+		deal_damage(90)
 	
 func _on_enemy_hitbox_area_exited(body):
 	if body.get_parent().is_in_group(\"Player\"):
