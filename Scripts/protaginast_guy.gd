@@ -4,13 +4,15 @@ extends CharacterBody2D
 
 
 @export var health = 100
+@export var speed = 300.0
 var can_take_damage = true
 var player_alive = true
 var enemy_in_attack_zone = false
 var can_shoot_fireball = true
-@export var speed = 300.0
 
 var bullet_prefab = preload("res://fireball.tscn")
+
+const REGEN = 5
 
 func _input(event):
 	if event.is_action_pressed("Shoot"):
@@ -33,8 +35,9 @@ func _physics_process(delta):
 	#every frame these things run
 	deal_damage()
 	player_move()
-	
-
+	if $ControlHealthBar.is_visible():
+		health += REGEN*delta
+		$ControlHealthBar.set_value(health)
 	#if player health is 0 then kill player
 	if health <= 0:
 		player_alive = false 
@@ -83,7 +86,7 @@ func update_health():
 
 func _on_regin_timer_timeout():
 	if health < 100:
-		health += 5
+		health += 100
 		if health > 100:
 			health = 100
 
