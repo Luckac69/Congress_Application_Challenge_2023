@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnj7wcohm8nfl"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_1byoy"]
+[ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_f3c22"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kac25"]
+bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7me2"]
+bg_color = Color(0, 0, 0, 0.509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtno7"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1byoy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.333333, 0.392157, 0.552941, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 88.8
+theme_override_colors/font_color = Color(0.505882, 0.709804, 0.780392, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.0823529, 0.2, 1)
+theme_override_constants/shadow_offset_x = 14
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("1_f3c22")
+theme_override_font_sizes/font_size = 175
+text = "WizQuiz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="StartContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 10
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/StartContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_f3c22")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_kac25")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m7me2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xtno7")
+text = "start"
+
+[node name="StudyContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 10
+
+[node name="StudyButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/StudyContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("1_f3c22")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_kac25")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m7me2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xtno7")
+text = "STUDY
+"
+
+[node name="CreditContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 10
+
+[node name="CreditButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/CreditContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_f3c22")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_kac25")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m7me2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xtno7")
+text = "CREDITS"
+
+[node name="ExitGameContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 10
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/ExitGameContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_f3c22")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_kac25")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m7me2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xtno7")
+text = "EXIT GAME"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StartContainer/StartButton" to="." method="_on_start_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StudyContainer/StudyButton" to="." method="_on_study_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/CreditContainer/CreditButton" to="." method="_on_credit_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/ExitGameContainer/ExitButton" to="." method="_on_exit_button_button_up"]

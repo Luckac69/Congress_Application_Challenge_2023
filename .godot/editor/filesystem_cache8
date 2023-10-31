@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698707196
+::res://::1698709566
 fireball.gd::GDScript::-1::1698707120::0::1::::<>CharacterBody2D<>::
-fireball.tscn::PackedScene::2882349026689931179::1698707120::0::1::::<><>::res://fireball.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://cmo3xu5wbe1i6::::res://Artwork/Effects/fireball-Sheet.png
+fireball.tscn::PackedScene::2882349026689931179::1698709540::0::1::::<><>::res://fireball.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://cmo3xu5wbe1i6::::res://Artwork/Effects/fireball-Sheet.png
 global.gd::GDScript::-1::1698707120::0::1::::<>Node<>::
 hit_effect.gd::GDScript::-1::1698707120::0::1::::<>GPUParticles2D<>::
-hit_effect.tscn::PackedScene::204011540600620784::1698707120::0::1::::<><>::res://hit_effect.gd
+hit_effect.tscn::PackedScene::204011540600620784::1698709540::0::1::::<><>::res://hit_effect.gd
+main_menu.tscn::PackedScene::3319437409017852945::1698709551::0::1::::<><>::uid://ewapdr1gqw01
 protaginast_guy.tscn::PackedScene::1241159874006497388::1698707120::0::1::::<><>::res://protaginast_guy.gd
 README.md::TextFile::-1::1698707120::0::1::::<><>::
-World.tscn::PackedScene::8379493916601640807::1698707120::0::1::::<><>::uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_Sphere.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn<>uid://d4eykwdu3h5km::::res://PreFabs/bad_guy_Knight.tscn<>uid://c53bmsws2shc::::res://hit_effect.tscn
 ::res://Artwork/::1698707120
-::res://Artwork/Effects/::1698707120
+::res://Artwork/Effects/::1698707197
 BackButton.png::CompressedTexture2D::8315617522304940773::1698707120::1698707120::1::::<><>::
 Coin-export.png::CompressedTexture2D::65956870932229457::1698707120::1698707120::1::::<><>::
 control button.png::CompressedTexture2D::4121697845468040098::1698707120::1698707120::1::::<><>::
@@ -97,14 +97,17 @@ Outside_B.png::CompressedTexture2D::6605706845246298765::1698707120::1698707120:
 Outside_B.txt::TextFile::-1::1698707120::0::1::::<><>::
 Outside_C.png::CompressedTexture2D::4887182703584826249::1698707120::1698707120::1::::<><>::
 Outside_C.txt::TextFile::-1::1698707120::0::1::::<><>::
-::res://PreFabs/::1698707120
-bad_guy_Knight.tscn::PackedScene::9204472254458477968::1698707120::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png
-bad_guy_Sphere.tscn::PackedScene::5555671141943278997::1698707120::0::1::::<><>::uid://c1x4d8fnqqcaf::::res://Artwork/Enemies/knight_spear_sprite-Sheet.png
-enemy_spawner.tscn::PackedScene::3966547869076799890::1698707120::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_1.tscn<>uid://g0aoiathy62x::::res://Artwork/Effects/Portal-Sheet.png
+::res://PreFabs/::1698709540
+bad_guy_Knight.tscn::PackedScene::9204472254458477968::1698709540::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png
+bad_guy_Sphere.tscn::PackedScene::5555671141943278997::1698709540::0::1::::<><>::uid://c1x4d8fnqqcaf::::res://Artwork/Enemies/knight_spear_sprite-Sheet.png
+enemy_spawner.tscn::PackedScene::3966547869076799890::1698707120::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://clfhdemr0mfhd
 protaginast_guy.gdshader::Shader::-1::1698707120::0::1::::<><>::
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698707120::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://bndt5y14kfhh8::::res://Artwork/Enemies/wizard_sprite-Sheet.png<>res://PreFabs/WhiteFlash.gdshader<>uid://tm3lofwyxbms::::res://PreFabs/trail_2d.tscn<>res://Scripts/Camera2D.gd
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698709540::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://bndt5y14kfhh8::::res://Artwork/Enemies/wizard_sprite-Sheet.png<>res://PreFabs/WhiteFlash.gdshader<>uid://tm3lofwyxbms::::res://PreFabs/trail_2d.tscn<>res://Scripts/Camera2D.gd
+ThaleahFat.ttf::FontFile::326198657071737764::1698707742::1698707742::1::::<><>::
 trail_2d.tscn::PackedScene::1360081025785228518::1698707120::0::1::::<><>::res://Scripts/Trail2D.gd
 WhiteFlash.gdshader::Shader::-1::1698707120::0::1::::<><>::
+::res://Scenes/::1698709566
+World.tscn::PackedScene::8379493916601640807::1698709540::0::1::::<><>::uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_Sphere.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn<>uid://d4eykwdu3h5km::::res://PreFabs/bad_guy_Knight.tscn<>uid://c53bmsws2shc::::res://hit_effect.tscn
 ::res://Scripts/::1698707120
 bad_guy_1.gd::GDScript::-1::1698707120::0::1::::Enemy<>CharacterBody2D<>::
 Camera2D.gd::GDScript::-1::1698707120::0::1::::<>Camera2D<>::

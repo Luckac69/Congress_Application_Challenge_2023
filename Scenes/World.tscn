@@ -1,14 +1,14 @@
 [gd_scene load_steps=9 format=3 uid="uid://drndbm4wqiax0"]
 
-[ext_resource type="PackedScene" uid="uid://b5kb8m6wcp8br" path="res://PreFabs/protaginast_guy.tscn" id="1_e8ioa"]
-[ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="3_4ejky"]
-[ext_resource type="PackedScene" uid="uid://clfhdemr0mfhd" path="res://PreFabs/bad_guy_Sphere.tscn" id="3_ndub3"]
-[ext_resource type="PackedScene" uid="uid://bwrop1iqvcqhe" path="res://PreFabs/enemy_spawner.tscn" id="4_1actk"]
-[ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_g5ugi"]
-[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="7_h5mf3"]
+[ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="1_cpd62"]
+[ext_resource type="PackedScene" uid="uid://b5kb8m6wcp8br" path="res://PreFabs/protaginast_guy.tscn" id="2_uo3rl"]
+[ext_resource type="PackedScene" uid="uid://bwrop1iqvcqhe" path="res://PreFabs/enemy_spawner.tscn" id="3_5hjlm"]
+[ext_resource type="PackedScene" uid="uid://clfhdemr0mfhd" path="res://PreFabs/bad_guy_Sphere.tscn" id="4_88l1m"]
+[ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_jbubq"]
+[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="6_q5cda"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt4r5"]
-texture = ExtResource("3_4ejky")
+texture = ExtResource("1_cpd62")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -1351,11 +1351,11 @@ layer_3/y_sort_origin = 0
 layer_3/z_index = 5
 layer_3/tile_data = PackedInt32Array(-131069, 458752, 3, -262150, 458752, 3, -327696, 458752, 0, -262160, 458752, 1, -327695, 524288, 0, -262159, 524288, 1, -327694, 589824, 0, -262158, 589824, 1)
 
-[node name="Protaginast_guy" parent="." groups=["Player"] instance=ExtResource("1_e8ioa")]
+[node name="Protaginast_guy" parent="." groups=["Player"] instance=ExtResource("2_uo3rl")]
 z_index = 3
 y_sort_enabled = true
 
-[node name="EnemySpawner" parent="." instance=ExtResource("4_1actk")]
-spawnlings = [ExtResource("3_ndub3"), ExtResource("5_g5ugi")]
+[node name="EnemySpawner" parent="." instance=ExtResource("3_5hjlm")]
+spawnlings = [ExtResource("4_88l1m"), ExtResource("5_jbubq")]
 
-[node name="HitEffect" parent="." instance=ExtResource("7_h5mf3")]
+[node name="HitEffect" parent="." instance=ExtResource("6_q5cda")]
