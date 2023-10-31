@@ -1,0 +1,196 @@
+[gd_scene load_steps=9 format=3 uid="uid://blm87mvoctsbj"]
+
+[ext_resource type="Script" path="res://question_create_menu.gd" id="1_ehp2s"]
+[ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_q36vf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axccu"]
+bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trjkx"]
+bg_color = Color(0, 0, 0, 0.509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnka3"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm0j1"]
+bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bduj1"]
+bg_color = Color(0, 0, 0, 0.509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgnqm"]
+bg_color = Color(0, 0, 0, 0.784314)
+
+[node name="QuestionCreateMenu" type="Control" node_paths=PackedStringArray("Question", "Answer1", "Answer2", "Answer3", "Answer4")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehp2s")
+Question = NodePath("MarginContainer/VBoxContainer/QuizZone/QuestionBox/QuestionMargin/QuestionTextEnter")
+Answer1 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceOne/TextEdit")
+Answer2 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo/TextEdit2")
+Answer3 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne/TextEdit")
+Answer4 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo/TextEdit2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.333333, 0.392157, 0.552941, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 88.8
+theme_override_colors/font_color = Color(0.505882, 0.709804, 0.780392, 1)
+theme_override_colors/font_shadow_color = Color(0.0509804, 0.0823529, 0.2, 1)
+theme_override_constants/shadow_offset_x = 14
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 175
+text = "WizQuiz"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuizZone" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="QuestionBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuestionMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/QuestionBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 20
+
+[node name="QuestionTextEnter" type="TextEdit" parent="MarginContainer/VBoxContainer/QuizZone/QuestionBox/QuestionMargin"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Question Here
+"
+wrap_mode = 1
+
+[node name="AnswerChoicesTop" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnswerChoiceOne" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceOne"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Answer Choice Here"
+wrap_mode = 1
+
+[node name="AnswerChoiceTwo" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextEdit2" type="TextEdit" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Answer Choice Here"
+wrap_mode = 1
+
+[node name="AnswerChoicesBottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnswerChoiceOne" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Answer Choice Here"
+wrap_mode = 1
+
+[node name="AnswerChoiceTwo" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextEdit2" type="TextEdit" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Enter Answer Choice Here"
+wrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
+layout_mode = 2
+
+[node name="CreateButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="CreateButton" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/CreateButtonContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_axccu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trjkx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nnka3")
+text = "Create QUESTION"
+
+[node name="BackButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/BackButtonContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_bm0j1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bduj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rgnqm")
+text = "BACK
+"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/CreateButtonContainer/CreateButton" to="." method="_on_create_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/BackButtonContainer/BackButton" to="." method="_on_back_button_button_up"]

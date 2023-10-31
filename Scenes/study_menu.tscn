@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbu3ebt4vqksk"]
+[gd_scene load_steps=6 format=3 uid="uid://cbu3ebt4vqksk"]
 
+[ext_resource type="Script" path="res://Scenes/study_menu.gd" id="1_ax0j1"]
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_ivmrx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgita"]
@@ -18,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ax0j1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -53,14 +55,14 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 alignment = 1
 
-[node name="StartContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="CreateButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 10
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/StartContainer"]
+[node name="CreateButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/CreateButtonContainer"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
@@ -71,14 +73,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_183ki")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s4g8y")
 text = "Create QUESTION"
 
-[node name="ExitGameContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="BackButtonContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 10
 
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/ExitGameContainer"]
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/BackButtonContainer"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
@@ -94,3 +96,6 @@ text = "BACK
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 3
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/CreateButtonContainer/CreateButton" to="." method="_on_create_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/BackButtonContainer/BackButton" to="." method="_on_back_button_button_up"]
