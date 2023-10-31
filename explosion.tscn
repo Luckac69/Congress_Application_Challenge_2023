@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://qr5gq8npq74c"]
+
+[ext_resource type="Script" path="res://Explosion.gd" id="1_cgcox"]
+[ext_resource type="Texture2D" uid="uid://cjdq435d5qh61" path="res://Artwork/Effects/explosion_full-Sheet.png" id="2_ggvwq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b3rpb"]
+radius = 43.0465
+
+[node name="Explosion" type="CharacterBody2D"]
+script = ExtResource("1_cgcox")
+
+[node name="ExplosionSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ggvwq")
+hframes = 9
+vframes = 2
+frame = 1
+
+[node name="ExplosionInitialHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionInitialHitbox"]
+shape = SubResource("CircleShape2D_b3rpb")
+one_way_collision_margin = 0.0
+
+[connection signal="area_entered" from="ExplosionInitialHitbox" to="." method="_on_explosion_initial_hitbox_area_entered"]
