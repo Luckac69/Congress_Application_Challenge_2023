@@ -13,7 +13,7 @@ func _on_study_button_button_up():
 
 
 func _on_credit_button_button_up():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/options_menu.tscn")
 
 
 func _on_exit_button_button_up():
