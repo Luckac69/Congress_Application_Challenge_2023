@@ -1,6 +1,6 @@
-ColorRect
-Label
-HBoxContainer
+
+Timer
+AnimationPlayer
 CollisionShape2D
 Area2D
 Sprite2D
@@ -11,11 +11,10 @@ VScrollBar
 Button
 MarginContainer
 VBoxContainer
-Timer
+Label
 GPUParticles2D
 Node2D
 Marker2D
-AnimationPlayer
 TileMap
 ProgressBar
 Line2D

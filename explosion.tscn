@@ -1,19 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://qr5gq8npq74c"]
+[gd_scene load_steps=9 format=3 uid="uid://qr5gq8npq74c"]
 
 [ext_resource type="Script" path="res://Explosion.gd" id="1_cgcox"]
 [ext_resource type="Texture2D" uid="uid://cjdq435d5qh61" path="res://Artwork/Effects/explosion_full-Sheet.png" id="2_ggvwq"]
+[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="2_hcepy"]
+
+[sub_resource type="Animation" id="Animation_apoi6"]
+resource_name = "initial cast"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_f57b4"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_rm1e7"]
+resource_name = "explosion contact"
+length = 2.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 10, 11, 12, 13, 14, 15, 16, 17, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6rimg"]
+_data = {
+"RESET": SubResource("Animation_f57b4"),
+"explosion contact": SubResource("Animation_rm1e7"),
+"initial cast": SubResource("Animation_apoi6")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b3rpb"]
 radius = 43.0465
 
 [node name="Explosion" type="CharacterBody2D"]
 script = ExtResource("1_cgcox")
+hit_effect = ExtResource("2_hcepy")
 
 [node name="ExplosionSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_ggvwq")
 hframes = 9
 vframes = 2
-frame = 1
+frame = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ExplosionSprite")
+speed_scale = 2.5
+libraries = {
+"": SubResource("AnimationLibrary_6rimg")
+}
 
 [node name="ExplosionInitialHitbox" type="Area2D" parent="."]
 
@@ -21,4 +73,8 @@ frame = 1
 shape = SubResource("CircleShape2D_b3rpb")
 one_way_collision_margin = 0.0
 
+[node name="KaboomTimer" type="Timer" parent="."]
+wait_time = 4.0
+
 [connection signal="area_entered" from="ExplosionInitialHitbox" to="." method="_on_explosion_initial_hitbox_area_entered"]
+[connection signal="timeout" from="KaboomTimer" to="." method="_on_timer_timeout"]
