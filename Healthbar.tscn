@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceol85xsdgoq5"]
+
+[ext_resource type="Texture2D" uid="uid://blr3ngop4b6nb" path="res://Artwork/GUI/HealthBarBackGround.png" id="1_0gwci"]
+[ext_resource type="Script" path="res://PreFabs/HealthBar.gd" id="1_uh6dx"]
+[ext_resource type="Texture2D" uid="uid://bv8wsl3dq7m2p" path="res://Artwork/GUI/HealthBar.png" id="2_gkfbf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uh6dx")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_left = -72.0
+offset_top = 100.0
+offset_right = -34.0
+offset_bottom = 108.0
+scale = Vector2(4, 4)
+value = 100.0
+texture_under = ExtResource("1_0gwci")
+texture_progress = ExtResource("2_gkfbf")
+texture_progress_offset = Vector2(2, 2)
