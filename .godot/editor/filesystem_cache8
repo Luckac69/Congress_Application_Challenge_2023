@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698781975
+::res://::1698782021
 Control.gd::GDScript::-1::1698779797::0::1::::<>Control<>::
 Explosion.gd::GDScript::-1::1698781938::0::1::::<>CharacterBody2D<>::
-explosion.tscn::PackedScene::1159949036537478060::1698781938::0::1::::<><>::res://Explosion.gd<>uid://cjdq435d5qh61::::res://Artwork/Effects/explosion_full-Sheet.png
+explosion.tscn::PackedScene::1159949036537478060::1698781938::0::1::::<><>::res://Explosion.gd<>uid://cjdq435d5qh61
 fireball.gd::GDScript::-1::1698704686::0::1::::<>CharacterBody2D<>::
 fireball.tscn::PackedScene::2882349026689931179::1698779822::0::1::::<><>::res://fireball.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://cmo3xu5wbe1i6::::res://Artwork/Effects/fireball-Sheet.png
 global.gd::GDScript::-1::1698704686::0::1::::<>Node<>::
