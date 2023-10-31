@@ -22,11 +22,13 @@ grow_vertical = 2
 script = ExtResource("1_e7sl6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.333333, 0.392157, 0.552941, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 

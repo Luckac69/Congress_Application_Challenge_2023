@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://b5kb8m6wcp8br"]
+[gd_scene load_steps=15 format=3 uid="uid://b5kb8m6wcp8br"]
 
 [ext_resource type="Script" path="res://Scripts/protaginast_guy.gd" id="1_gpdhi"]
 [ext_resource type="Texture2D" uid="uid://bndt5y14kfhh8" path="res://Artwork/Enemies/wizard_sprite-Sheet.png" id="2_aaedg"]
 [ext_resource type="Shader" path="res://PreFabs/WhiteFlash.gdshader" id="2_k8yg5"]
 [ext_resource type="PackedScene" uid="uid://tm3lofwyxbms" path="res://PreFabs/trail_2d.tscn" id="3_m1w6j"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="4_202qr"]
+[ext_resource type="PackedScene" uid="uid://dm6f8yue1ue4e" path="res://HealthBar.tscn" id="6_tjh30"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y0ewj"]
 shader = ExtResource("2_k8yg5")
@@ -140,6 +141,13 @@ libraries = {
 
 [node name="FireballShootCooldown" type="Timer" parent="."]
 wait_time = 0.25
+
+[node name="ControlHealthBar" parent="." instance=ExtResource("6_tjh30")]
+offset_left = -60.0
+offset_top = 64.0
+offset_right = -60.0
+offset_bottom = 64.0
+scale = Vector2(0.5, 0.5)
 
 [connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]

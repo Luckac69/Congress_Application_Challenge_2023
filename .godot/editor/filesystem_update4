@@ -8,3 +8,5 @@ res://hit_effect.tscn
 res://PreFabs/bad_guy_Knight.tscn
 res://PreFabs/bad_guy_Sphere.tscn
 res://Scripts/protaginast_guy.gd
+res://Control.gd
+res://HealthBar.tscn

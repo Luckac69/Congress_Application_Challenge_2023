@@ -101,6 +101,7 @@ func deal_damage():
 			health -= 20
 			$"/root/GlobalScript".camera.shake(0.2, 3)
 			animation.play("Damage")
+			$ControlHealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false
 			print("Player Health is ", health)
