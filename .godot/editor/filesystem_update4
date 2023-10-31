@@ -7,3 +7,5 @@ res://PreFabs/bad_guy_Knight.tscn
 res://PreFabs/bad_guy_Sphere.tscn
 res://Scenes/options_menu.tscn
 res://Scenes/main_menu.gd
+res://Scenes/options_menu.gd
+res://Scenes/study_menu.tscn

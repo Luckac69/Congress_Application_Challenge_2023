@@ -1,25 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8213daghuwd5"]
+[gd_scene load_steps=5 format=3 uid="uid://cbu3ebt4vqksk"]
 
-[ext_resource type="Script" path="res://Scenes/options_menu.gd" id="1_e7sl6"]
-[ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_vixdj"]
+[ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_ivmrx"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exq8q"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgita"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gtaq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_183ki"]
 bg_color = Color(0, 0, 0, 0.509804)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_geb0q"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4g8y"]
 bg_color = Color(0, 0, 0, 0.784314)
 
-[node name="OptionsMenu" type="Control"]
+[node name="StudyMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_e7sl6")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -41,7 +39,7 @@ theme_override_colors/font_color = Color(0.505882, 0.709804, 0.780392, 1)
 theme_override_colors/font_shadow_color = Color(0.0509804, 0.0823529, 0.2, 1)
 theme_override_constants/shadow_offset_x = 14
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/font = ExtResource("1_vixdj")
+theme_override_fonts/font = ExtResource("1_ivmrx")
 theme_override_font_sizes/font_size = 175
 text = "WizQuiz"
 horizontal_alignment = 1
@@ -64,12 +62,12 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("1_vixdj")
+theme_override_fonts/font = ExtResource("1_ivmrx")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_exq8q")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6gtaq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_geb0q")
-text = "start"
+theme_override_styles/normal = SubResource("StyleBoxFlat_jgita")
+theme_override_styles/hover = SubResource("StyleBoxFlat_183ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s4g8y")
+text = "Create QUESTION"
 
 [node name="ExitGameContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -82,13 +80,15 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
-theme_override_fonts/font = ExtResource("1_vixdj")
+theme_override_fonts/font = ExtResource("1_ivmrx")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_exq8q")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6gtaq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_geb0q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jgita")
+theme_override_styles/hover = SubResource("StyleBoxFlat_183ki")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s4g8y")
 text = "BACK
 "
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StartContainer/StartButton" to="." method="_on_start_button_button_up"]
-[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/ExitGameContainer/ExitButton" to="." method="_on_exit_button_button_up"]
+[node name="VScrollBar" type="VScrollBar" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3

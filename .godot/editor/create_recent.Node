@@ -1,8 +1,10 @@
+HScrollBar
+ColorRect
+VScrollBar
 Button
 MarginContainer
 VBoxContainer
 Label
-ColorRect
 Timer
 GPUParticles2D
 Node2D
