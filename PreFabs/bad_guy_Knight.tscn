@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4eykwdu3h5km"]
+[gd_scene load_steps=9 format=3 uid="uid://d4eykwdu3h5km"]
 
 [ext_resource type="Texture2D" uid="uid://ccv0kh37c6kw" path="res://Artwork/Enemies/knight_sprite-Sheet.png" id="1_c2wui"]
+[ext_resource type="PackedScene" uid="uid://ceol85xsdgoq5" path="res://Healthbar.tscn" id="2_17rx0"]
 
 [sub_resource type="GDScript" id="GDScript_vmnvc"]
 script/source = "extends CharacterBody2D
@@ -21,7 +22,14 @@ func _ready():
 	add_to_group(\"Enemy\")
 
 func _physics_process(delta):
+	move()
 
+	
+		#position += (target.position - position).normalized() * SPEED
+	# var player = get_parent().get_node(\"Protaginast_guy\")
+	# var target = player
+
+func move():
 	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
 	if target != null:
 		animation.play(\"Walk\")
@@ -31,11 +39,11 @@ func _physics_process(delta):
 		else:
 			EnemySprite.flip_h = false
 		move_and_slide()
-		#position += (target.position - position).normalized() * SPEED
-	# var player = get_parent().get_node(\"Protaginast_guy\")
-	# var target = player
+
 
 func update_health():
+	
+	var WizardSprite = $Wizard
 	var healthbar = $HealthBar
 	
 	healthbar.value = health
@@ -53,14 +61,23 @@ func _on_enemy_hitbox_area_entered(body):
 	if body.get_parent().is_in_group(\"Bullet\"):
 		deal_damage(20)
 	
+	
 func _on_enemy_hitbox_area_exited(body):
 	if body.get_parent().is_in_group(\"Playeraa\"):
 		player_inattack_zone = false
 		
+		
+
+
 func deal_damage(damage: float):
 		if can_take_damage == true:
 			health = health - damage
 			update_health()
+			
+			#HEALTH BAR
+			$HealthBar2.set_value(health)
+			
+			
 			$DamageTakeCooldown.start()
 			can_take_damage = false
 			print(\"Enemy Health is \", health)
@@ -168,6 +185,8 @@ show_percentage = false
 
 [node name="DamageTakeCooldown" type="Timer" parent="."]
 wait_time = 0.05
+
+[node name="HealthBar2" parent="." instance=ExtResource("2_17rx0")]
 
 [connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]

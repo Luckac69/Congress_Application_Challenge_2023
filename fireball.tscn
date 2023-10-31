@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhch4qwpg1fd8"]
+[gd_scene load_steps=8 format=3 uid="uid://hgcajt14hnmv"]
 
 [ext_resource type="Script" path="res://fireball.gd" id="1_wathu"]
-[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="2_sut7i"]
+[ext_resource type="PackedScene" path="res://hit_effect.tscn" id="2_sut7i"]
 [ext_resource type="Texture2D" uid="uid://cmo3xu5wbe1i6" path="res://Artwork/Effects/fireball-Sheet.png" id="2_tvlo0"]
 
 [sub_resource type="Animation" id="Animation_o8pa0"]
