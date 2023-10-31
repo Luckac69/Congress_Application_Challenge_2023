@@ -19,16 +19,16 @@ const REGEN = 5
 func _input(event):
 	if event.is_action_pressed("Shoot"):
 		if can_shoot_fireball == true:
-			if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-				can_shoot_fireball = false
-				$FireballShootCooldown.start()
-				create_bullet()
+			#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			can_shoot_fireball = false
+			$FireballShootCooldown.start()
+			create_bullet()
 	if event.is_action_pressed("Explode"):
 		if can_shoot_explosion == true:
-			if event is InputEventKey:
-				can_shoot_explosion = false
-				$ExplosionShootCooldown.start()
-				create_explosion()
+			#if event is InputEventKey:
+			can_shoot_explosion = false
+			$ExplosionShootCooldown.start()
+			create_explosion()
 
 func create_bullet():
 	var bullet = bullet_prefab.instantiate()

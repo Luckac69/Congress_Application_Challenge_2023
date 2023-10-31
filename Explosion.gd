@@ -24,6 +24,8 @@ func _on_explosion_initial_hitbox_area_entered(body):
 		effect_instance.position = body.get_parent().position
 		get_parent().add_child(effect_instance)
 		effect_instance.emitting = true
+		
+		speed = 0
 
 		animation.play("explosion contact")
 		$KaboomTimer.start()
