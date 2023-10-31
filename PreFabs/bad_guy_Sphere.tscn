@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://c52r05na5tnor"]
+[gd_scene load_steps=8 format=3 uid="uid://c52r05na5tnor"]
 
 [ext_resource type="Texture2D" uid="uid://c1x4d8fnqqcaf" path="res://Artwork/Enemies/knight_spear_sprite-Sheet.png" id="1_q2xob"]
-[ext_resource type="PackedScene" uid="uid://ceol85xsdgoq5" path="res://Healthbar.tscn" id="2_kq8sn"]
 
 [sub_resource type="GDScript" id="GDScript_vmnvc"]
 script/source = "extends CharacterBody2D
@@ -9,9 +8,9 @@ script/source = "extends CharacterBody2D
 # var target = player
 @onready var animation = $AnimationPlayer
 @onready var target = $\"../Protaginast_guy\"
-@export var speed : float = 250
-@export var health : float = 100
-@export var damage : float = 15
+@export var SPEED : float = 250
+@export var HEALTH : float = 100
+@export var DAMAGE : float = 15
 @export var EnemySprite : Sprite2D
 
 var player_inattack_zone = false
@@ -19,70 +18,20 @@ var can_take_damage = true
 
 
 func _physics_process(delta):
-	move()
-		#position += (target.position - position).normalized() * SPEED
-	# var player = get_parent().get_node(\"Protaginast_guy\")
-	# var target = player
-	
-
-func move():
+	deal_damage()
 	if target == null: target = get_tree().get_first_node_in_group(\"Player\")
 	if target != null:
 		animation.play(\"Walk\")
-		velocity = position.direction_to(target.position) * speed
+		velocity = position.direction_to(target.position) * SPEED
 		if velocity.x > 1:
 			EnemySprite.flip_h = true
 		else:
 			EnemySprite.flip_h = false
 		move_and_slide()
-
-func update_health():
+		#position += (target.position - position).normalized() * SPEED
+	# var player = get_parent().get_node(\"Protaginast_guy\")
+	# var target = player
 	
-	var WizardSprite = $Wizard
-	var healthbar = $HealthBar
-	
-	healthbar.value = health
-	
-	if health < 100:
-		healthbar.visible = true
-	else:
-		healthbar.visible = false
-	
-	
-
-func _on_enemy_hitbox_area_entered(body):
-	if body.get_parent().is_in_group(\"Player\"):
-		player_inattack_zone = true
-	if body.get_parent().is_in_group(\"Bullet\"):
-		deal_damage(20)
-	
-	
-func _on_enemy_hitbox_area_exited(body):
-	if body.get_parent().is_in_group(\"Playeraa\"):
-		player_inattack_zone = false
-		
-		
-
-
-func deal_damage(damage: float):
-		if can_take_damage == true:
-			health = health - damage
-			update_health()
-			
-			#HEALTH BAR
-			$HealthBar2.set_value(health)
-			
-			
-			$DamageTakeCooldown.start()
-			can_take_damage = false
-			print(\"Enemy Health is \", health)
-			if health <= 0: self.queue_free()
-
-func _on_damage_take_cooldown_timeout():
-	can_take_damage = true
-
-
-\"\"\"
 func update_health():
 	var healthbar = $HealthBar
 	
@@ -115,7 +64,6 @@ func deal_damage():
 
 func _on_damage_take_cooldown_timeout():
 	can_take_damage = true
-\"\"\"
 "
 
 [sub_resource type="Animation" id="Animation_22p5w"]
@@ -217,8 +165,6 @@ show_percentage = false
 
 [node name="DamageTakeCooldown" type="Timer" parent="."]
 wait_time = 0.05
-
-[node name="HealthBar2" parent="." instance=ExtResource("2_kq8sn")]
 
 [connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]

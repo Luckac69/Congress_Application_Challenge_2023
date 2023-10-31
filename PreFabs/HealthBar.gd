@@ -9,5 +9,4 @@ func set_value(value):
 	if value < 100:
 		show()
 	else:
-		#hide()
-		pass
+		hide()

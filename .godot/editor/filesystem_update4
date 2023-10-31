@@ -1,8 +1,9 @@
-res://PreFabs/protaginast_guy.tscn
-res://HealthBar.gd
 res://PreFabs/bad_guy_Knight.tscn
+res://World.tscn
+res://PreFabs/protaginast_guy.tscn
 res://PreFabs/bad_guy_Sphere.tscn
-res://Scripts/protaginast_guy.gd
-res://Healthbar.tscn
 res://PreFabs/HealthBar.gd
-res://fireball.tscn
+res://Scripts/protaginast_guy.gd
+res://HealthBar.gd
+res://PreFabs/TextureProgressBar.gd
+res://Healthbar.tscn

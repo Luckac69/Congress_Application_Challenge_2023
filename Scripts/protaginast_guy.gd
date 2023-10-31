@@ -104,8 +104,6 @@ func deal_damage():
 			health = health - 20
 			$"/root/GlobalScript".camera.shake(0.2, 3)
 			animation.play("Damage")
-			
-			#HEALTH BAR
 			$HealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false
