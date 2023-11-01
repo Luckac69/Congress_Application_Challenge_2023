@@ -1,13 +1,13 @@
+TextureProgressBar
+Timer
 CollisionShape2D
 Area2D
 AnimationPlayer
 Sprite2D
 CharacterBody2D
 AudioStreamPlayer
-Timer
 GPUParticles2D
 Control
-TextureProgressBar
 CanvasLayer
 AudioStreamPlayer2D
 MarginContainer

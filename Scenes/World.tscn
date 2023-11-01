@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=23 format=3 uid="uid://drndbm4wqiax0"]
 
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_2hfn6"]
 [ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="1_cpd62"]
@@ -9,10 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_jbubq"]
 [ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="6_q5cda"]
 [ext_resource type="PackedScene" uid="uid://k7eusrjpuycy" path="res://QuestionAnswer.tscn" id="7_ltarj"]
+[ext_resource type="PackedScene" uid="uid://gp83vuhaoyl7" path="res://gun_knight.tscn" id="8_itn7d"]
 [ext_resource type="Texture2D" uid="uid://dtvcmenv0xbg7" path="res://Artwork/Effects/exp_empty.png" id="9_3dcoh"]
 [ext_resource type="PackedScene" uid="uid://db5optobdvyba" path="res://pause_menu.tscn" id="9_3yb2o"]
 [ext_resource type="AudioStream" uid="uid://c0fkniu0jw7jp" path="res://Sounds/Ludum Dare 30 - Track 7.wav" id="9_jcqxt"]
-[ext_resource type="Texture2D" path="res://Artwork/Effects/exp_progress.png" id="10_nkjkv"]
+[ext_resource type="Texture2D" uid="uid://bbu4031wyehxu" path="res://Artwork/Effects/exp_progress.png" id="10_nkjkv"]
 [ext_resource type="Script" path="res://Scenes/EXPBar.gd" id="11_6bq8s"]
 [ext_resource type="PackedScene" uid="uid://3pb1ee1tystm" path="res://death_menu.tscn" id="13_xbm18"]
 
@@ -1383,7 +1384,7 @@ y_sort_enabled = true
 death_effect = ExtResource("4_2dc78")
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_5hjlm")]
-spawnlings = [ExtResource("4_88l1m"), ExtResource("5_jbubq")]
+spawnlings = [ExtResource("4_88l1m"), ExtResource("5_jbubq"), ExtResource("8_itn7d")]
 
 [node name="HitEffect" parent="." instance=ExtResource("6_q5cda")]
 

@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://gp83vuhaoyl7"]
+[gd_scene load_steps=10 format=3 uid="uid://gp83vuhaoyl7"]
 
+[ext_resource type="Script" path="res://gun_knight.gd" id="1_8arwo"]
 [ext_resource type="Texture2D" uid="uid://b6ut7v1flhxj4" path="res://knight_gun_sprite-Sheet.png" id="1_duqee"]
+[ext_resource type="PackedScene" uid="uid://dm6f8yue1ue4e" path="res://HealthBar.tscn" id="3_a6deb"]
+[ext_resource type="AudioStream" uid="uid://c4p2mwreqg026" path="res://Sounds/hurtEnemy.wav" id="4_qb7ny"]
 
 [sub_resource type="Animation" id="Animation_dkvri"]
 resource_name = "idle"
@@ -50,7 +53,9 @@ height = 80.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ac72c"]
 height = 32.6667
 
-[node name="gun_knight" type="CharacterBody2D"]
+[node name="gun_knight" type="CharacterBody2D" node_paths=PackedStringArray("EnemySprite")]
+script = ExtResource("1_8arwo")
+EnemySprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_duqee")
@@ -63,9 +68,9 @@ libraries = {
 "": SubResource("AnimationLibrary_tg1kq")
 }
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="EnemyHitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitbox"]
 position = Vector2(20, 36)
 shape = SubResource("CapsuleShape2D_b7eih")
 
@@ -73,3 +78,44 @@ shape = SubResource("CapsuleShape2D_b7eih")
 position = Vector2(10, 50)
 shape = SubResource("CapsuleShape2D_ac72c")
 debug_color = Color(0.796078, 0.392157, 0, 0.419608)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+visible = false
+modulate = Color(0.34902, 0.941176, 0.454902, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = 70.0
+offset_right = 37.5
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+show_percentage = false
+
+[node name="PelletTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="DamageTakeCooldown" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="SlowDuration" type="Timer" parent="."]
+
+[node name="ControlHealthBar" parent="." instance=ExtResource("3_a6deb")]
+offset_left = -37.0
+offset_top = 80.0
+offset_right = -37.0
+offset_bottom = 80.0
+scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qb7ny")
+volume_db = -20.0
+
+[connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]
+[connection signal="timeout" from="PelletTimer" to="." method="_on_pellet_timer_timeout"]
+[connection signal="timeout" from="DamageTakeCooldown" to="." method="_on_damage_take_cooldown_timeout"]
+[connection signal="timeout" from="SlowDuration" to="." method="_on_slow_duration_timeout"]

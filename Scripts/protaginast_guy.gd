@@ -154,7 +154,7 @@ func _on_player_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Enemy"):
 		enemy_in_attack_zone = true
 	if body.get_parent().is_in_group("Experience"):
-			update_experience()
+		update_experience()
 
 func _on_player_hitbox_area_exited(body):
 	if body.get_parent().is_in_group("Enemy"):

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d6xk5qpr05tb"]
+
+[ext_resource type="Script" path="res://pellet.gd" id="1_8vn78"]
+[ext_resource type="Texture2D" uid="uid://dtxoriq0oyd6a" path="res://PreFabs/bullet.png" id="1_bv6sp"]
+[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="2_fgk35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx7ef"]
+size = Vector2(8, 4)
+
+[node name="pellet" type="CharacterBody2D"]
+scale = Vector2(6, 6)
+script = ExtResource("1_8vn78")
+hit_effect = ExtResource("2_fgk35")
+
+[node name="PelletSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_bv6sp")
+
+[node name="PelletHitbox" type="Area2D" parent="."]
+
+[node name="PelletCollision" type="CollisionShape2D" parent="PelletHitbox"]
+shape = SubResource("RectangleShape2D_nx7ef")
+
+[connection signal="area_entered" from="PelletHitbox" to="." method="_on_pellet_hitbox_area_entered"]
