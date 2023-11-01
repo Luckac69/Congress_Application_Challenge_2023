@@ -48,6 +48,10 @@ func _input(event):
 			can_shoot_lightning = false
 			$LightningShootCooldown.start()
 			create_lightning()
+	if event.is_action_pressed("Pause"):
+		if $"../CanvasLayer/PauseMenu".visible == false:
+			$"../CanvasLayer/PauseMenu".visible = true
+			Engine.time_scale = 0
 
 func create_bullet():
 	var bullet = bullet_prefab.instantiate()
@@ -133,9 +137,9 @@ func update_health():
 func update_experience():
 	expamount = expamount + expgain * 5
 	if expamount >= maxexp:
-		$"../CanvasLayer/QuestionPopup".visible = true
-		$"/root/GlobalScript".popupquestion.questionpopup(5)
-		Engine.time_scale = 0
+		#$"../CanvasLayer/QuestionPopup".visible = true
+		#$"/root/GlobalScript".popupquestion.questionpopup(5)
+		#Engine.time_scale = 0
 		level = level + 1
 		expamount = expamount - maxexp
 		maxexp = maxexp + 50

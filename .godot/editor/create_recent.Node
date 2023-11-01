@@ -1,8 +1,12 @@
+ColorRect
+MarginContainer
+VBoxContainer
+Button
+Control
 AudioStreamPlayer
 AudioStreamPlayer2D
 Timer
 CanvasLayer
-MarginContainer
 TextureRect
 HSlider
 RayCast2D
@@ -16,8 +20,6 @@ RayCast2D
 TextureProgressBar
 HScrollBar
 VScrollBar
-Button
-VBoxContainer
 Label
 GPUParticles2D
 Marker2D

@@ -7,3 +7,5 @@ res://Scripts/protaginast_guy.gd
 res://QuestionAnswer.tscn
 res://Scenes/main_menu.tscn
 res://question_create_menu.gd
+res://pause_menu.gd
+res://pause_menu.tscn

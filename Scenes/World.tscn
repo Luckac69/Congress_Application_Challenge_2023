@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=17 format=3 uid="uid://drndbm4wqiax0"]
 
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_2hfn6"]
 [ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="1_cpd62"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_jbubq"]
 [ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="6_q5cda"]
 [ext_resource type="PackedScene" uid="uid://k7eusrjpuycy" path="res://QuestionAnswer.tscn" id="7_ltarj"]
+[ext_resource type="PackedScene" uid="uid://bm35wefta1b86" path="res://pause_menu.tscn" id="9_3yb2o"]
 [ext_resource type="AudioStream" uid="uid://c0fkniu0jw7jp" path="res://Sounds/Ludum Dare 30 - Track 7.wav" id="9_jcqxt"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_q1qf7"]
@@ -1386,6 +1387,9 @@ spawnlings = [ExtResource("4_88l1m"), ExtResource("5_jbubq")]
 visible = false
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("9_3yb2o")]
+visible = false
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jcqxt")
