@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://clfhdemr0mfhd"]
 
-[ext_resource type="Texture2D" uid="uid://c1x4d8fnqqcaf" path="res://Artwork/Enemies/knight_spear_sprite-Sheet.png" id="1_q2xob"]
+[ext_resource type="Texture2D" uid="uid://bnmsks1y1u17p" path="res://PreFabs/knight_spear_sprite2-Sheet.png" id="1_hm7kh"]
 [ext_resource type="PackedScene" uid="uid://dm6f8yue1ue4e" path="res://HealthBar.tscn" id="2_dxwei"]
 [ext_resource type="AudioStream" uid="uid://c4p2mwreqg026" path="res://Sounds/hurtEnemy.wav" id="3_3rxpp"]
 
@@ -150,7 +150,9 @@ EnemySprite = NodePath("SpearsMan")
 metadata/_edit_group_ = true
 
 [node name="SpearsMan" type="Sprite2D" parent="."]
-texture = ExtResource("1_q2xob")
+position = Vector2(-6, 0)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_hm7kh")
 hframes = 4
 vframes = 2
 

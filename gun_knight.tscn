@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://gp83vuhaoyl7"]
+
+[ext_resource type="Texture2D" uid="uid://b6ut7v1flhxj4" path="res://knight_gun_sprite-Sheet.png" id="1_duqee"]
+
+[sub_resource type="Animation" id="Animation_dkvri"]
+resource_name = "idle"
+length = 0.75
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_uudlf"]
+resource_name = "walk"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tg1kq"]
+_data = {
+"idle": SubResource("Animation_dkvri"),
+"walk": SubResource("Animation_uudlf")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b7eih"]
+radius = 25.0
+height = 80.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ac72c"]
+height = 32.6667
+
+[node name="gun_knight" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_duqee")
+hframes = 4
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 2.5
+libraries = {
+"": SubResource("AnimationLibrary_tg1kq")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(20, 36)
+shape = SubResource("CapsuleShape2D_b7eih")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2(10, 50)
+shape = SubResource("CapsuleShape2D_ac72c")
+debug_color = Color(0.796078, 0.392157, 0, 0.419608)

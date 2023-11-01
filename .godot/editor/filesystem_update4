@@ -1,16 +1,3 @@
-res://Scenes/World.tscn
-res://PreFabs/bad_guy_Knight.tscn
 res://PreFabs/bad_guy_Sphere.tscn
-res://PreFabs/protaginast_guy.tscn
-res://QuestionAnswer.tscn
-res://Scenes/main_menu.tscn
-res://pause_menu.tscn
 res://Scenes/EXPBar.gd
-res://Scripts/protaginast_guy.gd
-res://pause_menu.gd
-res://death_menu.tscn
-res://death_menu.gd
 res://PreFabs/ParticlePrefab.tres
-res://fireball.tscn
-res://hit_effect.tscn
-res://PreFabs/death_particles.tscn
