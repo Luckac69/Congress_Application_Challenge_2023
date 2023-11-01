@@ -1,3 +1,4 @@
+res://lightning.tscn
 res://Scenes/World.tscn
 res://hit_effect.tscn
 res://explosion.tscn
@@ -5,5 +6,7 @@ res://PreFabs/bad_guy_Sphere.tscn
 res://PreFabs/bad_guy_Knight.tscn
 res://fireball.tscn
 res://PreFabs/protaginast_guy.tscn
-res://lightning.tscn
 res://spikes.tscn
+res://experience.gd
+res://experience.tscn
+res://Spikes.gd
