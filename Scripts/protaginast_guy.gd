@@ -5,6 +5,11 @@ extends CharacterBody2D
 
 @export var health = 100
 @export var speed = 300.0
+var expamount = 0
+var level = 0
+var expgain = 20
+var maxexp = 500
+
 var can_take_damage = true
 var player_alive = true
 var enemy_in_attack_zone = false
@@ -121,7 +126,17 @@ func update_health():
 		healthbar.visible = false
 	else:
 		healthbar.visible = true
+		
+func update_experience():
+	expamount = expamount + expgain
 
+	if expamount >= maxexp:
+		$"../CanvasLayer/QuestionPopup".visible = true
+		$"/root/GlobalScript".popupquestion.questionpopup(5)
+		Engine.time_scale = 0
+		level = level + 1
+		expamount = expamount - maxexp
+		maxexp = maxexp + 50
 
 func _on_regin_timer_timeout():
 	if health < 100:
@@ -132,6 +147,8 @@ func _on_regin_timer_timeout():
 func _on_player_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Enemy"):
 		enemy_in_attack_zone = true
+		if body.get_parent().is_in_group("Experience"):
+			update_experience()
 
 func _on_player_hitbox_area_exited(body):
 	if body.get_parent().is_in_group("Enemy"):

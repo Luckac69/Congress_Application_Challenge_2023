@@ -21,7 +21,7 @@ bg_color = Color(0, 0, 0, 0.509804)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgnqm"]
 bg_color = Color(0, 0, 0, 0.784314)
 
-[node name="QuestionCreateMenu" type="Control" node_paths=PackedStringArray("Question", "Answer1", "Answer2", "Answer3", "Answer4")]
+[node name="QuestionCreateMenu" type="Control" node_paths=PackedStringArray("Question", "Answer1", "Answer2", "Answer3", "Answer4", "CorrectAnswer", "SliderCorrect")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,6 +34,8 @@ Answer1 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/Answ
 Answer2 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo/TextEdit2")
 Answer3 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne/TextEdit")
 Answer4 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo/TextEdit2")
+CorrectAnswer = NodePath("MarginContainer/VBoxContainer/QuizZone/CorrectAnswer/QuestionMargin/CorrectAnswer")
+SliderCorrect = NodePath("MarginContainer/VBoxContainer/QuizZone/HBoxContainer2/Answer3/HSlider")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -103,7 +105,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_q36vf")
 theme_override_font_sizes/font_size = 35
-placeholder_text = "Enter Answer Choice Here"
+placeholder_text = "1. Enter Answer Choice Here"
 wrap_mode = 1
 
 [node name="AnswerChoiceTwo" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop"]
@@ -117,7 +119,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_q36vf")
 theme_override_font_sizes/font_size = 35
-placeholder_text = "Enter Answer Choice Here"
+placeholder_text = "2. Enter Answer Choice Here"
 wrap_mode = 1
 
 [node name="AnswerChoicesBottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
@@ -135,7 +137,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_q36vf")
 theme_override_font_sizes/font_size = 35
-placeholder_text = "Enter Answer Choice Here"
+placeholder_text = "3. Enter Answer Choice Here"
 wrap_mode = 1
 
 [node name="AnswerChoiceTwo" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom"]
@@ -149,8 +151,52 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_q36vf")
 theme_override_font_sizes/font_size = 35
-placeholder_text = "Enter Answer Choice Here"
+placeholder_text = "4. Enter Answer Choice Here"
 wrap_mode = 1
+
+[node name="CorrectAnswer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
+layout_mode = 2
+
+[node name="QuestionMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/CorrectAnswer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 10
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/QuizZone/CorrectAnswer/QuestionMargin"]
+layout_mode = 2
+color = Color(0.191406, 0.214844, 0.277344, 1)
+
+[node name="CorrectAnswer" type="Label" parent="MarginContainer/VBoxContainer/QuizZone/CorrectAnswer/QuestionMargin"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_q36vf")
+theme_override_font_sizes/font_size = 45
+text = "The Correct answer is Set To: NONE
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
+layout_mode = 2
+
+[node name="Answer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/QuizZone/HBoxContainer2/Answer3"]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+rounded = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
 layout_mode = 2
@@ -194,5 +240,6 @@ text = "BACK
 
 [node name="Questions" type="Node2D" parent="."]
 
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer2/Answer3/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/CreateButtonContainer/CreateButton" to="." method="_on_create_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/BackButtonContainer/BackButton" to="." method="_on_back_button_button_up"]

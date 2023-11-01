@@ -1,4 +1,8 @@
 Timer
+CanvasLayer
+MarginContainer
+TextureRect
+HSlider
 RayCast2D
 CollisionShape2D
 AnimationPlayer
@@ -11,7 +15,6 @@ TextureProgressBar
 HScrollBar
 VScrollBar
 Button
-MarginContainer
 VBoxContainer
 Label
 GPUParticles2D

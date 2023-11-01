@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://k7eusrjpuycy"]
+[gd_scene load_steps=8 format=3 uid="uid://k7eusrjpuycy"]
 
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_b5icy"]
+[ext_resource type="Script" path="res://QuestionAnswer.gd" id="1_f8blr"]
+[ext_resource type="Texture2D" uid="uid://dry7b54607gwc" path="res://Artwork/Effects/correct.png" id="3_4wafd"]
+[ext_resource type="Texture2D" uid="uid://bisr1xn7f7guw" path="res://Artwork/Effects/incorrect.png" id="4_t140w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n15j1"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
@@ -11,13 +14,19 @@ bg_color = Color(0, 0, 0, 0.509804)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2h1n5"]
 bg_color = Color(0, 0, 0, 0.784314)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" node_paths=PackedStringArray("Answ1", "Answ2", "Answ3", "Answ4", "AnswerDelay")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_f8blr")
+Answ1 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceOne/AnswerButton")
+Answ2 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo/AnswerButton2")
+Answ3 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne/AnswerButton3")
+Answ4 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo/AnswerButton4")
+AnswerDelay = NodePath("AnswerDelay")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -77,10 +86,12 @@ autowrap_mode = 3
 [node name="AnswerChoicesTop" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="AnswerChoiceOne" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
@@ -100,11 +111,12 @@ text_overrun_behavior = 1
 [node name="AnswerChoiceTwo" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="AnswerButton" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo"]
+[node name="AnswerButton2" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
@@ -119,15 +131,17 @@ text_overrun_behavior = 1
 [node name="AnswerChoicesBottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuizZone"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="AnswerChoiceOne" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="AnswerButton" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne"]
+[node name="AnswerButton3" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
@@ -142,11 +156,12 @@ text_overrun_behavior = 1
 [node name="AnswerChoiceTwo" type="MarginContainer" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="AnswerButton" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo"]
+[node name="AnswerButton4" type="Button" parent="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo"]
 layout_mode = 2
 focus_mode = 0
 theme_override_constants/outline_size = 0
@@ -157,3 +172,32 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_fn8vc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_2h1n5")
 alignment = 0
 text_overrun_behavior = 1
+
+[node name="Response" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 100
+
+[node name="Check" type="TextureRect" parent="MarginContainer/Response"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_4wafd")
+
+[node name="Wrong" type="TextureRect" parent="MarginContainer/Response"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_t140w")
+
+[node name="AnswerDelay" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceOne/AnswerButton" to="." method="_on_answer_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo/AnswerButton2" to="." method="_on_answer_button_2_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceOne/AnswerButton3" to="." method="_on_answer_button_3_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/AnswerChoiceTwo/AnswerButton4" to="." method="_on_answer_button_4_button_up"]
+[connection signal="timeout" from="AnswerDelay" to="." method="_on_answer_delay_timeout"]

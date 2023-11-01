@@ -1,5 +1,5 @@
 extends Node
 
 var camera = Camera2D
-
-var QuestionDictionary: Dictionary 
+var QuestionDictinary: Dictionary 
+var popupquestion = Control

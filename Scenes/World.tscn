@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=10 format=3 uid="uid://drndbm4wqiax0"]
 
 [ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="1_cpd62"]
 [ext_resource type="PackedScene" uid="uid://b5kb8m6wcp8br" path="res://PreFabs/protaginast_guy.tscn" id="2_uo3rl"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://clfhdemr0mfhd" path="res://PreFabs/bad_guy_Sphere.tscn" id="4_88l1m"]
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_jbubq"]
 [ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="6_q5cda"]
+[ext_resource type="PackedScene" uid="uid://k7eusrjpuycy" path="res://QuestionAnswer.tscn" id="7_ltarj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt4r5"]
 texture = ExtResource("1_cpd62")
@@ -1359,3 +1360,10 @@ y_sort_enabled = true
 spawnlings = [ExtResource("4_88l1m"), ExtResource("5_jbubq")]
 
 [node name="HitEffect" parent="." instance=ExtResource("6_q5cda")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="QuestionPopup" parent="CanvasLayer" instance=ExtResource("7_ltarj")]
+visible = false
+size_flags_horizontal = 3
+size_flags_vertical = 3
