@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=19 format=3 uid="uid://drndbm4wqiax0"]
 
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_2hfn6"]
 [ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="1_cpd62"]
@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_jbubq"]
 [ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="6_q5cda"]
 [ext_resource type="PackedScene" uid="uid://k7eusrjpuycy" path="res://QuestionAnswer.tscn" id="7_ltarj"]
+[ext_resource type="Texture2D" uid="uid://dtvcmenv0xbg7" path="res://Artwork/Effects/exp_empty.png" id="9_3dcoh"]
 [ext_resource type="AudioStream" uid="uid://c0fkniu0jw7jp" path="res://Sounds/Ludum Dare 30 - Track 7.wav" id="9_jcqxt"]
+[ext_resource type="Texture2D" uid="uid://bbu4031wyehxu" path="res://Artwork/Effects/exp_progress.png" id="10_nkjkv"]
+[ext_resource type="Script" path="res://Scenes/EXPBar.gd" id="11_6bq8s"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_q1qf7"]
 tile_data = PackedInt32Array(0, 458752, 4)
@@ -1387,5 +1390,21 @@ visible = false
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="EXPBar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 640.0
+grow_vertical = 0
+scale = Vector2(0.4, 0.5)
+pivot_offset = Vector2(35, 0)
+texture_under = ExtResource("9_3dcoh")
+texture_progress = ExtResource("10_nkjkv")
+texture_progress_offset = Vector2(10, 9)
+script = ExtResource("11_6bq8s")
+player = NodePath("../../Protaginast_guy")
+
 [node name="MainTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jcqxt")
+volume_db = -15.0

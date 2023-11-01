@@ -9,6 +9,7 @@ var expamount = 0
 var level = 0
 var expgain = 20
 var maxexp = 500
+signal exp_changed
 
 var can_take_damage = true
 var player_alive = true
@@ -132,10 +133,11 @@ func update_health():
 		
 func update_experience():
 	expamount = expamount + expgain * 5
+	exp_changed.emit()
 	if expamount >= maxexp:
-		$"../CanvasLayer/QuestionPopup".visible = true
-		$"/root/GlobalScript".popupquestion.questionpopup(5)
-		Engine.time_scale = 0
+		#$"../CanvasLayer/QuestionPopup".visible = true
+		#$"/root/GlobalScript".popupquestion.questionpopup(5)
+		#Engine.time_scale = 0
 		level = level + 1
 		expamount = expamount - maxexp
 		maxexp = maxexp + 50
