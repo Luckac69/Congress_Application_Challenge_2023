@@ -11,3 +11,5 @@ res://HealthBar.tscn
 res://explosion.tscn
 res://Scripts/protaginast_guy.gd
 res://Explosion.gd
+res://lightning.gd
+res://lightning.tscn

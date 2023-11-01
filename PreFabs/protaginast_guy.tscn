@@ -145,6 +145,9 @@ wait_time = 0.25
 [node name="ExplosionShootCooldown" type="Timer" parent="."]
 wait_time = 4.0
 
+[node name="LightningShootCooldown" type="Timer" parent="."]
+wait_time = 2.0
+
 [node name="ControlHealthBar" parent="." instance=ExtResource("6_tjh30")]
 offset_left = -60.0
 offset_top = 64.0
@@ -159,3 +162,4 @@ scale = Vector2(0.5, 0.5)
 [connection signal="timeout" from="DamageTakeCooldown" to="." method="_on_damage_take_cooldown_timeout"]
 [connection signal="timeout" from="FireballShootCooldown" to="." method="_on_fireball_shoot_cooldown_timeout"]
 [connection signal="timeout" from="ExplosionShootCooldown" to="." method="_on_explosion_shoot_cooldown_timeout"]
+[connection signal="timeout" from="LightningShootCooldown" to="." method="_on_lightning_shoot_cooldown_timeout"]

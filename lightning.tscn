@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhch4qwpg1fd8"]
+[gd_scene load_steps=7 format=3 uid="uid://rw7tvjhgildq"]
 
-[ext_resource type="Script" path="res://fireball.gd" id="1_wathu"]
-[ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="2_sut7i"]
-[ext_resource type="Texture2D" uid="uid://cmo3xu5wbe1i6" path="res://Artwork/Effects/fireball-Sheet.png" id="2_tvlo0"]
+[ext_resource type="Script" path="res://lightning.gd" id="1_f2dc0"]
+[ext_resource type="Texture2D" uid="uid://ran0b2r5nbii" path="res://Artwork/Effects/lightning-Sheet.png" id="1_fmx26"]
 
 [sub_resource type="Animation" id="Animation_o8pa0"]
 length = 0.001
@@ -42,18 +41,17 @@ _data = {
 "idle": SubResource("Animation_gky5h")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lrqlj"]
-height = 59.6364
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pllcq"]
+radius = 54.0
+height = 184.0
 
-[node name="Fireball" type="CharacterBody2D"]
-scale = Vector2(0.45, 0.45)
-script = ExtResource("1_wathu")
-hit_effect = ExtResource("2_sut7i")
+[node name="Lightning" type="CharacterBody2D"]
+script = ExtResource("1_f2dc0")
 
-[node name="FireSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_tvlo0")
-hframes = 5
-frame = 4
+[node name="LightSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_fmx26")
+hframes = 14
+frame = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 speed_scale = 2.5
@@ -61,13 +59,15 @@ libraries = {
 "": SubResource("AnimationLibrary_7xy4i")
 }
 
-[node name="FireballHitbox" type="Area2D" parent="."]
+[node name="LightningHitbox" type="Area2D" parent="."]
+position = Vector2(0, 64)
 
-[node name="Fireball_Collision" type="CollisionShape2D" parent="FireballHitbox"]
-position = Vector2(0, 10)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightningHitbox"]
 rotation = 1.5708
-scale = Vector2(5.5, 5.5)
-shape = SubResource("CapsuleShape2D_lrqlj")
-debug_color = Color(0.988235, 0.113725, 0, 0.419608)
+shape = SubResource("CapsuleShape2D_pllcq")
 
-[connection signal="area_entered" from="FireballHitbox" to="." method="_on_fireball_hitbox_area_entered"]
+[node name="ShockTimer" type="Timer" parent="."]
+wait_time = 1.4
+
+[connection signal="area_entered" from="LightningHitbox" to="." method="_on_lightning_area_entered"]
+[connection signal="timeout" from="ShockTimer" to="." method="_on_shock_timer_timeout"]
