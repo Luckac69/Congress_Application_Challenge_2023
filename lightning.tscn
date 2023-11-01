@@ -64,7 +64,6 @@ libraries = {
 
 [node name="LightningHitbox" type="Area2D" parent="."]
 position = Vector2(0, 64)
-monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LightningHitbox"]
 position = Vector2(0, 159)
