@@ -1,4 +1,4 @@
-
+Node2D
 Timer
 AnimationPlayer
 CollisionShape2D
@@ -13,7 +13,6 @@ MarginContainer
 VBoxContainer
 Label
 GPUParticles2D
-Node2D
 Marker2D
 TileMap
 ProgressBar
