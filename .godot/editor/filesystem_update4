@@ -1,9 +1,5 @@
-res://Scenes/main_menu.tscn
 res://Scenes/World.tscn
-res://question_create_menu.tscn
-res://QuestionAnswer.tscn
 res://PreFabs/bad_guy_Knight.tscn
-res://Scenes/study_menu.tscn
-res://Scenes/options_menu.tscn
-res://PreFabs/protaginast_guy.tscn
 res://PreFabs/bad_guy_Sphere.tscn
+res://PreFabs/protaginast_guy.tscn
+res://Scenes/main_menu.tscn
