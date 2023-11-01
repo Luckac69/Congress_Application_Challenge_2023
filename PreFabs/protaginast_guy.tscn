@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5kb8m6wcp8br"]
+[gd_scene load_steps=20 format=3 uid="uid://b5kb8m6wcp8br"]
 
 [ext_resource type="Script" path="res://Scripts/protaginast_guy.gd" id="1_gpdhi"]
 [ext_resource type="Texture2D" uid="uid://bndt5y14kfhh8" path="res://Artwork/Enemies/wizard_sprite-Sheet.png" id="2_aaedg"]
@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://tm3lofwyxbms" path="res://PreFabs/trail_2d.tscn" id="3_m1w6j"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="4_202qr"]
 [ext_resource type="PackedScene" uid="uid://dm6f8yue1ue4e" path="res://HealthBar.tscn" id="6_tjh30"]
+[ext_resource type="AudioStream" uid="uid://cq3yngm0a1vhy" path="res://Sounds/attackFireball.wav" id="7_jjt5q"]
+[ext_resource type="AudioStream" uid="uid://ms37rvsamywu" path="res://Sounds/hurtPlayer.wav" id="7_mb2jx"]
+[ext_resource type="AudioStream" uid="uid://d135xetx2b6wm" path="res://Sounds/attackInitialExplosion.wav" id="8_uvhok"]
+[ext_resource type="AudioStream" uid="uid://qr8f5jvwisrh" path="res://Sounds/attackLightning.wav" id="9_0lgvl"]
+[ext_resource type="AudioStream" uid="uid://d3wsr4ykcg131" path="res://Sounds/attackSpikes.wav" id="10_5njwb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y0ewj"]
 shader = ExtResource("2_k8yg5")
@@ -159,6 +164,21 @@ offset_top = 64.0
 offset_right = -60.0
 offset_bottom = 64.0
 scale = Vector2(0.5, 0.5)
+
+[node name="HurtPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mb2jx")
+
+[node name="Fireball" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jjt5q")
+
+[node name="InitialExplosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_uvhok")
+
+[node name="Lightning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_0lgvl")
+
+[node name="Spikes" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_5njwb")
 
 [connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]

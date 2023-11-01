@@ -57,6 +57,7 @@ func create_bullet():
 	bullet.position = position
 	bullet.velocity = get_global_mouse_position() - bullet.position
 	bullet.look_at(get_global_mouse_position())
+	$Fireball.play()
 
 func create_explosion():
 	var explosion = explosion_prefab.instantiate()
@@ -64,17 +65,19 @@ func create_explosion():
 	explosion.position = position
 	explosion.velocity = get_global_mouse_position() - explosion.position
 	explosion.look_at(get_global_mouse_position())
+	$InitialExplosion.play()
 
 func create_spikes():
 	var spikes = spikes_prefab.instantiate()
 	get_parent().add_child(spikes)
 	spikes.position = get_global_mouse_position()
+	$Spikes.play()
 	
 func create_lightning():
 	var lightning = lightning_prefab.instantiate()
 	get_parent().add_child(lightning)
 	lightning.position = get_global_mouse_position() - Vector2(0, 250)
-
+	$Lightning.play()
 
 func _physics_process(delta):
 	#every frame these things run
@@ -160,6 +163,7 @@ func deal_damage():
 			health -= 20
 			$"/root/GlobalScript".camera.shake(0.2, 3)
 			animation.play("Damage")
+			$HurtPlayer.play()
 			$ControlHealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false

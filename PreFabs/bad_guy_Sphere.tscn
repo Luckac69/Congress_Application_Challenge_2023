@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://clfhdemr0mfhd"]
+[gd_scene load_steps=10 format=3 uid="uid://clfhdemr0mfhd"]
 
 [ext_resource type="Texture2D" uid="uid://c1x4d8fnqqcaf" path="res://Artwork/Enemies/knight_spear_sprite-Sheet.png" id="1_q2xob"]
 [ext_resource type="PackedScene" uid="uid://dm6f8yue1ue4e" path="res://HealthBar.tscn" id="2_dxwei"]
+[ext_resource type="AudioStream" uid="uid://c4p2mwreqg026" path="res://Sounds/hurtEnemy.wav" id="3_3rxpp"]
 
 [sub_resource type="GDScript" id="GDScript_vmnvc"]
 script/source = "extends CharacterBody2D
@@ -60,8 +61,8 @@ func _on_enemy_hitbox_area_entered(body):
 		deal_damage(10)
 		speed = 250
 		$SlowDuration.start()
-		deal_damage(90)
-		
+	if body.get_parent().is_in_group(\"Lightning\"):
+		deal_damage(100)
 	
 func _on_enemy_hitbox_area_exited(body):
 	if body.get_parent().is_in_group(\"Player\"):
@@ -71,6 +72,7 @@ func deal_damage(damage: float):
 		if can_take_damage == true:
 			health = health - damage
 			update_health()
+			$AudioStreamPlayer.play()
 			$ControlHealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false
@@ -200,6 +202,9 @@ offset_top = 64.0
 offset_right = -60.0
 offset_bottom = 64.0
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3rxpp")
 
 [connection signal="area_entered" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_entered"]
 [connection signal="area_exited" from="EnemyHitbox" to="." method="_on_enemy_hitbox_area_exited"]
