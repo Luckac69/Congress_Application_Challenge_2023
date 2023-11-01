@@ -72,7 +72,6 @@ scale = Vector2(3.5, 2.5)
 shape = SubResource("CapsuleShape2D_pllcq")
 
 [node name="ShockTimer" type="Timer" parent="."]
-wait_time = 1.4
 
 [connection signal="area_entered" from="LightningHitbox" to="." method="_on_lightning_area_entered"]
 [connection signal="timeout" from="ShockTimer" to="." method="_on_shock_timer_timeout"]

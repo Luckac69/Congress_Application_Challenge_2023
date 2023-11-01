@@ -1,6 +1,7 @@
 res://Scenes/main_menu.tscn
 res://Scenes/options_menu.tscn
 res://Scenes/study_menu.tscn
+res://lightning.tscn
 res://Scenes/World.tscn
 res://PreFabs/protaginast_guy.tscn
 res://hit_effect.tscn
@@ -16,3 +17,9 @@ res://QuestionAnswer.gd
 res://QuestionAnswer.tscn
 res://question_create_menu.tscn
 res://question_create_menu.gd
+res://fireball.tscn
+res://PreFabs/protaginast_guy.tscn
+res://spikes.tscn
+res://experience.gd
+res://experience.tscn
+res://Spikes.gd
