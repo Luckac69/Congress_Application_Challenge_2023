@@ -59,6 +59,8 @@ func _on_enemy_hitbox_area_entered(body):
 		deal_damage(10)
 		speed = 250
 		$SlowDuration.start()
+		deal_damage(90)
+		
 	
 func _on_enemy_hitbox_area_exited(body):
 	if body.get_parent().is_in_group(\"Player\"):

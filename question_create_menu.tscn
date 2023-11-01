@@ -192,5 +192,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_rgnqm")
 text = "BACK
 "
 
+[node name="Questions" type="Node2D" parent="."]
+
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/CreateButtonContainer/CreateButton" to="." method="_on_create_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/BackButtonContainer/BackButton" to="." method="_on_back_button_button_up"]

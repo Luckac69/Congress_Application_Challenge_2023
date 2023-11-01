@@ -5,6 +5,8 @@ AnimationPlayer
 Sprite2D
 Area2D
 CharacterBody2D
+AnimationPlayer
+Sprite2D
 TextureProgressBar
 HScrollBar
 VScrollBar
@@ -13,7 +15,6 @@ MarginContainer
 VBoxContainer
 Label
 GPUParticles2D
-Node2D
 Marker2D
 TileMap
 ProgressBar

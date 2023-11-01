@@ -13,9 +13,13 @@ var can_shoot_explosion = true
 var can_summon_spikes = true
 
 
+var can_shoot_lightning = true
+
 var bullet_prefab = preload("res://fireball.tscn")
 var explosion_prefab = preload("res://explosion.tscn")
 var spikes_prefab = preload("res://spikes.tscn")
+
+var lightning_prefab = preload("res://lightning.tscn")
 
 const REGEN = 5
 
@@ -26,6 +30,7 @@ func _input(event):
 			can_shoot_fireball = false
 			$FireballShootCooldown.start()
 			create_bullet()
+	
 	if event.is_action_pressed("Explode"):
 		if can_shoot_explosion == true:
 			#if event is InputEventKey:
@@ -37,6 +42,12 @@ func _input(event):
 			can_summon_spikes = false
 			$SpikesSummonCooldown.start()
 			create_spikes()
+	
+	if event.is_action_pressed("Lightning"):
+		if can_shoot_lightning == true:
+			can_shoot_lightning = false
+			$LightningShootCooldown.start()
+			create_lightning()
 
 func create_bullet():
 	var bullet = bullet_prefab.instantiate()
@@ -59,6 +70,12 @@ func create_spikes():
 	get_parent().add_child(spikes)
 	spikes.position = get_global_mouse_position()
 	
+func create_lightning():
+	var lightning = lightning_prefab.instantiate()
+	get_parent().add_child(lightning)
+	lightning.position = position
+	lightning.velocity = get_global_mouse_position() - lightning.position
+	lightning.look_at(get_global_mouse_position())
 
 func _physics_process(delta):
 	#every frame these things run
@@ -151,3 +168,5 @@ func _on_explosion_shoot_cooldown_timeout():
 
 func _on_spikes_summon_cooldown_timeout():
 	can_summon_spikes = true
+func _on_lightning_shoot_cooldown_timeout():
+	can_shoot_lightning = true
