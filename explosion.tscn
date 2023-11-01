@@ -51,6 +51,7 @@ _data = {
 radius = 100.0
 
 [node name="Explosion" type="CharacterBody2D"]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_cgcox")
 hit_effect = ExtResource("2_hcepy")
 

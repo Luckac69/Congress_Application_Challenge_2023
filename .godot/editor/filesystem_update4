@@ -1,13 +1,11 @@
-res://PreFabs/protaginast_guy.tscn
-res://Scenes/main_menu.tscn
-res://Scenes/options_menu.tscn
-res://Scenes/study_menu.tscn
+res://Spikes.gd
 res://Scenes/World.tscn
+res://PreFabs/protaginast_guy.tscn
 res://fireball.tscn
 res://hit_effect.tscn
 res://PreFabs/bad_guy_Knight.tscn
 res://PreFabs/bad_guy_Sphere.tscn
-res://HealthBar.tscn
 res://explosion.tscn
 res://Scripts/protaginast_guy.gd
+res://spikes.tscn
 res://Explosion.gd

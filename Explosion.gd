@@ -24,12 +24,11 @@ func _on_explosion_initial_hitbox_area_entered(body):
 		effect_instance.position = body.get_parent().position
 		get_parent().add_child(effect_instance)
 		effect_instance.emitting = true
-		
-		
-
 		animation.play("explosion contact")
+		self.scale.x = 1.6
+		self.scale.y = 1.6
 		$KaboomTimer.start()
-
 
 func _on_timer_timeout():
 	self.queue_free()
+

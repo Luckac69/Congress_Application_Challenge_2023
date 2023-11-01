@@ -10,9 +10,12 @@ var player_alive = true
 var enemy_in_attack_zone = false
 var can_shoot_fireball = true
 var can_shoot_explosion = true
+var can_summon_spikes = true
+
 
 var bullet_prefab = preload("res://fireball.tscn")
 var explosion_prefab = preload("res://explosion.tscn")
+var spikes_prefab = preload("res://spikes.tscn")
 
 const REGEN = 5
 
@@ -29,6 +32,11 @@ func _input(event):
 			can_shoot_explosion = false
 			$ExplosionShootCooldown.start()
 			create_explosion()
+	if event.is_action_pressed("Spikes"):
+		if can_summon_spikes == true:
+			can_summon_spikes = false
+			$SpikesSummonCooldown.start()
+			create_spikes()
 
 func create_bullet():
 	var bullet = bullet_prefab.instantiate()
@@ -45,6 +53,12 @@ func create_explosion():
 	explosion.position = position
 	explosion.velocity = get_global_mouse_position() - explosion.position
 	explosion.look_at(get_global_mouse_position())
+
+func create_spikes():
+	var spikes = spikes_prefab.instantiate()
+	get_parent().add_child(spikes)
+	spikes.position = get_global_mouse_position()
+	
 
 func _physics_process(delta):
 	#every frame these things run
@@ -134,3 +148,6 @@ func _on_fireball_shoot_cooldown_timeout():
 
 func _on_explosion_shoot_cooldown_timeout():
 	can_shoot_explosion = true
+
+func _on_spikes_summon_cooldown_timeout():
+	can_summon_spikes = true
