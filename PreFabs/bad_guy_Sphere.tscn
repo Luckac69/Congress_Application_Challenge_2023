@@ -151,7 +151,7 @@ metadata/_edit_group_ = true
 
 [node name="SpearsMan" type="Sprite2D" parent="."]
 position = Vector2(-6, 0)
-scale = Vector2(1.6, 1.6)
+scale = Vector2(2, 2)
 texture = ExtResource("1_hm7kh")
 hframes = 4
 vframes = 2

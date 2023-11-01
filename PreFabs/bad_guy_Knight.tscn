@@ -61,7 +61,6 @@ func _on_enemy_hitbox_area_entered(body):
 		take_damage(10)
 		speed = 250
 		$SlowDuration.start()
-		take_damage(80)
 	if body.get_parent().is_in_group(\"Lightning\"):
 		take_damage(100)
 		

@@ -1,3 +1,4 @@
+Label
 TextureProgressBar
 Timer
 CollisionShape2D
@@ -20,7 +21,6 @@ HScrollBar
 VScrollBar
 Button
 VBoxContainer
-Label
 Marker2D
 TileMap
 ProgressBar

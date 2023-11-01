@@ -50,14 +50,13 @@ func _on_enemy_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Player"):
 		player_inattack_zone = true
 	if body.get_parent().is_in_group("Bullet"):
-		take_damage(10)
+		take_damage(45)
 	if body.get_parent().is_in_group("Explosion"):
-		take_damage(60)
+		take_damage(80)
 	if body.get_parent().is_in_group("Spikes"):
-		take_damage(10)
+		take_damage(25)
 		speed = 250
 		$SlowDuration.start()
-		take_damage(80)
 	if body.get_parent().is_in_group("Lightning"):
 		take_damage(100)
 		

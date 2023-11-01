@@ -11,7 +11,7 @@ func _on_start_button_button_up():
 
 func _on_study_button_button_up():
 	$MenuSound.play()
-	get_tree().change_scene_to_file("res://Scenes/study_menu.tscn")
+	get_tree().change_scene_to_file("res://question_create_menu.tscn")
 
 
 func _on_credit_button_button_up():

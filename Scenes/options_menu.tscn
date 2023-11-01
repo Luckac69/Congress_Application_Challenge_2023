@@ -59,25 +59,29 @@ alignment = 1
 [node name="StartContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 0
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/StartContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/StartContainer"]
 layout_mode = 2
-focus_mode = 0
-theme_override_constants/outline_size = 0
+size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("1_vixdj")
-theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_exq8q")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6gtaq")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_geb0q")
-text = "start"
+theme_override_font_sizes/font_size = 35
+text = "Credits:
+Developers: Vageesh Degala, Anand Chanade, Van Tran, Hieu Tran
+Applications Used: Godot 4 (GD Script), Github, Aseprite, Kate, Obs, JSFXR
+Resources: World of Solaria Tileset by Jamie Brownhill, Free Pixel Font by Rick Hoppmann
+Soundtracks by Benjamin Burnes: Abstraction - Ludum Dare 28 Track 1, Abstraction - Ludum Dare 30 Track 6, Abstraction - Ludum Dare Track 7
+Sound effects: Sounds by Eric Fredricksen"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ExitGameContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 8
 theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 10
 
@@ -96,5 +100,4 @@ text = "BACK
 [node name="MenuSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_f27m1")
 
-[connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StartContainer/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/ExitGameContainer/ExitButton" to="." method="_on_exit_button_button_up"]
