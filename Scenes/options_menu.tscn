@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8213daghuwd5"]
+[gd_scene load_steps=7 format=3 uid="uid://b8213daghuwd5"]
 
 [ext_resource type="Script" path="res://Scenes/options_menu.gd" id="1_e7sl6"]
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_vixdj"]
+[ext_resource type="AudioStream" uid="uid://bvufgkba1co3e" path="res://Sounds/menuClickAlt.wav" id="3_f27m1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exq8q"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
@@ -91,6 +92,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_6gtaq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_geb0q")
 text = "BACK
 "
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f27m1")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StartContainer/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/ExitGameContainer/ExitButton" to="." method="_on_exit_button_button_up"]

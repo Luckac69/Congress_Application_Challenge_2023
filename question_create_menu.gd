@@ -11,8 +11,12 @@ var amount : int = 0
 
 @onready var questionsdictionary = $"/root/GlobalScript".QuestionDictinary
 
+func _ready():
+	$StudyTheme.play()
+
 
 func _on_create_button_button_up():
+	$MenuSound.play()
 	
 	var IsAnswer1 = false
 	var IsAnswer2 = false
@@ -63,8 +67,10 @@ func _on_create_button_button_up():
 	get_tree().change_scene_to_file("res://Scenes/study_menu.tscn")
 
 func _on_back_button_button_up():
+	$MenuSound.play()
 	get_tree().change_scene_to_file("res://Scenes/study_menu.tscn")
 
 
 func _on_h_slider_value_changed(value):
+	$MenuSound.play()
 	CorrectAnswer.text = "The Correct answer is Set To Answer Choice" + str(SliderCorrect.value)

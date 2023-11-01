@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://blm87mvoctsbj"]
+[gd_scene load_steps=11 format=3 uid="uid://blm87mvoctsbj"]
 
 [ext_resource type="Script" path="res://question_create_menu.gd" id="1_ehp2s"]
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_q36vf"]
+[ext_resource type="AudioStream" uid="uid://jtmeswkctrm4" path="res://Sounds/Ludum Dare 30 - Track 6.wav" id="3_wv11t"]
+[ext_resource type="AudioStream" uid="uid://c88b8jvs1e0xs" path="res://Sounds/menuClickAlt2.wav" id="4_7rbke"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axccu"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
@@ -239,6 +241,12 @@ text = "BACK
 "
 
 [node name="Questions" type="Node2D" parent="."]
+
+[node name="StudyTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wv11t")
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7rbke")
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer2/Answer3/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/HBoxContainer/CreateButtonContainer/CreateButton" to="." method="_on_create_button_button_up"]
