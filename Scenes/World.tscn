@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://k7eusrjpuycy" path="res://QuestionAnswer.tscn" id="7_ltarj"]
 [ext_resource type="Texture2D" uid="uid://dtvcmenv0xbg7" path="res://Artwork/Effects/exp_empty.png" id="9_3dcoh"]
 [ext_resource type="AudioStream" uid="uid://c0fkniu0jw7jp" path="res://Sounds/Ludum Dare 30 - Track 7.wav" id="9_jcqxt"]
-[ext_resource type="Texture2D" uid="uid://bbu4031wyehxu" path="res://Artwork/Effects/exp_progress.png" id="10_nkjkv"]
+[ext_resource type="Texture2D" path="res://Artwork/Effects/exp_progress.png" id="10_nkjkv"]
 [ext_resource type="Script" path="res://Scenes/EXPBar.gd" id="11_6bq8s"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_q1qf7"]

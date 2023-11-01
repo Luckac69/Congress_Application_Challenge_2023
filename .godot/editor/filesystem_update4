@@ -4,5 +4,5 @@ res://PreFabs/bad_guy_Sphere.tscn
 res://PreFabs/protaginast_guy.tscn
 res://QuestionAnswer.tscn
 res://Scenes/main_menu.tscn
-res://Scripts/protaginast_guy.gd
+res://pause_menu.tscn
 res://Scenes/EXPBar.gd
