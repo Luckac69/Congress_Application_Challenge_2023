@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm35wefta1b86"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_4uf4n"]
+[ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="2_i7owj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lgy1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj1t5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PauseMenu" type="Control" node_paths=PackedStringArray("ResumeButton", "ExitLevelButton")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 651.0
+script = ExtResource("1_4uf4n")
+ResumeButton = NodePath("MarginContainer/VBoxContainer/ResumeMargin/ResumeButton")
+ExitLevelButton = NodePath("MarginContainer/VBoxContainer/ResumeMargin2/Exit Button")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_right = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ResumeMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 500
+theme_override_constants/margin_top = 250
+theme_override_constants/margin_right = 500
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer/ResumeMargin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.831373, 0.831373, 0.784314)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_i7owj")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_7lgy1")
+text = "Resume"
+
+[node name="ResumeMargin2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 500
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 250
+
+[node name="Exit Button" type="Button" parent="MarginContainer/VBoxContainer/ResumeMargin2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.831373, 0.831373, 0.831373, 0.784314)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_i7owj")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_oj1t5")
+text = "Exit Level
+"
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.184314)
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/ResumeMargin/ResumeButton" to="." method="_on_resume_button_button_up"]
+[connection signal="button_up" from="MarginContainer/VBoxContainer/ResumeMargin2/Exit Button" to="." method="_on_exit_button_button_up"]

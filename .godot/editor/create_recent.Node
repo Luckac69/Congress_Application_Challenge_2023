@@ -4,6 +4,15 @@ AudioStreamPlayer
 AudioStreamPlayer2D
 Timer
 MarginContainer
+ColorRect
+MarginContainer
+VBoxContainer
+Button
+Control
+AudioStreamPlayer
+AudioStreamPlayer2D
+Timer
+CanvasLayer
 TextureRect
 HSlider
 RayCast2D
@@ -16,8 +25,6 @@ Timer
 RayCast2D
 HScrollBar
 VScrollBar
-Button
-VBoxContainer
 Label
 GPUParticles2D
 Marker2D
