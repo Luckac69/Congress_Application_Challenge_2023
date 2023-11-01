@@ -167,12 +167,14 @@ scale = Vector2(0.5, 0.5)
 
 [node name="HurtPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_mb2jx")
+volume_db = 5.0
 
 [node name="Fireball" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_jjt5q")
 
 [node name="InitialExplosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_uvhok")
+volume_db = -2.0
 
 [node name="Lightning" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0lgvl")
