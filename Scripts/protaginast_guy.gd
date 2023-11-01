@@ -49,10 +49,6 @@ func _input(event):
 			can_shoot_lightning = false
 			$LightningShootCooldown.start()
 			create_lightning()
-	if event.is_action_pressed("Pause"):
-		if $"../CanvasLayer/PauseMenu".visible == false:
-			$"../CanvasLayer/PauseMenu".visible = true
-			Engine.time_scale = 0
 
 func create_bullet():
 	var bullet = bullet_prefab.instantiate()
