@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_1byoy"]
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_f3c22"]
-[ext_resource type="AudioStream" uid="uid://c88b8jvs1e0xs" path="res://Sounds/menuClickAlt2.wav" id="3_65pli"]
+[ext_resource type="AudioStream" uid="uid://b4r6tlb6ltecw" path="res://Sounds/Ludum Dare 28 - Track 1.wav" id="3_hh15k"]
 [ext_resource type="AudioStream" uid="uid://bvufgkba1co3e" path="res://Sounds/menuClickAlt.wav" id="4_44y7r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kac25"]
@@ -130,7 +130,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_xtno7")
 text = "EXIT GAME"
 
 [node name="MenuTheme" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_65pli")
+stream = ExtResource("3_hh15k")
 
 [node name="StartSound" type="AudioStreamPlayer" parent="."]
 

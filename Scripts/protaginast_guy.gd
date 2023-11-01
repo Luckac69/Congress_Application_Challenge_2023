@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var animation = $AnimationPlayer
-
+@onready var questionsdictionary = $"/root/GlobalScript".QuestionDictinary
 
 @export var health = 100
 @export var speed = 300.0
@@ -131,11 +131,10 @@ func update_health():
 		healthbar.visible = true
 		
 func update_experience():
-	expamount = expamount + expgain
+	expamount = expamount + expgain * 5
 	if expamount >= maxexp:
-		#if not $"/root/GlobalScript".QuestionDictinary == null:
-			#/$"../CanvasLayer/QuestionPopup".visible = true
-			#$"/root/GlobalScript".popupquestion.questionpopup(5)
+		$"../CanvasLayer/QuestionPopup".visible = true
+		$"/root/GlobalScript".popupquestion.questionpopup(5)
 		Engine.time_scale = 0
 		level = level + 1
 		expamount = expamount - maxexp

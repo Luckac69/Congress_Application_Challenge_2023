@@ -61,6 +61,9 @@ func _on_create_button_button_up():
 	for Questions in questionsdictionary:
 		amount = amount + 1
 		
+		questionsdictionary["Question" + str(amount)] = QuestionTable
+		print(questionsdictionary)
+		
 	
 	get_tree().change_scene_to_file("res://Scenes/study_menu.tscn")
 
