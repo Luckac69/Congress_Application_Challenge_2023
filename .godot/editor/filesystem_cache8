@@ -1,162 +1,162 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698821032
-Control.gd::GDScript::-1::1698779797::0::1::::<>Control<>::
-experience.gd::GDScript::-1::1698817799::0::1::::<>CharacterBody2D<>::
-experience.tscn::PackedScene::8341200768345068863::1698820663::0::1::::<><>::res://experience.gd<>uid://cxxojmnuqfic7::::res://Artwork/Effects/exp_circle-Sheet.png
-Explosion.gd::GDScript::-1::1698802308::0::1::::<>CharacterBody2D<>::
-explosion.tscn::PackedScene::1159949036537478060::1698817693::0::1::::<><>::res://Explosion.gd<>uid://cjdq435d5qh61::::res://Artwork/Effects/explosion_full-Sheet.png<>uid://c53bmsws2shc::::res://hit_effect.tscn
-fireball.gd::GDScript::-1::1698795102::0::1::::<>CharacterBody2D<>::
-fireball.tscn::PackedScene::2882349026689931179::1698817693::0::1::::<><>::res://fireball.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://cmo3xu5wbe1i6::::res://Artwork/Effects/fireball-Sheet.png
-global.gd::GDScript::-1::1698817791::0::1::::<>Node<>::
-HealthBar.tscn::PackedScene::8065887692948008622::1698803791::0::1::::<><>::res://Control.gd<>uid://cinigjppdrf1x::::res://Artwork/Effects/hp_bar.png<>uid://bu1f3ls16v76p::::res://Artwork/Effects/hp_Background.png
-HealthBarUnder.png::CompressedTexture2D::936046524545764751::1698779797::1698779797::1::::<><>::
-hit_effect.gd::GDScript::-1::1698704686::0::1::::<>GPUParticles2D<>::
-hit_effect.tscn::PackedScene::204011540600620784::1698817693::0::1::::<><>::res://hit_effect.gd
-lightning.gd::GDScript::-1::1698806536::0::1::::<>CharacterBody2D<>::
-lightning.tscn::PackedScene::1240604643508571490::1698817799::0::1::::<><>::res://lightning.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://7nqwpqhnusn3::::res://lightning_cloud_blank-Sheet.png
-lightning_cloud-Sheet.png::CompressedTexture2D::6838338819265652628::1698779797::1698779797::1::::<><>::
-lightning_cloud_blank-Sheet.png::CompressedTexture2D::2273891479473335022::1698805593::1698805594::1::::<><>::
-progressBar.png::CompressedTexture2D::1241587254838290736::1698779797::1698779797::1::::<><>::
-protaginast_guy.tscn::PackedScene::1241159874006497388::1698704686::0::1::::<><>::res://protaginast_guy.gd
-QuestionAnswer.gd::GDScript::-1::1698820741::0::1::::<>Control<>::
-QuestionAnswer.tscn::PackedScene::768228080471155884::1698820741::0::1::::<><>::uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>res://QuestionAnswer.gd<>uid://dry7b54607gwc::::res://Artwork/Effects/correct.png<>uid://bisr1xn7f7guw::::res://Artwork/Effects/incorrect.png<>uid://clr55ko1n6ooq::::res://Sounds/answerCorrect.wav<>uid://cof6rkfy1sshw::::res://Sounds/answerWrong.wav
-question_create_menu.gd::GDScript::-1::1698820741::0::1::::<>Control<>::
-question_create_menu.tscn::PackedScene::3185331966287055275::1698820741::0::1::::<><>::res://question_create_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://jtmeswkctrm4::::res://Sounds/Ludum Dare 30 - Track 6.wav<>uid://c88b8jvs1e0xs::::res://Sounds/menuClickAlt2.wav
-README.md::TextFile::-1::1698704686::0::1::::<><>::
-Spikes.gd::GDScript::-1::1698809159::0::1::::<>CharacterBody2D<>::
-spikes.tscn::PackedScene::1885148155719193415::1698817693::0::1::::<><>::res://Spikes.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://baahdddbgl8t2::::res://Artwork/Effects/spikes-Sheet.png
-::res://Artwork/::1698808420
-::res://Artwork/Effects/::1698817799
-BackButton.png::CompressedTexture2D::8315617522304940773::1698704686::1698704686::1::::<><>::
-Coin-export.png::CompressedTexture2D::65956870932229457::1698704686::1698704686::1::::<><>::
-control button.png::CompressedTexture2D::4121697845468040098::1698704686::1698704686::1::::<><>::
-correct.png::CompressedTexture2D::8403963810528724406::1698704686::1698704686::1::::<><>::
-earth_hitfx-Sheet.png::CompressedTexture2D::4755877752481831374::1698704686::1698704686::1::::<><>::
-explosion-Sheet.png::CompressedTexture2D::5041676420067464807::1698704686::1698704686::1::::<><>::
-explosion_full-Sheet.png::CompressedTexture2D::5411758870473149204::1698781026::1698781026::1::::<><>::
-exp_circle-Sheet.png::CompressedTexture2D::6435532220741151212::1698817799::1698817799::1::::<><>::
-exp_empty.png::CompressedTexture2D::8536345107713881112::1698704686::1698704686::1::::<><>::
-exp_full.png::CompressedTexture2D::5590875387464976905::1698704686::1698704686::1::::<><>::
-fireball-Sheet.png::CompressedTexture2D::5645751026468939783::1698704686::1698704686::1::::<><>::
-fire_hitfx-Sheet.png::CompressedTexture2D::5283067561595748093::1698704686::1698704686::1::::<><>::
-flashcard.png::CompressedTexture2D::1142660738707230279::1698704686::1698704686::1::::<><>::
-heart.png::CompressedTexture2D::6372095656328576717::1698704686::1698704686::1::::<><>::
-hp_Background.png::CompressedTexture2D::3844225572039414277::1698779797::1698779797::1::::<><>::
-hp_bar.png::CompressedTexture2D::5361685974567232119::1698779797::1698704686::1::::<><>::
-icon.svg::CompressedTexture2D::5666130331205426709::1698704686::1698795147::1::::<><>::
-incorrect.png::CompressedTexture2D::2986170081470384614::1698704686::1698704686::1::::<><>::
-knight_spear_idle-Sheet.png::CompressedTexture2D::1204987223675086832::1698704686::1698704686::1::::<><>::
-knight_spear_walk-Sheet.png::CompressedTexture2D::8158392088859658372::1698704686::1698704686::1::::<><>::
-knight_sword_idle-Sheet.png::CompressedTexture2D::478116988791550489::1698704686::1698704686::1::::<><>::
-knight_sword_sprite-Sheet.png::CompressedTexture2D::7858137853807985494::1698704686::1698704686::1::::<><>::
-lightning-Sheet.png::CompressedTexture2D::1194044402646211012::1698802864::1698704686::1::::<><>::
-play button.png::CompressedTexture2D::8592759481511072825::1698704686::1698704686::1::::<><>::
-Portal-Sheet.png::CompressedTexture2D::472767927854765881::1698704686::1698704686::1::::<><>::
-spikes-Sheet.png::CompressedTexture2D::2386851222282569277::1698704686::1698704686::1::::<><>::
-wizard_idle-Sheet.png::CompressedTexture2D::6365822361096377471::1698704686::1698704686::1::::<><>::
-::res://Artwork/Enemies/::1698704686
-knight_spear_sprite-Sheet.png::CompressedTexture2D::6646999882097610989::1698704686::1698704686::1::::<><>::
-knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698704686::1698704686::1::::<><>::
-knight_sword_sprite-Sheet.png::CompressedTexture2D::2967287097412053354::1698704686::1698704686::1::::<><>::
-Sip.png::CompressedTexture2D::2938066403285530928::1698704686::1698704686::1::::<><>::
-TheBoar.png::CompressedTexture2D::7234390846672947380::1698704686::1698704686::1::::<><>::
-wizard_sprite-Sheet.png::CompressedTexture2D::3306277282985924883::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/::1698704686
-Asset License.txt::TextFile::-1::1698704686::0::1::::<><>::
-Solaria Palette.png::CompressedTexture2D::2578586704287745856::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/16x16/::1698704686
-::res://Artwork/Solaria Demo Pack Update 03/16x16/Sprites/::1698704686
-Hero 01.png::CompressedTexture2D::3870639512871166020::1698704686::1698704686::1::::<><>::
-Minecart 01.png::CompressedTexture2D::8984416379389318982::1698704686::1698704686::1::::<><>::
-Slime 01.png::CompressedTexture2D::6779237740842730338::1698704686::1698704686::1::::<><>::
-Sword 01.png::CompressedTexture2D::4914173457999615087::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/::1698704686
-Solaria Demo Update 01.png::CompressedTexture2D::5249393100562069683::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/Examples/::1698704686
-Demo Pack Example 01.png::CompressedTexture2D::8389295702717641998::1698704686::1698704686::1::::<><>::
-Demo Pack Example 02.png::CompressedTexture2D::1464570835347275460::1698704686::1698704686::1::::<><>::
-Demo Pack Example 03.png::CompressedTexture2D::1824090573858513260::1698704686::1698704686::1::::<><>::
-Demo Pack Update 01 Preview.png::CompressedTexture2D::5205986713862132311::1698704686::1698704686::1::::<><>::
-Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::658051498286109785::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/::1698704686
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/characters/::1698704686
-!Chest.png::CompressedTexture2D::1530705066196467162::1698704686::1698704686::1::::<><>::
-!Door1.png::CompressedTexture2D::6595533936449656603::1698704686::1698704686::1::::<><>::
-!Flame.png::CompressedTexture2D::5362898621611530638::1698704686::1698704686::1::::<><>::
-!Other1.png::CompressedTexture2D::4764578339655656905::1698704686::1698704686::1::::<><>::
-!Other2.png::CompressedTexture2D::8465845229347783765::1698704686::1698704686::1::::<><>::
-!Switch1.png::CompressedTexture2D::2239055025629924803::1698704686::1698704686::1::::<><>::
-Actor1.png::CompressedTexture2D::8355689128571753849::1698704686::1698704686::1::::<><>::
-Minecart.png::CompressedTexture2D::5045467312779510694::1698704686::1698704686::1::::<><>::
-Monster.png::CompressedTexture2D::5988549847081745078::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/faces/::1698704686
-Actor1.png::CompressedTexture2D::9061075525384943771::1698704686::1698704686::1::::<><>::
-::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/tilesets/::1698704686
-Dungeon_A1.png::CompressedTexture2D::702205158031962065::1698704686::1698704686::1::::<><>::
-Dungeon_A1.txt::TextFile::-1::1698704686::0::1::::<><>::
-Dungeon_A2.png::CompressedTexture2D::6799935031326260563::1698704686::1698704686::1::::<><>::
-Dungeon_A2.txt::TextFile::-1::1698704686::0::1::::<><>::
-Dungeon_A4.png::CompressedTexture2D::3323522533514470936::1698704686::1698704686::1::::<><>::
-Dungeon_A4.txt::TextFile::-1::1698704686::0::1::::<><>::
-Dungeon_A5.png::CompressedTexture2D::6604484929875814292::1698704686::1698704686::1::::<><>::
-Dungeon_A5.txt::TextFile::-1::1698704686::0::1::::<><>::
-Dungeon_B.png::CompressedTexture2D::3730497200195550686::1698704686::1698704686::1::::<><>::
-Dungeon_B.txt::TextFile::-1::1698704686::0::1::::<><>::
-Dungeon_C.png::CompressedTexture2D::6656592760397037072::1698704686::1698704686::1::::<><>::
-Dungeon_C.txt::TextFile::-1::1698704686::0::1::::<><>::
-Outside_A1.png::CompressedTexture2D::608042096376219201::1698704686::1698704686::1::::<><>::
-Outside_A1.txt::TextFile::-1::1698704686::0::1::::<><>::
-Outside_A2.png::CompressedTexture2D::6439161970580052771::1698704686::1698704686::1::::<><>::
-Outside_A2.txt::TextFile::-1::1698704686::0::1::::<><>::
-Outside_A3.png::CompressedTexture2D::3641386570154739647::1698704686::1698704686::1::::<><>::
-Outside_A3.txt::TextFile::-1::1698704686::0::1::::<><>::
-Outside_A5.png::CompressedTexture2D::406739641970117726::1698704686::1698704686::1::::<><>::
-Outside_A5.txt::TextFile::-1::1698704686::0::1::::<><>::
-Outside_B.png::CompressedTexture2D::6605706845246298765::1698704686::1698704686::1::::<><>::
-Outside_B.txt::TextFile::-1::1698704686::0::1::::<><>::
-Outside_C.png::CompressedTexture2D::4887182703584826249::1698704686::1698704686::1::::<><>::
-Outside_C.txt::TextFile::-1::1698704686::0::1::::<><>::
-::res://PreFabs/::1698820663
-bad_guy_Knight.tscn::PackedScene::9204472254458477968::1698820663::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png<>uid://dm6f8yue1ue4e::::res://HealthBar.tscn<>uid://c4p2mwreqg026::::res://Sounds/hurtEnemy.wav
-bad_guy_Sphere.tscn::PackedScene::5555671141943278997::1698820663::0::1::::<><>::uid://c1x4d8fnqqcaf::::res://Artwork/Enemies/knight_spear_sprite-Sheet.png<>uid://dm6f8yue1ue4e::::res://HealthBar.tscn<>uid://c4p2mwreqg026::::res://Sounds/hurtEnemy.wav
-enemy_spawner.tscn::PackedScene::3966547869076799890::1698724380::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_1.tscn<>uid://g0aoiathy62x::::res://Artwork/Effects/Portal-Sheet.png
-protaginast_guy.gdshader::Shader::-1::1698704686::0::1::::<><>::
-protaginast_guy.tscn::PackedScene::4512850097738316751::1698820663::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://bndt5y14kfhh8::::res://Artwork/Enemies/wizard_sprite-Sheet.png<>res://PreFabs/WhiteFlash.gdshader<>uid://tm3lofwyxbms::::res://PreFabs/trail_2d.tscn<>res://Scripts/Camera2D.gd<>uid://dm6f8yue1ue4e::::res://HealthBar.tscn<>uid://cq3yngm0a1vhy::::res://Sounds/attackFireball.wav<>uid://ms37rvsamywu::::res://Sounds/hurtPlayer.wav<>uid://d135xetx2b6wm::::res://Sounds/attackInitialExplosion.wav<>uid://qr8f5jvwisrh::::res://Sounds/attackLightning.wav<>uid://d3wsr4ykcg131::::res://Sounds/attackSpikes.wav
-ThaleahFat.ttf::FontFile::326198657071737764::1698719208::1698719208::1::::<><>::
-trail_2d.tscn::PackedScene::1360081025785228518::1698704686::0::1::::<><>::res://Scripts/Trail2D.gd
-WhiteFlash.gdshader::Shader::-1::1698704686::0::1::::<><>::
-::res://Scenes/::1698820741
-main_menu.gd::GDScript::-1::1698820741::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::3319437409017852945::1698820741::0::1::::<><>::res://Scenes/main_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://c88b8jvs1e0xs::::res://Sounds/menuClickAlt2.wav<>uid://bvufgkba1co3e::::res://Sounds/menuClickAlt.wav
-options_menu.gd::GDScript::-1::1698820741::0::1::::<>Control<>::
-options_menu.tscn::PackedScene::4760019525001877804::1698820741::0::1::::<><>::res://Scenes/options_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://bvufgkba1co3e::::res://Sounds/menuClickAlt.wav
-study_menu.gd::GDScript::-1::1698820741::0::1::::<>Control<>::
-study_menu.tscn::PackedScene::4886025068299476038::1698820741::0::1::::<><>::res://Scenes/study_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://bvufgkba1co3e::::res://Sounds/menuClickAlt.wav
-World.gd::GDScript::-1::1698820741::0::1::::<>Node2D<>::
-World.tscn::PackedScene::8379493916601640807::1698820741::0::1::::<><>::res://Scenes/World.gd<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_Sphere.tscn<>uid://d4eykwdu3h5km::::res://PreFabs/bad_guy_Knight.tscn<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://k7eusrjpuycy::::res://QuestionAnswer.tscn<>uid://c0fkniu0jw7jp::::res://Sounds/Ludum Dare 30 - Track 7.wav
-::res://Scripts/::1698820092
-bad_guy_1.gd::GDScript::-1::1698704686::0::1::::Enemy<>CharacterBody2D<>::
-Camera2D.gd::GDScript::-1::1698704686::0::1::::<>Camera2D<>::
-EnemySpawner.gd::GDScript::-1::1698725429::0::1::::<>Marker2D<>::
-protaginast_guy.gd::GDScript::-1::1698820092::0::1::::<>CharacterBody2D<>::
-Trail2D.gd::GDScript::-1::1698704686::0::1::::<>Line2D<>::
-::res://Sounds/::1698820741
-answerCorrect.wav::AudioStreamWAV::5581888700884407084::1698819271::1698819271::1::::<><>::
-answerWrong.wav::AudioStreamWAV::5767720186444544956::1698819271::1698819271::1::::<><>::
-attackFireball.wav::AudioStreamWAV::5955146200670238666::1698819271::1698819271::1::::<><>::
-attackInitialExplosion.wav::AudioStreamWAV::9043837386350481612::1698819271::1698819271::1::::<><>::
-attackLightning.wav::AudioStreamWAV::1160130100345975313::1698819271::1698819271::1::::<><>::
-attackSpikes.wav::AudioStreamWAV::9171090808609458506::1698819271::1698819271::1::::<><>::
-gameOver.wav::AudioStreamWAV::5590504513739415768::1698819271::1698819271::1::::<><>::
-hurtEnemy.wav::AudioStreamWAV::6840945469510358153::1698819271::1698819271::1::::<><>::
-hurtPlayer.wav::AudioStreamWAV::881183070588065216::1698819271::1698819271::1::::<><>::
-Ludum Dare 28 - Track 1.wav::AudioStreamWAV::4458908308600615122::1698819271::1698819271::1::::<><>::
-Ludum Dare 30 - Track 6.wav::AudioStreamWAV::671659497022037873::1698819271::1698820741::1::::<><>::
-Ludum Dare 30 - Track 7.wav::AudioStreamWAV::6538515184587442977::1698819271::1698820741::1::::<><>::
-menuClick.wav::AudioStreamWAV::2480385765861848290::1698819271::1698819271::1::::<><>::
-menuClickAlt2.wav::AudioStreamWAV::7157317827520684740::1698819271::1698819271::1::::<><>::
-menuClickAlt.wav::AudioStreamWAV::3901988781713384676::1698819271::1698819271::1::::<><>::
-pickUp.wav::AudioStreamWAV::7852874230631313272::1698819271::1698819271::1::::<><>::
-playerDead.wav::AudioStreamWAV::6519530981590888614::1698819271::1698819271::1::::<><>::
-playerLevelUp.wav::AudioStreamWAV::6616126811496334090::1698819271::1698819271::1::::<><>::
-playerLevelUpAlt.wav::AudioStreamWAV::2758594328814500819::1698819271::1698819271::1::::<><>::
+::res://::1698821625
+Control.gd::GDScript::-1::1698821092::0::1::::<>Control<>::
+experience.gd::GDScript::-1::1698821092::0::1::::<>CharacterBody2D<>::
+experience.tscn::PackedScene::8341200768345068863::1698821092::0::1::::<><>::res://experience.gd<>uid://cxxojmnuqfic7::::res://Artwork/Effects/exp_circle-Sheet.png
+Explosion.gd::GDScript::-1::1698821092::0::1::::<>CharacterBody2D<>::
+explosion.tscn::PackedScene::1159949036537478060::1698821092::0::1::::<><>::res://Explosion.gd<>uid://cjdq435d5qh61::::res://Artwork/Effects/explosion_full-Sheet.png<>uid://c53bmsws2shc::::res://hit_effect.tscn
+fireball.gd::GDScript::-1::1698821092::0::1::::<>CharacterBody2D<>::
+fireball.tscn::PackedScene::2882349026689931179::1698821092::0::1::::<><>::res://fireball.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://cmo3xu5wbe1i6::::res://Artwork/Effects/fireball-Sheet.png
+global.gd::GDScript::-1::1698821092::0::1::::<>Node<>::
+HealthBar.tscn::PackedScene::8065887692948008622::1698821092::0::1::::<><>::res://Control.gd<>uid://cinigjppdrf1x::::res://Artwork/Effects/hp_bar.png<>uid://bu1f3ls16v76p::::res://Artwork/Effects/hp_Background.png
+HealthBarUnder.png::CompressedTexture2D::936046524545764751::1698821092::1698821092::1::::<><>::
+hit_effect.gd::GDScript::-1::1698821092::0::1::::<>GPUParticles2D<>::
+hit_effect.tscn::PackedScene::204011540600620784::1698821092::0::1::::<><>::res://hit_effect.gd
+lightning.gd::GDScript::-1::1698821092::0::1::::<>CharacterBody2D<>::
+lightning.tscn::PackedScene::1240604643508571490::1698821092::0::1::::<><>::res://lightning.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://7nqwpqhnusn3::::res://lightning_cloud_blank-Sheet.png
+lightning_cloud-Sheet.png::CompressedTexture2D::6838338819265652628::1698821092::1698821092::1::::<><>::
+lightning_cloud_blank-Sheet.png::CompressedTexture2D::2273891479473335022::1698821092::1698821092::1::::<><>::
+progressBar.png::CompressedTexture2D::1241587254838290736::1698821092::1698821092::1::::<><>::
+protaginast_guy.tscn::PackedScene::1241159874006497388::1698821092::0::1::::<><>::res://protaginast_guy.gd
+QuestionAnswer.gd::GDScript::-1::1698821092::0::1::::<>Control<>::
+QuestionAnswer.tscn::PackedScene::768228080471155884::1698821593::0::1::::<><>::uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>res://QuestionAnswer.gd<>uid://dry7b54607gwc::::res://Artwork/Effects/correct.png<>uid://bisr1xn7f7guw::::res://Artwork/Effects/incorrect.png<>uid://clr55ko1n6ooq::::res://Sounds/answerCorrect.wav<>uid://cof6rkfy1sshw::::res://Sounds/answerWrong.wav
+question_create_menu.gd::GDScript::-1::1698821092::0::1::::<>Control<>::
+question_create_menu.tscn::PackedScene::3185331966287055275::1698821593::0::1::::<><>::res://question_create_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://jtmeswkctrm4::::res://Sounds/Ludum Dare 30 - Track 6.wav<>uid://c88b8jvs1e0xs::::res://Sounds/menuClickAlt2.wav
+README.md::TextFile::-1::1698821092::0::1::::<><>::
+Spikes.gd::GDScript::-1::1698821092::0::1::::<>CharacterBody2D<>::
+spikes.tscn::PackedScene::1885148155719193415::1698821092::0::1::::<><>::res://Spikes.gd<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://baahdddbgl8t2::::res://Artwork/Effects/spikes-Sheet.png
+::res://Artwork/::1698821092
+::res://Artwork/Effects/::1698821092
+BackButton.png::CompressedTexture2D::8315617522304940773::1698821092::1698821092::1::::<><>::
+Coin-export.png::CompressedTexture2D::65956870932229457::1698821092::1698821092::1::::<><>::
+control button.png::CompressedTexture2D::4121697845468040098::1698821092::1698821092::1::::<><>::
+correct.png::CompressedTexture2D::8403963810528724406::1698821092::1698821092::1::::<><>::
+earth_hitfx-Sheet.png::CompressedTexture2D::4755877752481831374::1698821092::1698821092::1::::<><>::
+explosion-Sheet.png::CompressedTexture2D::5041676420067464807::1698821092::1698821092::1::::<><>::
+explosion_full-Sheet.png::CompressedTexture2D::5411758870473149204::1698821092::1698821092::1::::<><>::
+exp_circle-Sheet.png::CompressedTexture2D::6435532220741151212::1698821092::1698821092::1::::<><>::
+exp_empty.png::CompressedTexture2D::8536345107713881112::1698821092::1698821092::1::::<><>::
+exp_full.png::CompressedTexture2D::5590875387464976905::1698821092::1698821092::1::::<><>::
+fireball-Sheet.png::CompressedTexture2D::5645751026468939783::1698821092::1698821092::1::::<><>::
+fire_hitfx-Sheet.png::CompressedTexture2D::5283067561595748093::1698821092::1698821092::1::::<><>::
+flashcard.png::CompressedTexture2D::1142660738707230279::1698821092::1698821092::1::::<><>::
+heart.png::CompressedTexture2D::6372095656328576717::1698821092::1698821092::1::::<><>::
+hp_Background.png::CompressedTexture2D::3844225572039414277::1698821092::1698821092::1::::<><>::
+hp_bar.png::CompressedTexture2D::5361685974567232119::1698821092::1698821092::1::::<><>::
+icon.svg::CompressedTexture2D::5666130331205426709::1698821092::1698821092::1::::<><>::
+incorrect.png::CompressedTexture2D::2986170081470384614::1698821092::1698821092::1::::<><>::
+knight_spear_idle-Sheet.png::CompressedTexture2D::1204987223675086832::1698821092::1698821092::1::::<><>::
+knight_spear_walk-Sheet.png::CompressedTexture2D::8158392088859658372::1698821092::1698821092::1::::<><>::
+knight_sword_idle-Sheet.png::CompressedTexture2D::478116988791550489::1698821092::1698821092::1::::<><>::
+knight_sword_sprite-Sheet.png::CompressedTexture2D::7858137853807985494::1698821092::1698821092::1::::<><>::
+lightning-Sheet.png::CompressedTexture2D::1194044402646211012::1698821092::1698821092::1::::<><>::
+play button.png::CompressedTexture2D::8592759481511072825::1698821092::1698821092::1::::<><>::
+Portal-Sheet.png::CompressedTexture2D::472767927854765881::1698821092::1698821092::1::::<><>::
+spikes-Sheet.png::CompressedTexture2D::2386851222282569277::1698821092::1698821092::1::::<><>::
+wizard_idle-Sheet.png::CompressedTexture2D::6365822361096377471::1698821092::1698821092::1::::<><>::
+::res://Artwork/Enemies/::1698821092
+knight_spear_sprite-Sheet.png::CompressedTexture2D::6646999882097610989::1698821092::1698821092::1::::<><>::
+knight_sprite-Sheet.png::CompressedTexture2D::145826681842104246::1698821092::1698821092::1::::<><>::
+knight_sword_sprite-Sheet.png::CompressedTexture2D::2967287097412053354::1698821092::1698821092::1::::<><>::
+Sip.png::CompressedTexture2D::2938066403285530928::1698821092::1698821092::1::::<><>::
+TheBoar.png::CompressedTexture2D::7234390846672947380::1698821092::1698821092::1::::<><>::
+wizard_sprite-Sheet.png::CompressedTexture2D::3306277282985924883::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/::1698821092
+Asset License.txt::TextFile::-1::1698821092::0::1::::<><>::
+Solaria Palette.png::CompressedTexture2D::2578586704287745856::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/16x16/::1698821092
+::res://Artwork/Solaria Demo Pack Update 03/16x16/Sprites/::1698821092
+Hero 01.png::CompressedTexture2D::3870639512871166020::1698821092::1698821092::1::::<><>::
+Minecart 01.png::CompressedTexture2D::8984416379389318982::1698821092::1698821092::1::::<><>::
+Slime 01.png::CompressedTexture2D::6779237740842730338::1698821092::1698821092::1::::<><>::
+Sword 01.png::CompressedTexture2D::4914173457999615087::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/::1698821092
+Solaria Demo Update 01.png::CompressedTexture2D::5249393100562069683::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/Examples/::1698821092
+Demo Pack Example 01.png::CompressedTexture2D::8389295702717641998::1698821092::1698821092::1::::<><>::
+Demo Pack Example 02.png::CompressedTexture2D::1464570835347275460::1698821092::1698821092::1::::<><>::
+Demo Pack Example 03.png::CompressedTexture2D::1824090573858513260::1698821092::1698821092::1::::<><>::
+Demo Pack Update 01 Preview.png::CompressedTexture2D::5205986713862132311::1698821092::1698821092::1::::<><>::
+Demo Pack Update 01 Sprite Preview.png::CompressedTexture2D::658051498286109785::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/::1698821092
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/characters/::1698821092
+!Chest.png::CompressedTexture2D::1530705066196467162::1698821092::1698821092::1::::<><>::
+!Door1.png::CompressedTexture2D::6595533936449656603::1698821092::1698821092::1::::<><>::
+!Flame.png::CompressedTexture2D::5362898621611530638::1698821092::1698821092::1::::<><>::
+!Other1.png::CompressedTexture2D::4764578339655656905::1698821092::1698821092::1::::<><>::
+!Other2.png::CompressedTexture2D::8465845229347783765::1698821092::1698821092::1::::<><>::
+!Switch1.png::CompressedTexture2D::2239055025629924803::1698821092::1698821092::1::::<><>::
+Actor1.png::CompressedTexture2D::8355689128571753849::1698821092::1698821092::1::::<><>::
+Minecart.png::CompressedTexture2D::5045467312779510694::1698821092::1698821092::1::::<><>::
+Monster.png::CompressedTexture2D::5988549847081745078::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/faces/::1698821092
+Actor1.png::CompressedTexture2D::9061075525384943771::1698821092::1698821092::1::::<><>::
+::res://Artwork/Solaria Demo Pack Update 03/RPG Maker/tilesets/::1698821092
+Dungeon_A1.png::CompressedTexture2D::702205158031962065::1698821092::1698821092::1::::<><>::
+Dungeon_A1.txt::TextFile::-1::1698821092::0::1::::<><>::
+Dungeon_A2.png::CompressedTexture2D::6799935031326260563::1698821092::1698821092::1::::<><>::
+Dungeon_A2.txt::TextFile::-1::1698821092::0::1::::<><>::
+Dungeon_A4.png::CompressedTexture2D::3323522533514470936::1698821092::1698821092::1::::<><>::
+Dungeon_A4.txt::TextFile::-1::1698821092::0::1::::<><>::
+Dungeon_A5.png::CompressedTexture2D::6604484929875814292::1698821092::1698821092::1::::<><>::
+Dungeon_A5.txt::TextFile::-1::1698821092::0::1::::<><>::
+Dungeon_B.png::CompressedTexture2D::3730497200195550686::1698821092::1698821092::1::::<><>::
+Dungeon_B.txt::TextFile::-1::1698821092::0::1::::<><>::
+Dungeon_C.png::CompressedTexture2D::6656592760397037072::1698821092::1698821092::1::::<><>::
+Dungeon_C.txt::TextFile::-1::1698821092::0::1::::<><>::
+Outside_A1.png::CompressedTexture2D::608042096376219201::1698821092::1698821092::1::::<><>::
+Outside_A1.txt::TextFile::-1::1698821092::0::1::::<><>::
+Outside_A2.png::CompressedTexture2D::6439161970580052771::1698821092::1698821092::1::::<><>::
+Outside_A2.txt::TextFile::-1::1698821092::0::1::::<><>::
+Outside_A3.png::CompressedTexture2D::3641386570154739647::1698821092::1698821092::1::::<><>::
+Outside_A3.txt::TextFile::-1::1698821092::0::1::::<><>::
+Outside_A5.png::CompressedTexture2D::406739641970117726::1698821092::1698821092::1::::<><>::
+Outside_A5.txt::TextFile::-1::1698821092::0::1::::<><>::
+Outside_B.png::CompressedTexture2D::6605706845246298765::1698821092::1698821092::1::::<><>::
+Outside_B.txt::TextFile::-1::1698821092::0::1::::<><>::
+Outside_C.png::CompressedTexture2D::4887182703584826249::1698821092::1698821092::1::::<><>::
+Outside_C.txt::TextFile::-1::1698821092::0::1::::<><>::
+::res://PreFabs/::1698821594
+bad_guy_Knight.tscn::PackedScene::9204472254458477968::1698821594::0::1::::<><>::uid://ccv0kh37c6kw::::res://Artwork/Enemies/knight_sprite-Sheet.png<>uid://dm6f8yue1ue4e::::res://HealthBar.tscn<>uid://c4p2mwreqg026::::res://Sounds/hurtEnemy.wav
+bad_guy_Sphere.tscn::PackedScene::5555671141943278997::1698821594::0::1::::<><>::uid://c1x4d8fnqqcaf::::res://Artwork/Enemies/knight_spear_sprite-Sheet.png<>uid://dm6f8yue1ue4e::::res://HealthBar.tscn<>uid://c4p2mwreqg026::::res://Sounds/hurtEnemy.wav
+enemy_spawner.tscn::PackedScene::3966547869076799890::1698821092::0::1::::<><>::res://Scripts/EnemySpawner.gd<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_1.tscn<>uid://g0aoiathy62x::::res://Artwork/Effects/Portal-Sheet.png
+protaginast_guy.gdshader::Shader::-1::1698821092::0::1::::<><>::
+protaginast_guy.tscn::PackedScene::4512850097738316751::1698821594::0::1::::<><>::res://Scripts/protaginast_guy.gd<>uid://bndt5y14kfhh8::::res://Artwork/Enemies/wizard_sprite-Sheet.png<>res://PreFabs/WhiteFlash.gdshader<>uid://tm3lofwyxbms::::res://PreFabs/trail_2d.tscn<>res://Scripts/Camera2D.gd<>uid://dm6f8yue1ue4e::::res://HealthBar.tscn<>uid://cq3yngm0a1vhy::::res://Sounds/attackFireball.wav<>uid://ms37rvsamywu::::res://Sounds/hurtPlayer.wav<>uid://d135xetx2b6wm::::res://Sounds/attackInitialExplosion.wav<>uid://qr8f5jvwisrh::::res://Sounds/attackLightning.wav<>uid://d3wsr4ykcg131::::res://Sounds/attackSpikes.wav
+ThaleahFat.ttf::FontFile::326198657071737764::1698821092::1698821092::1::::<><>::
+trail_2d.tscn::PackedScene::1360081025785228518::1698821092::0::1::::<><>::res://Scripts/Trail2D.gd
+WhiteFlash.gdshader::Shader::-1::1698821092::0::1::::<><>::
+::res://Scenes/::1698821593
+main_menu.gd::GDScript::-1::1698821092::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::3319437409017852945::1698821593::0::1::::<><>::res://Scenes/main_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://c88b8jvs1e0xs::::res://Sounds/menuClickAlt2.wav<>uid://bvufgkba1co3e::::res://Sounds/menuClickAlt.wav
+options_menu.gd::GDScript::-1::1698821092::0::1::::<>Control<>::
+options_menu.tscn::PackedScene::4760019525001877804::1698821593::0::1::::<><>::res://Scenes/options_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://bvufgkba1co3e::::res://Sounds/menuClickAlt.wav
+study_menu.gd::GDScript::-1::1698821092::0::1::::<>Control<>::
+study_menu.tscn::PackedScene::4886025068299476038::1698821593::0::1::::<><>::res://Scenes/study_menu.gd<>uid://ewapdr1gqw01::::res://PreFabs/ThaleahFat.ttf<>uid://bvufgkba1co3e::::res://Sounds/menuClickAlt.wav
+World.gd::GDScript::-1::1698821092::0::1::::<>Node2D<>::
+World.tscn::PackedScene::8379493916601640807::1698821593::0::1::::<><>::res://Scenes/World.gd<>uid://cg130cptlhsoh::::res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png<>uid://b5kb8m6wcp8br::::res://PreFabs/protaginast_guy.tscn<>uid://bwrop1iqvcqhe::::res://PreFabs/enemy_spawner.tscn<>uid://clfhdemr0mfhd::::res://PreFabs/bad_guy_Sphere.tscn<>uid://d4eykwdu3h5km::::res://PreFabs/bad_guy_Knight.tscn<>uid://c53bmsws2shc::::res://hit_effect.tscn<>uid://k7eusrjpuycy::::res://QuestionAnswer.tscn<>uid://c0fkniu0jw7jp::::res://Sounds/Ludum Dare 30 - Track 7.wav
+::res://Scripts/::1698821092
+bad_guy_1.gd::GDScript::-1::1698821092::0::1::::Enemy<>CharacterBody2D<>::
+Camera2D.gd::GDScript::-1::1698821092::0::1::::<>Camera2D<>::
+EnemySpawner.gd::GDScript::-1::1698821092::0::1::::<>Marker2D<>::
+protaginast_guy.gd::GDScript::-1::1698821092::0::1::::<>CharacterBody2D<>::
+Trail2D.gd::GDScript::-1::1698821092::0::1::::<>Line2D<>::
+::res://Sounds/::1698821092
+answerCorrect.wav::AudioStreamWAV::5581888700884407084::1698821092::1698821092::1::::<><>::
+answerWrong.wav::AudioStreamWAV::5767720186444544956::1698821092::1698821092::1::::<><>::
+attackFireball.wav::AudioStreamWAV::5955146200670238666::1698821092::1698821092::1::::<><>::
+attackInitialExplosion.wav::AudioStreamWAV::9043837386350481612::1698821092::1698821092::1::::<><>::
+attackLightning.wav::AudioStreamWAV::1160130100345975313::1698821092::1698821092::1::::<><>::
+attackSpikes.wav::AudioStreamWAV::9171090808609458506::1698821092::1698821092::1::::<><>::
+gameOver.wav::AudioStreamWAV::5590504513739415768::1698821092::1698821092::1::::<><>::
+hurtEnemy.wav::AudioStreamWAV::6840945469510358153::1698821092::1698821092::1::::<><>::
+hurtPlayer.wav::AudioStreamWAV::881183070588065216::1698821092::1698821092::1::::<><>::
+Ludum Dare 28 - Track 1.wav::AudioStreamWAV::4458908308600615122::1698821092::1698821092::1::::<><>::
+Ludum Dare 30 - Track 6.wav::AudioStreamWAV::671659497022037873::1698821092::1698821092::1::::<><>::
+Ludum Dare 30 - Track 7.wav::AudioStreamWAV::6538515184587442977::1698821092::1698821092::1::::<><>::
+menuClick.wav::AudioStreamWAV::2480385765861848290::1698821092::1698821092::1::::<><>::
+menuClickAlt2.wav::AudioStreamWAV::7157317827520684740::1698821092::1698821092::1::::<><>::
+menuClickAlt.wav::AudioStreamWAV::3901988781713384676::1698821092::1698821092::1::::<><>::
+pickUp.wav::AudioStreamWAV::7852874230631313272::1698821092::1698821092::1::::<><>::
+playerDead.wav::AudioStreamWAV::6519530981590888614::1698821092::1698821092::1::::<><>::
+playerLevelUp.wav::AudioStreamWAV::6616126811496334090::1698821092::1698821092::1::::<><>::
+playerLevelUpAlt.wav::AudioStreamWAV::2758594328814500819::1698821092::1698821092::1::::<><>::
