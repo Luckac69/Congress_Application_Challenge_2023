@@ -52,11 +52,13 @@ func questionpopup(placeholder):
 
 func _on_answer_button_button_up():
 	if Choice1 == true:
+		$AnswerCorrect.play()
 		StartTimer = true
 		check.visible = true
 		Engine.time_scale = 1
 		AnswerDelay.start()
 	else:
+		$AnswerWrong.play()
 		StartTimer = true
 		wrong.visible = true
 		Engine.time_scale = 1
@@ -64,11 +66,13 @@ func _on_answer_button_button_up():
 
 func _on_answer_button_2_button_up():
 	if Choice2 == true:
+		$AnswerCorrect.play()
 		check.visible = true
 		StartTimer = true
 		Engine.time_scale = 1
 		AnswerDelay.start()
 	else:
+		$AnswerWrong.play()
 		wrong.visible = true
 		StartTimer = true
 		Engine.time_scale = 1
@@ -76,11 +80,13 @@ func _on_answer_button_2_button_up():
 
 func _on_answer_button_3_button_up():
 	if Choice3 == true:
+		$AnswerCorrect.play()
 		check.visible = true
 		StartTimer = true
 		Engine.time_scale = 1
 		AnswerDelay.start()
 	else:
+		$AnswerWrong.play()
 		wrong.visible = true
 		StartTimer = true
 		Engine.time_scale = 1
@@ -89,11 +95,13 @@ func _on_answer_button_3_button_up():
 
 func _on_answer_button_4_button_up():
 	if Choice4 == true:
+		$AnswerCorrect.play()
 		check.visible = true
 		StartTimer = true
 		Engine.time_scale = 1
 		AnswerDelay.start()
 	else:
+		$AnswerWrong.play()
 		wrong.visible = true
 		StartTimer = true
 		Engine.time_scale = 1

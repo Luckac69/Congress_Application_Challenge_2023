@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbu3ebt4vqksk"]
+[gd_scene load_steps=7 format=3 uid="uid://cbu3ebt4vqksk"]
 
 [ext_resource type="Script" path="res://Scenes/study_menu.gd" id="1_ax0j1"]
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_ivmrx"]
+[ext_resource type="AudioStream" uid="uid://bvufgkba1co3e" path="res://Sounds/menuClickAlt.wav" id="3_2reup"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgita"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
@@ -96,6 +97,9 @@ text = "BACK
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 3
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2reup")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/CreateButtonContainer/CreateButton" to="." method="_on_create_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/BackButtonContainer/BackButton" to="." method="_on_back_button_button_up"]

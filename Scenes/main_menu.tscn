@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnj7wcohm8nfl"]
+[gd_scene load_steps=8 format=3 uid="uid://bnj7wcohm8nfl"]
 
 [ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_1byoy"]
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_f3c22"]
+[ext_resource type="AudioStream" uid="uid://c88b8jvs1e0xs" path="res://Sounds/menuClickAlt2.wav" id="3_65pli"]
+[ext_resource type="AudioStream" uid="uid://bvufgkba1co3e" path="res://Sounds/menuClickAlt.wav" id="4_44y7r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kac25"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
@@ -126,6 +128,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kac25")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m7me2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xtno7")
 text = "EXIT GAME"
+
+[node name="MenuTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_65pli")
+
+[node name="StartSound" type="AudioStreamPlayer" parent="."]
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_44y7r")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StartContainer/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/StudyContainer/StudyButton" to="." method="_on_study_button_button_up"]

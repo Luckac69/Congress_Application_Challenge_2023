@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://k7eusrjpuycy"]
+[gd_scene load_steps=10 format=3 uid="uid://k7eusrjpuycy"]
 
 [ext_resource type="FontFile" uid="uid://ewapdr1gqw01" path="res://PreFabs/ThaleahFat.ttf" id="1_b5icy"]
 [ext_resource type="Script" path="res://QuestionAnswer.gd" id="1_f8blr"]
 [ext_resource type="Texture2D" uid="uid://dry7b54607gwc" path="res://Artwork/Effects/correct.png" id="3_4wafd"]
 [ext_resource type="Texture2D" uid="uid://bisr1xn7f7guw" path="res://Artwork/Effects/incorrect.png" id="4_t140w"]
+[ext_resource type="AudioStream" uid="uid://clr55ko1n6ooq" path="res://Sounds/answerCorrect.wav" id="5_0be4j"]
+[ext_resource type="AudioStream" uid="uid://cof6rkfy1sshw" path="res://Sounds/answerWrong.wav" id="6_opjnp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n15j1"]
 bg_color = Color(0.101961, 0.0862745, 0.145098, 0.392157)
@@ -29,11 +31,13 @@ Answ4 = NodePath("MarginContainer/VBoxContainer/QuizZone/AnswerChoicesBottom/Ans
 AnswerDelay = NodePath("AnswerDelay")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.333333, 0.392157, 0.552941, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
@@ -195,6 +199,12 @@ texture = ExtResource("4_t140w")
 
 [node name="AnswerDelay" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="AnswerCorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0be4j")
+
+[node name="AnswerWrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_opjnp")
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceOne/AnswerButton" to="." method="_on_answer_button_button_up"]
 [connection signal="button_up" from="MarginContainer/VBoxContainer/QuizZone/AnswerChoicesTop/AnswerChoiceTwo/AnswerButton2" to="." method="_on_answer_button_2_button_up"]
