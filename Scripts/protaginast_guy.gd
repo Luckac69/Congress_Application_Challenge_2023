@@ -132,10 +132,10 @@ func update_health():
 		
 func update_experience():
 	expamount = expamount + expgain
-
 	if expamount >= maxexp:
-		$"../CanvasLayer/QuestionPopup".visible = true
-		$"/root/GlobalScript".popupquestion.questionpopup(5)
+		#if not $"/root/GlobalScript".QuestionDictinary == null:
+			#/$"../CanvasLayer/QuestionPopup".visible = true
+			#$"/root/GlobalScript".popupquestion.questionpopup(5)
 		Engine.time_scale = 0
 		level = level + 1
 		expamount = expamount - maxexp
@@ -150,7 +150,8 @@ func _on_regin_timer_timeout():
 func _on_player_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Enemy"):
 		enemy_in_attack_zone = true
-		if body.get_parent().is_in_group("Experience"):
+	if body.get_parent().is_in_group("Experience"):
+			print("is experience")
 			update_experience()
 
 func _on_player_hitbox_area_exited(body):
