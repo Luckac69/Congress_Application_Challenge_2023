@@ -78,7 +78,6 @@ func take_damage(damage: float):
 			$ControlHealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false
-			print(\"Enemy Health is \", health)
 			if health <= 0:
 				create_experience()
 				self.queue_free()

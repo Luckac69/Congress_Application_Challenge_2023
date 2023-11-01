@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://gy0rs723dlxk"]
+
+[ext_resource type="Material" uid="uid://kf4g2c5qnpm" path="res://PreFabs/ParticlePrefab.tres" id="1_0ony6"]
+
+[node name="DeathParticles" type="GPUParticles2D"]
+scale = Vector2(2, 2)
+emitting = false
+amount = 150
+process_material = ExtResource("1_0ony6")
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true

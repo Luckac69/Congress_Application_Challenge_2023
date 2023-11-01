@@ -1,9 +1,10 @@
+AudioStreamPlayer
+Timer
+GPUParticles2D
 Control
 TextureProgressBar
 CanvasLayer
-AudioStreamPlayer
 AudioStreamPlayer2D
-Timer
 MarginContainer
 TextureRect
 HSlider
@@ -13,14 +14,12 @@ AnimationPlayer
 AnimationTree
 Sprite2D
 CharacterBody2D
-Timer
 RayCast2D
 HScrollBar
 VScrollBar
 Button
 VBoxContainer
 Label
-GPUParticles2D
 Marker2D
 TileMap
 ProgressBar

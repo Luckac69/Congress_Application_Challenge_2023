@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animation = $AnimationPlayer
 @onready var questionsdictionary = $"/root/GlobalScript".QuestionDictinary
+@export var death_effect : PackedScene
 
 @export var health = 100
 @export var speed = 300.0
@@ -24,31 +25,37 @@ var explosion_prefab = preload("res://explosion.tscn")
 var spikes_prefab = preload("res://spikes.tscn")
 var lightning_prefab = preload("res://lightning.tscn")
 
+
 const REGEN = 5
 
 func _input(event):
-	if event.is_action_pressed("Shoot"):
-		if can_shoot_fireball == true:
-			#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-			can_shoot_fireball = false
-			$FireballShootCooldown.start()
-			create_bullet()
-	if event.is_action_pressed("Explode"):
-		if can_shoot_explosion == true:
-			#if event is InputEventKey:
-			can_shoot_explosion = false
-			$ExplosionShootCooldown.start()
-			create_explosion()
-	if event.is_action_pressed("Spikes"):
-		if can_summon_spikes == true:
-			can_summon_spikes = false
-			$SpikesSummonCooldown.start()
-			create_spikes()
-	if event.is_action_pressed("Lightning"):
-		if can_shoot_lightning == true:
-			can_shoot_lightning = false
-			$LightningShootCooldown.start()
-			create_lightning()
+	if player_alive == true:
+		if event.is_action_pressed("Shoot"):
+			if can_shoot_fireball == true:
+				#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+				can_shoot_fireball = false
+				$FireballShootCooldown.start()
+				create_bullet()
+		if event.is_action_pressed("Explode"):
+			if can_shoot_explosion == true:
+				#if event is InputEventKey:
+				can_shoot_explosion = false
+				$ExplosionShootCooldown.start()
+				create_explosion()
+		if event.is_action_pressed("Spikes"):
+			if can_summon_spikes == true:
+				can_summon_spikes = false
+				$SpikesSummonCooldown.start()
+				create_spikes()
+		if event.is_action_pressed("Lightning"):
+			if can_shoot_lightning == true:
+				can_shoot_lightning = false
+				$LightningShootCooldown.start()
+				create_lightning()
+		if event.is_action_pressed("Pause"):
+			if $"../CanvasLayer/PauseMenu".visible == false:
+				$"../CanvasLayer/PauseMenu".visible = true
+				Engine.time_scale = 0
 
 func create_bullet():
 	var bullet = bullet_prefab.instantiate()
@@ -81,18 +88,13 @@ func create_lightning():
 	$Lightning.play()
 
 func _physics_process(delta):
-	#every frame these things run
-	deal_damage()
-	player_move()
-	if $ControlHealthBar.is_visible():
-		health += REGEN*delta
-		$ControlHealthBar.set_value(health)
-	#if player health is 0 then kill player
-	if health <= 0:
-		player_alive = false 
-		health = 0
-		print("player killed")
-		self.queue_free()
+	if player_alive == true:
+		#every frame these things run
+		deal_damage()
+		player_move()
+		if $ControlHealthBar.is_visible():
+			health += REGEN*delta
+			$ControlHealthBar.set_value(health)
 
 func player_move():
 	var yDirection = Input.get_axis("up","down")
@@ -152,7 +154,6 @@ func _on_player_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Enemy"):
 		enemy_in_attack_zone = true
 	if body.get_parent().is_in_group("Experience"):
-			print("is experience")
 			update_experience()
 
 func _on_player_hitbox_area_exited(body):
@@ -169,9 +170,16 @@ func deal_damage():
 			$ControlHealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false
-			print("Player Health is ", health)
 			if health <= 0:
-				self.queue_free()
+				$DeathSound.play()
+				player_alive = false
+				var effect_instance : GPUParticles2D = death_effect.instantiate()
+				effect_instance.position = position
+				get_parent().add_child(effect_instance)
+				effect_instance.emitting = true
+				Engine.time_scale = 0.25
+				visible = false
+				$DeathTimer.start()
 
 func _on_damage_take_cooldown_timeout():
 	can_take_damage = true
@@ -188,3 +196,8 @@ func _on_spikes_summon_cooldown_timeout():
 func _on_lightning_shoot_cooldown_timeout():
 	can_shoot_lightning = true
 
+func _on_death_timer_timeout():
+	Engine.time_scale = 0.1
+	$"../CanvasLayer/DeathMenu".visible = true
+
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b5kb8m6wcp8br"]
+[gd_scene load_steps=21 format=3 uid="uid://b5kb8m6wcp8br"]
 
 [ext_resource type="Script" path="res://Scripts/protaginast_guy.gd" id="1_gpdhi"]
 [ext_resource type="Texture2D" uid="uid://bndt5y14kfhh8" path="res://Artwork/Enemies/wizard_sprite-Sheet.png" id="2_aaedg"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://d135xetx2b6wm" path="res://Sounds/attackInitialExplosion.wav" id="8_uvhok"]
 [ext_resource type="AudioStream" uid="uid://qr8f5jvwisrh" path="res://Sounds/attackLightning.wav" id="9_0lgvl"]
 [ext_resource type="AudioStream" uid="uid://d3wsr4ykcg131" path="res://Sounds/attackSpikes.wav" id="10_5njwb"]
+[ext_resource type="AudioStream" uid="uid://cy5dytrayr143" path="res://Sounds/playerDead.wav" id="12_yyyak"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y0ewj"]
 shader = ExtResource("2_k8yg5")
@@ -185,6 +186,12 @@ volume_db = -18.0
 stream = ExtResource("10_5njwb")
 volume_db = -20.0
 
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_yyyak")
+
 [connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]
 [connection signal="area_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="area_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_area_exited"]
@@ -195,3 +202,4 @@ volume_db = -20.0
 [connection signal="timeout" from="SpikesSummonCooldown" to="." method="_on_spikes_summon_cooldown_timeout"]
 [connection signal="timeout" from="LightningShootCooldown" to="." method="_on_lightning_shoot_cooldown_timeout"]
 [connection signal="timeout" from="LightningShootDelay" to="." method="_on_lightning_shoot_delay_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

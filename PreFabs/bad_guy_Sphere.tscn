@@ -10,7 +10,7 @@ script/source = "extends CharacterBody2D
 # var target = player
 @onready var animation = $AnimationPlayer
 @onready var target = get_parent().get_node(\"Protaginast_guy\")
-@export var speed : float = 450
+@export var speed : float = 700
 @export var health : float = 100
 @export var damage : float = 15
 @export var EnemySprite : Sprite2D
@@ -76,7 +76,6 @@ func deal_damage(damage: float):
 			$ControlHealthBar.set_value(health)
 			$DamageTakeCooldown.start()
 			can_take_damage = false
-			print(\"Enemy Health is \", health)
 			if health <= 0:
 				create_experience()
 				self.queue_free()

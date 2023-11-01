@@ -1,17 +1,20 @@
-[gd_scene load_steps=19 format=3 uid="uid://drndbm4wqiax0"]
+[gd_scene load_steps=22 format=3 uid="uid://drndbm4wqiax0"]
 
 [ext_resource type="Script" path="res://Scenes/World.gd" id="1_2hfn6"]
 [ext_resource type="Texture2D" uid="uid://cg130cptlhsoh" path="res://Artwork/Solaria Demo Pack Update 03/16x16/Tilesets/Solaria Demo Update 01.png" id="1_cpd62"]
 [ext_resource type="PackedScene" uid="uid://b5kb8m6wcp8br" path="res://PreFabs/protaginast_guy.tscn" id="2_uo3rl"]
 [ext_resource type="PackedScene" uid="uid://bwrop1iqvcqhe" path="res://PreFabs/enemy_spawner.tscn" id="3_5hjlm"]
+[ext_resource type="PackedScene" uid="uid://gy0rs723dlxk" path="res://PreFabs/death_particles.tscn" id="4_2dc78"]
 [ext_resource type="PackedScene" uid="uid://clfhdemr0mfhd" path="res://PreFabs/bad_guy_Sphere.tscn" id="4_88l1m"]
 [ext_resource type="PackedScene" uid="uid://d4eykwdu3h5km" path="res://PreFabs/bad_guy_Knight.tscn" id="5_jbubq"]
 [ext_resource type="PackedScene" uid="uid://c53bmsws2shc" path="res://hit_effect.tscn" id="6_q5cda"]
 [ext_resource type="PackedScene" uid="uid://k7eusrjpuycy" path="res://QuestionAnswer.tscn" id="7_ltarj"]
 [ext_resource type="Texture2D" uid="uid://dtvcmenv0xbg7" path="res://Artwork/Effects/exp_empty.png" id="9_3dcoh"]
+[ext_resource type="PackedScene" uid="uid://db5optobdvyba" path="res://pause_menu.tscn" id="9_3yb2o"]
 [ext_resource type="AudioStream" uid="uid://c0fkniu0jw7jp" path="res://Sounds/Ludum Dare 30 - Track 7.wav" id="9_jcqxt"]
 [ext_resource type="Texture2D" path="res://Artwork/Effects/exp_progress.png" id="10_nkjkv"]
 [ext_resource type="Script" path="res://Scenes/EXPBar.gd" id="11_6bq8s"]
+[ext_resource type="PackedScene" uid="uid://3pb1ee1tystm" path="res://death_menu.tscn" id="13_xbm18"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_q1qf7"]
 tile_data = PackedInt32Array(0, 458752, 4)
@@ -1377,6 +1380,7 @@ layer_3/tile_data = PackedInt32Array(-131069, 458752, 3, -262150, 458752, 3, -32
 [node name="Protaginast_guy" parent="." groups=["Player"] instance=ExtResource("2_uo3rl")]
 z_index = 3
 y_sort_enabled = true
+death_effect = ExtResource("4_2dc78")
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_5hjlm")]
 spawnlings = [ExtResource("4_88l1m"), ExtResource("5_jbubq")]
@@ -1404,6 +1408,12 @@ texture_progress = ExtResource("10_nkjkv")
 texture_progress_offset = Vector2(10, 9)
 script = ExtResource("11_6bq8s")
 player = NodePath("../../Protaginast_guy")
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("9_3yb2o")]
+visible = false
+
+[node name="DeathMenu" parent="CanvasLayer" instance=ExtResource("13_xbm18")]
+visible = false
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jcqxt")
