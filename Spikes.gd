@@ -10,7 +10,7 @@ func _ready():
 
 func _on_spikes_hitbox_area_entered(body):
 	if body.get_parent().is_in_group("Enemy"):
-		$"/root/GlobalScript".camera.shake(1.0, 3)
+		$"/root/GlobalScript".camera.shake(1.0, 2)
 		var effect_instance : GPUParticles2D = hit_effect.instantiate()
 		effect_instance.position = body.get_parent().position
 		get_parent().add_child(effect_instance)
